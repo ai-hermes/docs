@@ -1,0 +1,274 @@
+{
+  "common": {
+    "brand": "Rethink AI",
+    "slogan": "会話を再考し、心を理解する",
+    "getStarted": "始める",
+    "learnMore": "詳細を見る",
+    "login": "ログイン",
+    "register": "登録",
+    "logout": "ログアウト",
+    "dashboard": "ダッシュボード",
+    "profile": "プロフィール",
+    "billing": "請求情報",
+    "settings": "設定",
+    "docs": "ドキュメント",
+    "pricing": "料金",
+    "home": "ホーム",
+    "language": "言語",
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "search": "検索",
+    "noResults": "結果が見つかりません"
+  },
+  "home": {
+    "hero": {
+      "title": "会話を再考する",
+      "titleHighlight": "心を理解する",
+      "subtitle": "チャット履歴をインポートし、AIが会話相手の性格、感情、真の意図を分析します",
+      "cta": "無料で試す",
+      "secondaryCta": "ドキュメントを見る"
+    },
+    "features": {
+      "title": "主な機能",
+      "subtitle": "強力なAI分析で、すべての会話をより深く理解",
+      "personality": {
+        "title": "性格分析",
+        "description": "会話内容から外向性、開放性、誠実性などの性格特性を分析"
+      },
+      "emotion": {
+        "title": "感情認識",
+        "description": "会話中の感情変化を正確に識別し、最適なコミュニケーションタイミングを把握"
+      },
+      "intent": {
+        "title": "意図の洞察",
+        "description": "会話の背後にある本当のニーズと意図を深く分析"
+      },
+      "multilingual": {
+        "title": "多言語対応",
+        "description": "日本語、中国語、英語、フランス語、韓国語などの分析をサポート"
+      }
+    },
+    "howItWorks": {
+      "title": "使い方",
+      "subtitle": "3つのステップで会話洞察を始める",
+      "step1": {
+        "title": "チャット履歴をインポート",
+        "description": "WeChat、WhatsApp、Telegramなどの主要なチャットツールからエクスポート"
+      },
+      "step2": {
+        "title": "AIスマート分析",
+        "description": "AIモデルが会話内容を深く分析し、多次元レポートを生成"
+      },
+      "step3": {
+        "title": "洞察レポートを取得",
+        "description": "詳細な性格分析、感情曲線、意図解釈を確認"
+      }
+    },
+    "testimonials": {
+      "title": "お客様の声",
+      "subtitle": "他のユーザーの評価",
+      "items": [
+        {
+          "content": "Rethink AIのおかげで顧客のニーズをより深く理解でき、売上が30%向上しました。",
+          "author": "田中太郎",
+          "role": "営業マネージャー"
+        },
+        {
+          "content": "セラピストとして、クライアントの状態をすばやく理解するのに役立っています。",
+          "author": "佐藤花子",
+          "role": "心理カウンセラー"
+        },
+        {
+          "content": "チームのコミュニケーション効率が大幅に向上し、誤解が減りました。",
+          "author": "鈴木一郎",
+          "role": "プロジェクトマネージャー"
+        }
+      ]
+    },
+    "cta": {
+      "title": "会話を再考する準備はできましたか？",
+      "subtitle": "今すぐ登録して無料分析クレジットを取得",
+      "button": "無料で始める"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "アカウントにログイン",
+      "phone": "電話番号",
+      "phonePlaceholder": "電話番号を入力",
+      "code": "認証コード",
+      "codePlaceholder": "認証コードを入力",
+      "sendCode": "コードを送信",
+      "codeSent": "コードを送信しました",
+      "submit": "ログイン",
+      "noAccount": "アカウントをお持ちでない方",
+      "registerNow": "今すぐ登録",
+      "or": "または",
+      "socialLogin": "ソーシャルログイン"
+    },
+    "register": {
+      "title": "アカウント作成",
+      "subtitle": "AI会話分析の旅を始めましょう",
+      "phone": "電話番号",
+      "phonePlaceholder": "電話番号を入力",
+      "code": "認証コード",
+      "codePlaceholder": "認証コードを入力",
+      "sendCode": "コードを送信",
+      "codeSent": "コードを送信しました",
+      "submit": "登録",
+      "hasAccount": "すでにアカウントをお持ちですか？",
+      "loginNow": "今すぐログイン",
+      "terms": "登録することで、",
+      "termsLink": "利用規約",
+      "and": "と",
+      "privacyLink": "プライバシーポリシー"
+    },
+    "social": {
+      "wechat": "WeChatでログイン",
+      "qq": "QQでログイン",
+      "google": "Googleでログイン"
+    }
+  },
+  "docs": {
+    "title": "ドキュメント",
+    "subtitle": "Rethink AIの使い方を学ぶ",
+    "search": "ドキュメントを検索...",
+    "categories": {
+      "introduction": "製品紹介",
+      "quickStart": "クイックスタート",
+      "chatlogIntegration": "チャットログ連携",
+      "usageGuide": "使用ガイド"
+    },
+    "onThisPage": "このページの目次",
+    "editOnGithub": "GitHubで編集",
+    "lastUpdated": "最終更新"
+  },
+  "pricing": {
+    "title": "プランを選択",
+    "subtitle": "ニーズに合わせた柔軟な料金体系",
+    "monthly": "月額",
+    "yearly": "年額",
+    "yearlyDiscount": "20%お得",
+    "plans": {
+      "free": {
+        "name": "無料",
+        "price": "0",
+        "period": "永久無料",
+        "description": "お試しに最適",
+        "features": [
+          "月10回の分析",
+          "基本的な性格分析",
+          "基本的な感情認識",
+          "単一言語対応"
+        ],
+        "cta": "始める"
+      },
+      "pro": {
+        "name": "プロ",
+        "price": "980",
+        "period": "円/月",
+        "description": "個人ユーザー向け",
+        "features": [
+          "月100回の分析",
+          "完全な性格分析",
+          "深い感情追跡",
+          "意図洞察分析",
+          "多言語対応",
+          "履歴保存"
+        ],
+        "cta": "今すぐ購読"
+      },
+      "enterprise": {
+        "name": "エンタープライズ",
+        "price": "お問い合わせ",
+        "period": "",
+        "description": "チーム向け",
+        "features": [
+          "無制限の分析",
+          "チームコラボレーション",
+          "APIアクセス",
+          "専任アカウントマネージャー",
+          "カスタムレポート",
+          "優先サポート"
+        ],
+        "cta": "営業に連絡"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "items": [
+        {
+          "question": "無料で試せますか？",
+          "answer": "はい、月10回の分析が可能な無料プランがあります。クレジットカードは不要です。"
+        },
+        {
+          "question": "どのチャットツールに対応していますか？",
+          "answer": "WeChat、WhatsApp、Telegram、iMessageなどのエクスポートに対応しています。"
+        },
+        {
+          "question": "データセキュリティはどのように確保されていますか？",
+          "answer": "エンドツーエンドの暗号化を使用し、分析後すぐに元データを削除してプライバシーを保護します。"
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "welcome": "おかえりなさい",
+    "overview": "概要",
+    "recentAnalysis": "最近の分析",
+    "noAnalysis": "分析記録がありません",
+    "startAnalysis": "新しい分析を開始",
+    "quota": {
+      "title": "今月の使用量",
+      "used": "使用済み",
+      "remaining": "残り",
+      "total": "合計"
+    },
+    "profile": {
+      "title": "プロフィール",
+      "phone": "電話番号",
+      "bindPhone": "電話番号を紐付け",
+      "email": "メール",
+      "bindEmail": "メールを紐付け",
+      "nickname": "ニックネーム",
+      "avatar": "アバター",
+      "changeAvatar": "アバターを変更",
+      "createdAt": "登録日"
+    },
+    "billing": {
+      "title": "請求情報",
+      "currentPlan": "現在のプラン",
+      "expireDate": "有効期限",
+      "autoRenew": "自動更新",
+      "history": "請求履歴",
+      "noHistory": "請求記録がありません",
+      "upgrade": "プランをアップグレード",
+      "cancel": "購読をキャンセル"
+    }
+  },
+  "footer": {
+    "product": "製品",
+    "features": "機能",
+    "pricing": "料金",
+    "docs": "ドキュメント",
+    "company": "会社",
+    "about": "会社概要",
+    "blog": "ブログ",
+    "careers": "採用情報",
+    "legal": "法的情報",
+    "terms": "利用規約",
+    "privacy": "プライバシーポリシー",
+    "contact": "お問い合わせ",
+    "copyright": "© 2024 Rethink AI. All rights reserved."
+  }
+}

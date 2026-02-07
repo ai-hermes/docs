@@ -1,0 +1,274 @@
+{
+  "common": {
+    "brand": "Rethink AI",
+    "slogan": "重新思考对话，洞察人心",
+    "getStarted": "开始使用",
+    "learnMore": "了解更多",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出登录",
+    "dashboard": "控制台",
+    "profile": "个人信息",
+    "billing": "付费信息",
+    "settings": "设置",
+    "docs": "文档",
+    "pricing": "定价",
+    "home": "首页",
+    "language": "语言",
+    "loading": "加载中...",
+    "error": "出错了",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "search": "搜索",
+    "noResults": "未找到结果"
+  },
+  "home": {
+    "hero": {
+      "title": "重新思考对话",
+      "titleHighlight": "洞察人心",
+      "subtitle": "导入聊天记录，AI 帮你分析对话者的性格、情绪和真实诉求",
+      "cta": "免费试用",
+      "secondaryCta": "查看文档"
+    },
+    "features": {
+      "title": "核心功能",
+      "subtitle": "强大的 AI 分析能力，帮你更好地理解每一次对话",
+      "personality": {
+        "title": "性格分析",
+        "description": "通过对话内容分析对方的性格特征，包括外向性、开放性、责任心等多维度画像"
+      },
+      "emotion": {
+        "title": "情绪识别",
+        "description": "精准识别对话中的情绪变化，追踪情感走向，把握沟通最佳时机"
+      },
+      "intent": {
+        "title": "诉求洞察",
+        "description": "深度解析对话背后的真实需求和意图，帮你更好地回应对方"
+      },
+      "multilingual": {
+        "title": "多语言支持",
+        "description": "支持中、英、日、法、韩等主流语言的聊天记录分析"
+      }
+    },
+    "howItWorks": {
+      "title": "如何使用",
+      "subtitle": "三步开始你的对话洞察之旅",
+      "step1": {
+        "title": "导入聊天记录",
+        "description": "支持微信、WhatsApp、Telegram 等主流聊天工具的记录导出"
+      },
+      "step2": {
+        "title": "AI 智能分析",
+        "description": "我们的 AI 模型会深度分析对话内容，生成多维度报告"
+      },
+      "step3": {
+        "title": "获取洞察报告",
+        "description": "查看详细的性格分析、情绪曲线和诉求解读"
+      }
+    },
+    "testimonials": {
+      "title": "用户评价",
+      "subtitle": "看看其他用户怎么说",
+      "items": [
+        {
+          "content": "Rethink AI 帮我更好地理解了客户的需求，销售业绩提升了30%。",
+          "author": "张明",
+          "role": "销售经理"
+        },
+        {
+          "content": "作为心理咨询师，这个工具让我能更快地了解来访者的状态。",
+          "author": "李婷",
+          "role": "心理咨询师"
+        },
+        {
+          "content": "团队沟通效率大幅提升，减少了很多不必要的误解。",
+          "author": "王强",
+          "role": "项目经理"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好重新思考对话了吗？",
+      "subtitle": "立即注册，获得免费分析额度",
+      "button": "免费开始"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录你的账户",
+      "phone": "手机号",
+      "phonePlaceholder": "请输入手机号",
+      "code": "验证码",
+      "codePlaceholder": "请输入验证码",
+      "sendCode": "发送验证码",
+      "codeSent": "验证码已发送",
+      "submit": "登录",
+      "noAccount": "还没有账户？",
+      "registerNow": "立即注册",
+      "or": "或",
+      "socialLogin": "第三方登录"
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "开始你的 AI 对话分析之旅",
+      "phone": "手机号",
+      "phonePlaceholder": "请输入手机号",
+      "code": "验证码",
+      "codePlaceholder": "请输入验证码",
+      "sendCode": "发送验证码",
+      "codeSent": "验证码已发送",
+      "submit": "注册",
+      "hasAccount": "已有账户？",
+      "loginNow": "立即登录",
+      "terms": "注册即表示同意",
+      "termsLink": "服务条款",
+      "and": "和",
+      "privacyLink": "隐私政策"
+    },
+    "social": {
+      "wechat": "微信登录",
+      "qq": "QQ 登录",
+      "google": "Google 登录"
+    }
+  },
+  "docs": {
+    "title": "文档中心",
+    "subtitle": "了解如何使用 Rethink AI",
+    "search": "搜索文档...",
+    "categories": {
+      "introduction": "产品介绍",
+      "quickStart": "快速上手",
+      "chatlogIntegration": "对接聊天记录",
+      "usageGuide": "使用说明"
+    },
+    "onThisPage": "本页目录",
+    "editOnGithub": "在 GitHub 上编辑",
+    "lastUpdated": "最后更新"
+  },
+  "pricing": {
+    "title": "选择适合你的方案",
+    "subtitle": "灵活的定价，满足不同需求",
+    "monthly": "月付",
+    "yearly": "年付",
+    "yearlyDiscount": "节省 20%",
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "price": "0",
+        "period": "永久免费",
+        "description": "适合个人体验",
+        "features": [
+          "每月 10 次分析",
+          "基础性格分析",
+          "基础情绪识别",
+          "单一语言支持"
+        ],
+        "cta": "开始使用"
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "99",
+        "period": "/月",
+        "description": "适合个人用户",
+        "features": [
+          "每月 100 次分析",
+          "完整性格分析",
+          "深度情绪追踪",
+          "诉求洞察分析",
+          "多语言支持",
+          "历史记录保存"
+        ],
+        "cta": "立即订阅"
+      },
+      "enterprise": {
+        "name": "企业版",
+        "price": "联系我们",
+        "period": "",
+        "description": "适合团队使用",
+        "features": [
+          "无限次分析",
+          "团队协作功能",
+          "API 接口调用",
+          "专属客户经理",
+          "定制化报告",
+          "优先技术支持"
+        ],
+        "cta": "联系销售"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "可以免费试用吗？",
+          "answer": "是的，我们提供免费版，每月可进行 10 次分析，无需绑定信用卡。"
+        },
+        {
+          "question": "支持哪些聊天工具？",
+          "answer": "目前支持微信、WhatsApp、Telegram、iMessage 等主流聊天工具的记录导出。"
+        },
+        {
+          "question": "数据安全如何保障？",
+          "answer": "我们采用端到端加密，分析完成后立即删除原始数据，确保你的隐私安全。"
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "welcome": "欢迎回来",
+    "overview": "概览",
+    "recentAnalysis": "最近分析",
+    "noAnalysis": "暂无分析记录",
+    "startAnalysis": "开始新分析",
+    "quota": {
+      "title": "本月配额",
+      "used": "已使用",
+      "remaining": "剩余",
+      "total": "总计"
+    },
+    "profile": {
+      "title": "个人信息",
+      "phone": "手机号",
+      "bindPhone": "绑定手机",
+      "email": "邮箱",
+      "bindEmail": "绑定邮箱",
+      "nickname": "昵称",
+      "avatar": "头像",
+      "changeAvatar": "更换头像",
+      "createdAt": "注册时间"
+    },
+    "billing": {
+      "title": "付费信息",
+      "currentPlan": "当前方案",
+      "expireDate": "到期时间",
+      "autoRenew": "自动续费",
+      "history": "账单历史",
+      "noHistory": "暂无账单记录",
+      "upgrade": "升级方案",
+      "cancel": "取消订阅"
+    }
+  },
+  "footer": {
+    "product": "产品",
+    "features": "功能特性",
+    "pricing": "定价方案",
+    "docs": "使用文档",
+    "company": "公司",
+    "about": "关于我们",
+    "blog": "博客",
+    "careers": "加入我们",
+    "legal": "法律条款",
+    "terms": "服务条款",
+    "privacy": "隐私政策",
+    "contact": "联系我们",
+    "copyright": "© 2024 Rethink AI. 保留所有权利。"
+  }
+}

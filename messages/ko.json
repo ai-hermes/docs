@@ -1,0 +1,274 @@
+{
+  "common": {
+    "brand": "Rethink AI",
+    "slogan": "대화를 다시 생각하고, 마음을 이해하세요",
+    "getStarted": "시작하기",
+    "learnMore": "더 알아보기",
+    "login": "로그인",
+    "register": "회원가입",
+    "logout": "로그아웃",
+    "dashboard": "대시보드",
+    "profile": "프로필",
+    "billing": "결제 정보",
+    "settings": "설정",
+    "docs": "문서",
+    "pricing": "요금제",
+    "home": "홈",
+    "language": "언어",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "cancel": "취소",
+    "confirm": "확인",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "search": "검색",
+    "noResults": "결과 없음"
+  },
+  "home": {
+    "hero": {
+      "title": "대화를 다시 생각하다",
+      "titleHighlight": "마음을 이해하다",
+      "subtitle": "채팅 기록을 가져와 AI가 대화 상대의 성격, 감정, 진정한 의도를 분석합니다",
+      "cta": "무료 체험",
+      "secondaryCta": "문서 보기"
+    },
+    "features": {
+      "title": "핵심 기능",
+      "subtitle": "강력한 AI 분석으로 모든 대화를 더 잘 이해하세요",
+      "personality": {
+        "title": "성격 분석",
+        "description": "대화 내용을 통해 외향성, 개방성, 성실성 등의 성격 특성을 분석"
+      },
+      "emotion": {
+        "title": "감정 인식",
+        "description": "대화 중 감정 변화를 정확히 식별하고 최적의 소통 타이밍 파악"
+      },
+      "intent": {
+        "title": "의도 통찰",
+        "description": "대화 뒤에 숨겨진 진정한 필요와 의도를 깊이 분석"
+      },
+      "multilingual": {
+        "title": "다국어 지원",
+        "description": "한국어, 중국어, 영어, 일본어, 프랑스어 등 분석 지원"
+      }
+    },
+    "howItWorks": {
+      "title": "사용 방법",
+      "subtitle": "3단계로 대화 통찰 여정을 시작하세요",
+      "step1": {
+        "title": "채팅 기록 가져오기",
+        "description": "WeChat, WhatsApp, Telegram 등 주요 채팅 도구에서 내보내기 지원"
+      },
+      "step2": {
+        "title": "AI 스마트 분석",
+        "description": "AI 모델이 대화 내용을 깊이 분석하고 다차원 보고서 생성"
+      },
+      "step3": {
+        "title": "통찰 보고서 받기",
+        "description": "상세한 성격 분석, 감정 곡선, 의도 해석 확인"
+      }
+    },
+    "testimonials": {
+      "title": "사용자 리뷰",
+      "subtitle": "다른 사용자들의 이야기",
+      "items": [
+        {
+          "content": "Rethink AI 덕분에 고객 요구를 더 잘 이해하게 되어 매출이 30% 증가했습니다.",
+          "author": "김민수",
+          "role": "영업 매니저"
+        },
+        {
+          "content": "상담사로서 이 도구는 내담자의 상태를 빠르게 이해하는 데 도움이 됩니다.",
+          "author": "박지영 박사",
+          "role": "심리 상담사"
+        },
+        {
+          "content": "팀 커뮤니케이션 효율이 크게 향상되어 불필요한 오해가 줄었습니다.",
+          "author": "이준호",
+          "role": "프로젝트 매니저"
+        }
+      ]
+    },
+    "cta": {
+      "title": "대화를 다시 생각할 준비가 되셨나요?",
+      "subtitle": "지금 가입하고 무료 분석 크레딧을 받으세요",
+      "button": "무료로 시작"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "다시 오신 것을 환영합니다",
+      "subtitle": "계정에 로그인하세요",
+      "phone": "전화번호",
+      "phonePlaceholder": "전화번호 입력",
+      "code": "인증 코드",
+      "codePlaceholder": "인증 코드 입력",
+      "sendCode": "코드 전송",
+      "codeSent": "코드 전송됨",
+      "submit": "로그인",
+      "noAccount": "계정이 없으신가요?",
+      "registerNow": "지금 가입",
+      "or": "또는",
+      "socialLogin": "소셜 로그인"
+    },
+    "register": {
+      "title": "계정 만들기",
+      "subtitle": "AI 대화 분석 여정을 시작하세요",
+      "phone": "전화번호",
+      "phonePlaceholder": "전화번호 입력",
+      "code": "인증 코드",
+      "codePlaceholder": "인증 코드 입력",
+      "sendCode": "코드 전송",
+      "codeSent": "코드 전송됨",
+      "submit": "가입하기",
+      "hasAccount": "이미 계정이 있으신가요?",
+      "loginNow": "지금 로그인",
+      "terms": "가입하시면",
+      "termsLink": "서비스 약관",
+      "and": "및",
+      "privacyLink": "개인정보 처리방침"
+    },
+    "social": {
+      "wechat": "WeChat 로그인",
+      "qq": "QQ 로그인",
+      "google": "Google 로그인"
+    }
+  },
+  "docs": {
+    "title": "문서",
+    "subtitle": "Rethink AI 사용법 알아보기",
+    "search": "문서 검색...",
+    "categories": {
+      "introduction": "제품 소개",
+      "quickStart": "빠른 시작",
+      "chatlogIntegration": "채팅 기록 연동",
+      "usageGuide": "사용 가이드"
+    },
+    "onThisPage": "이 페이지에서",
+    "editOnGithub": "GitHub에서 편집",
+    "lastUpdated": "마지막 업데이트"
+  },
+  "pricing": {
+    "title": "요금제 선택",
+    "subtitle": "다양한 요구에 맞는 유연한 가격",
+    "monthly": "월간",
+    "yearly": "연간",
+    "yearlyDiscount": "20% 절약",
+    "plans": {
+      "free": {
+        "name": "무료",
+        "price": "0",
+        "period": "영구 무료",
+        "description": "체험에 적합",
+        "features": [
+          "월 10회 분석",
+          "기본 성격 분석",
+          "기본 감정 인식",
+          "단일 언어 지원"
+        ],
+        "cta": "시작하기"
+      },
+      "pro": {
+        "name": "프로",
+        "price": "9,900",
+        "period": "원/월",
+        "description": "개인 사용자용",
+        "features": [
+          "월 100회 분석",
+          "완전한 성격 분석",
+          "심층 감정 추적",
+          "의도 통찰 분석",
+          "다국어 지원",
+          "기록 저장"
+        ],
+        "cta": "지금 구독"
+      },
+      "enterprise": {
+        "name": "기업용",
+        "price": "문의",
+        "period": "",
+        "description": "팀용",
+        "features": [
+          "무제한 분석",
+          "팀 협업",
+          "API 접근",
+          "전담 계정 매니저",
+          "맞춤 보고서",
+          "우선 지원"
+        ],
+        "cta": "영업팀 연락"
+      }
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "items": [
+        {
+          "question": "무료로 체험할 수 있나요?",
+          "answer": "네, 월 10회 분석이 가능한 무료 티어를 제공합니다. 신용카드 필요 없음."
+        },
+        {
+          "question": "어떤 채팅 도구를 지원하나요?",
+          "answer": "현재 WeChat, WhatsApp, Telegram, iMessage 등의 내보내기를 지원합니다."
+        },
+        {
+          "question": "데이터 보안은 어떻게 보장되나요?",
+          "answer": "종단간 암호화를 사용하고 분석 후 원본 데이터를 즉시 삭제합니다."
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "welcome": "다시 오신 것을 환영합니다",
+    "overview": "개요",
+    "recentAnalysis": "최근 분석",
+    "noAnalysis": "분석 기록 없음",
+    "startAnalysis": "새 분석 시작",
+    "quota": {
+      "title": "월간 할당량",
+      "used": "사용됨",
+      "remaining": "남음",
+      "total": "총"
+    },
+    "profile": {
+      "title": "프로필",
+      "phone": "전화번호",
+      "bindPhone": "전화번호 연결",
+      "email": "이메일",
+      "bindEmail": "이메일 연결",
+      "nickname": "닉네임",
+      "avatar": "아바타",
+      "changeAvatar": "아바타 변경",
+      "createdAt": "가입일"
+    },
+    "billing": {
+      "title": "결제 정보",
+      "currentPlan": "현재 요금제",
+      "expireDate": "만료일",
+      "autoRenew": "자동 갱신",
+      "history": "결제 내역",
+      "noHistory": "결제 내역 없음",
+      "upgrade": "업그레이드",
+      "cancel": "구독 취소"
+    }
+  },
+  "footer": {
+    "product": "제품",
+    "features": "기능",
+    "pricing": "요금제",
+    "docs": "문서",
+    "company": "회사",
+    "about": "소개",
+    "blog": "블로그",
+    "careers": "채용",
+    "legal": "법적 고지",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "contact": "문의",
+    "copyright": "© 2024 Rethink AI. All rights reserved."
+  }
+}

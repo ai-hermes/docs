@@ -1,0 +1,274 @@
+{
+  "common": {
+    "brand": "Rethink AI",
+    "slogan": "Repensez les conversations, comprenez les cœurs",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus",
+    "login": "Connexion",
+    "register": "Inscription",
+    "logout": "Déconnexion",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "billing": "Facturation",
+    "settings": "Paramètres",
+    "docs": "Documentation",
+    "pricing": "Tarifs",
+    "home": "Accueil",
+    "language": "Langue",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "noResults": "Aucun résultat"
+  },
+  "home": {
+    "hero": {
+      "title": "Repensez les conversations",
+      "titleHighlight": "Comprenez les cœurs",
+      "subtitle": "Importez vos historiques de chat, laissez l'IA analyser la personnalité, les émotions et les intentions",
+      "cta": "Essai gratuit",
+      "secondaryCta": "Voir la documentation"
+    },
+    "features": {
+      "title": "Fonctionnalités clés",
+      "subtitle": "Une analyse IA puissante pour mieux comprendre chaque conversation",
+      "personality": {
+        "title": "Analyse de personnalité",
+        "description": "Analysez les traits de personnalité à travers le contenu des conversations"
+      },
+      "emotion": {
+        "title": "Reconnaissance émotionnelle",
+        "description": "Identifiez précisément les changements émotionnels dans les conversations"
+      },
+      "intent": {
+        "title": "Insight des intentions",
+        "description": "Analysez en profondeur les besoins et intentions réels derrière les conversations"
+      },
+      "multilingual": {
+        "title": "Support multilingue",
+        "description": "Support pour l'analyse en chinois, anglais, japonais, français, coréen et plus"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "Trois étapes pour commencer votre voyage d'insight",
+      "step1": {
+        "title": "Importez les historiques",
+        "description": "Support des exports depuis WeChat, WhatsApp, Telegram et autres"
+      },
+      "step2": {
+        "title": "Analyse IA intelligente",
+        "description": "Notre modèle IA analyse en profondeur et génère des rapports multidimensionnels"
+      },
+      "step3": {
+        "title": "Obtenez le rapport",
+        "description": "Consultez l'analyse de personnalité, les courbes émotionnelles et l'interprétation"
+      }
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "subtitle": "Ce que disent nos utilisateurs",
+      "items": [
+        {
+          "content": "Rethink AI m'a aidé à mieux comprendre les besoins des clients, augmentant les ventes de 30%.",
+          "author": "Michel Dupont",
+          "role": "Directeur commercial"
+        },
+        {
+          "content": "En tant que thérapeute, cet outil m'aide à comprendre rapidement l'état de mes clients.",
+          "author": "Dr. Marie Laurent",
+          "role": "Psychothérapeute"
+        },
+        {
+          "content": "L'efficacité de la communication d'équipe s'est considérablement améliorée.",
+          "author": "Pierre Martin",
+          "role": "Chef de projet"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à repenser les conversations ?",
+      "subtitle": "Inscrivez-vous maintenant pour des crédits d'analyse gratuits",
+      "button": "Commencer gratuitement"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Entrez votre numéro",
+      "code": "Code de vérification",
+      "codePlaceholder": "Entrez le code",
+      "sendCode": "Envoyer le code",
+      "codeSent": "Code envoyé",
+      "submit": "Connexion",
+      "noAccount": "Pas de compte ?",
+      "registerNow": "Inscrivez-vous",
+      "or": "ou",
+      "socialLogin": "Connexion sociale"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Commencez votre voyage d'analyse IA",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Entrez votre numéro",
+      "code": "Code de vérification",
+      "codePlaceholder": "Entrez le code",
+      "sendCode": "Envoyer le code",
+      "codeSent": "Code envoyé",
+      "submit": "Inscription",
+      "hasAccount": "Déjà un compte ?",
+      "loginNow": "Connectez-vous",
+      "terms": "En vous inscrivant, vous acceptez nos",
+      "termsLink": "Conditions d'utilisation",
+      "and": "et",
+      "privacyLink": "Politique de confidentialité"
+    },
+    "social": {
+      "wechat": "WeChat",
+      "qq": "QQ",
+      "google": "Google"
+    }
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Apprenez à utiliser Rethink AI",
+    "search": "Rechercher...",
+    "categories": {
+      "introduction": "Introduction",
+      "quickStart": "Démarrage rapide",
+      "chatlogIntegration": "Intégration des chats",
+      "usageGuide": "Guide d'utilisation"
+    },
+    "onThisPage": "Sur cette page",
+    "editOnGithub": "Modifier sur GitHub",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "pricing": {
+    "title": "Choisissez votre plan",
+    "subtitle": "Tarification flexible pour différents besoins",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "yearlyDiscount": "Économisez 20%",
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "price": "0",
+        "period": "Gratuit pour toujours",
+        "description": "Parfait pour essayer",
+        "features": [
+          "10 analyses par mois",
+          "Analyse de personnalité basique",
+          "Reconnaissance émotionnelle basique",
+          "Support monolingue"
+        ],
+        "cta": "Commencer"
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "9,99",
+        "period": "€/mois",
+        "description": "Pour les utilisateurs individuels",
+        "features": [
+          "100 analyses par mois",
+          "Analyse de personnalité complète",
+          "Suivi émotionnel approfondi",
+          "Analyse des intentions",
+          "Support multilingue",
+          "Historique sauvegardé"
+        ],
+        "cta": "S'abonner"
+      },
+      "enterprise": {
+        "name": "Entreprise",
+        "price": "Contactez-nous",
+        "period": "",
+        "description": "Pour les équipes",
+        "features": [
+          "Analyses illimitées",
+          "Collaboration d'équipe",
+          "Accès API",
+          "Gestionnaire de compte dédié",
+          "Rapports personnalisés",
+          "Support prioritaire"
+        ],
+        "cta": "Contacter les ventes"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "Puis-je essayer gratuitement ?",
+          "answer": "Oui, nous offrons un niveau gratuit avec 10 analyses par mois, sans carte de crédit."
+        },
+        {
+          "question": "Quels outils de chat sont supportés ?",
+          "answer": "Nous supportons actuellement WeChat, WhatsApp, Telegram, iMessage et plus."
+        },
+        {
+          "question": "Comment la sécurité des données est-elle assurée ?",
+          "answer": "Nous utilisons le chiffrement de bout en bout et supprimons les données originales immédiatement."
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "welcome": "Bon retour",
+    "overview": "Aperçu",
+    "recentAnalysis": "Analyses récentes",
+    "noAnalysis": "Aucune analyse",
+    "startAnalysis": "Nouvelle analyse",
+    "quota": {
+      "title": "Quota mensuel",
+      "used": "Utilisé",
+      "remaining": "Restant",
+      "total": "Total"
+    },
+    "profile": {
+      "title": "Profil",
+      "phone": "Téléphone",
+      "bindPhone": "Lier le téléphone",
+      "email": "Email",
+      "bindEmail": "Lier l'email",
+      "nickname": "Pseudo",
+      "avatar": "Avatar",
+      "changeAvatar": "Changer l'avatar",
+      "createdAt": "Inscrit le"
+    },
+    "billing": {
+      "title": "Facturation",
+      "currentPlan": "Plan actuel",
+      "expireDate": "Expire le",
+      "autoRenew": "Renouvellement auto",
+      "history": "Historique",
+      "noHistory": "Aucun historique",
+      "upgrade": "Améliorer",
+      "cancel": "Annuler"
+    }
+  },
+  "footer": {
+    "product": "Produit",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "docs": "Documentation",
+    "company": "Entreprise",
+    "about": "À propos",
+    "blog": "Blog",
+    "careers": "Carrières",
+    "legal": "Légal",
+    "terms": "Conditions",
+    "privacy": "Confidentialité",
+    "contact": "Contact",
+    "copyright": "© 2024 Rethink AI. Tous droits réservés."
+  }
+}

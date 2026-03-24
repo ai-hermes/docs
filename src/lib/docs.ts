@@ -1,7 +1,23 @@
+import 'server-only';
+
+import { cache } from 'react';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+
+const CONTENT_ROOT = path.join(process.cwd(), 'src/content');
+const DEFAULT_DOC_LOCALE = 'en';
+const MDX_EXTENSION = '.mdx';
+const CATEGORY_ORDER = ['introduction', 'quickStart', 'chatlogIntegration', 'usageGuide'];
+
 export interface DocItem {
   slug: string;
   title: string;
   description?: string;
+  category: string;
+  order: number;
+  contentLocale: string;
+  lastModified: string;
 }
 
 export interface DocCategory {
@@ -9,75 +25,156 @@ export interface DocCategory {
   items: DocItem[];
 }
 
-export const docsConfig: Record<string, DocCategory[]> = {
-  zh: [
-    {
-      key: 'introduction',
-      items: [
-        { slug: 'introduction', title: '产品介绍', description: '了解 Rethink AI 是什么以及它能为你做什么' },
-      ],
-    },
-    {
-      key: 'quickStart',
-      items: [
-        { slug: 'quick-start', title: '快速上手', description: '5 分钟快速开始使用 Rethink AI' },
-      ],
-    },
-    {
-      key: 'chatlogIntegration',
-      items: [
-        { slug: 'chatlog-integration', title: '对接聊天记录', description: '了解如何导入各种聊天工具的记录' },
-      ],
-    },
-    {
-      key: 'usageGuide',
-      items: [
-        { slug: 'usage-guide', title: '使用说明', description: '详细的功能使用指南' },
-      ],
-    },
-  ],
-  en: [
-    {
-      key: 'introduction',
-      items: [
-        { slug: 'introduction', title: 'Introduction', description: 'Learn what Rethink AI is and what it can do for you' },
-      ],
-    },
-    {
-      key: 'quickStart',
-      items: [
-        { slug: 'quick-start', title: 'Quick Start', description: 'Get started with Rethink AI in 5 minutes' },
-      ],
-    },
-    {
-      key: 'chatlogIntegration',
-      items: [
-        { slug: 'chatlog-integration', title: 'Chat Log Integration', description: 'Learn how to import chat logs from various tools' },
-      ],
-    },
-    {
-      key: 'usageGuide',
-      items: [
-        { slug: 'usage-guide', title: 'Usage Guide', description: 'Detailed feature usage guide' },
-      ],
-    },
-  ],
-};
-
-export function getDocsConfig(locale: string): DocCategory[] {
-  return docsConfig[locale] || docsConfig.en;
+interface DocFrontmatter {
+  title?: string;
+  description?: string;
+  category?: string;
+  order?: number;
 }
 
-export function getAllDocSlugs(locale: string): string[] {
-  const config = getDocsConfig(locale);
-  return config.flatMap((category) => category.items.map((item) => item.slug));
-}
-
-export function getDocBySlug(locale: string, slug: string): DocItem | undefined {
-  const config = getDocsConfig(locale);
-  for (const category of config) {
-    const item = category.items.find((i) => i.slug === slug);
-    if (item) return item;
+async function pathExists(targetPath: string) {
+  try {
+    await fs.access(targetPath);
+    return true;
+  } catch {
+    return false;
   }
-  return undefined;
+}
+
+async function readDocsFromDirectory(locale: string): Promise<DocItem[]> {
+  const localeDirectory = path.join(CONTENT_ROOT, locale);
+
+  if (!(await pathExists(localeDirectory))) {
+    return [];
+  }
+
+  const entries = await fs.readdir(localeDirectory, { withFileTypes: true });
+  const docs = await Promise.all(
+    entries
+      .filter((entry) => entry.isFile() && entry.name.endsWith(MDX_EXTENSION))
+      .map(async (entry) => {
+        const filePath = path.join(localeDirectory, entry.name);
+        const raw = await fs.readFile(filePath, 'utf8');
+        const { data } = matter(raw);
+        const frontmatter = data as DocFrontmatter;
+        const slug = entry.name.slice(0, -MDX_EXTENSION.length);
+
+        if (!frontmatter.title || !frontmatter.category) {
+          throw new Error(`Missing required frontmatter in ${filePath}`);
+        }
+
+        const stats = await fs.stat(filePath);
+
+        return {
+          slug,
+          title: frontmatter.title,
+          description: frontmatter.description,
+          category: frontmatter.category,
+          order: frontmatter.order ?? 0,
+          contentLocale: locale,
+          lastModified: stats.mtime.toISOString(),
+        } satisfies DocItem;
+      })
+  );
+
+  return docs.sort((a, b) => {
+    const categoryDiff = CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category);
+    if (categoryDiff !== 0) {
+      return categoryDiff;
+    }
+
+    if (a.order !== b.order) {
+      return a.order - b.order;
+    }
+
+    return a.title.localeCompare(b.title);
+  });
+}
+
+const getDocsForLocale = cache(async (locale: string): Promise<DocItem[]> => {
+  const localizedDocs = await readDocsFromDirectory(locale);
+  if (locale === DEFAULT_DOC_LOCALE) {
+    return localizedDocs;
+  }
+
+  const fallbackDocs = await readDocsFromDirectory(DEFAULT_DOC_LOCALE);
+  if (localizedDocs.length === 0) {
+    return fallbackDocs;
+  }
+
+  const mergedDocs = new Map(localizedDocs.map((doc) => [doc.slug, doc]));
+  for (const fallbackDoc of fallbackDocs) {
+    if (!mergedDocs.has(fallbackDoc.slug)) {
+      mergedDocs.set(fallbackDoc.slug, fallbackDoc);
+    }
+  }
+
+  return Array.from(mergedDocs.values()).sort((a, b) => {
+    const categoryDiff = CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category);
+    if (categoryDiff !== 0) {
+      return categoryDiff;
+    }
+
+    if (a.order !== b.order) {
+      return a.order - b.order;
+    }
+
+    return a.title.localeCompare(b.title);
+  });
+});
+
+export const getDocsConfig = cache(async (locale: string): Promise<DocCategory[]> => {
+  const docs = await getDocsForLocale(locale);
+  const groups = new Map<string, DocItem[]>();
+
+  for (const doc of docs) {
+    const items = groups.get(doc.category) ?? [];
+    items.push(doc);
+    groups.set(doc.category, items);
+  }
+
+  const orderedKeys = Array.from(groups.keys()).sort((a, b) => {
+    const aIndex = CATEGORY_ORDER.indexOf(a);
+    const bIndex = CATEGORY_ORDER.indexOf(b);
+
+    if (aIndex === -1 && bIndex === -1) {
+      return a.localeCompare(b);
+    }
+
+    if (aIndex === -1) {
+      return 1;
+    }
+
+    if (bIndex === -1) {
+      return -1;
+    }
+
+    return aIndex - bIndex;
+  });
+
+  return orderedKeys.map((key) => ({
+    key,
+    items: groups.get(key) ?? [],
+  }));
+});
+
+export const getAllDocSlugs = cache(async (locale: string): Promise<string[]> => {
+  const docs = await getDocsForLocale(locale);
+  return docs.map((doc) => doc.slug);
+});
+
+export const getDocBySlug = cache(async (locale: string, slug: string): Promise<DocItem | null> => {
+  const docs = await getDocsForLocale(locale);
+  return docs.find((doc) => doc.slug === slug) ?? null;
+});
+
+export async function getDocComponent(locale: string, slug: string) {
+  const doc = await getDocBySlug(locale, slug);
+
+  if (!doc) {
+    return null;
+  }
+
+  const docModule = await import(`../content/${doc.contentLocale}/${doc.slug}.mdx`);
+  return docModule.default;
 }

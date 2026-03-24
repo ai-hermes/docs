@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
 import { locales } from '@/i18n/config';
-import { getAllDocSlugs } from '@/lib/docs';
+import { getDocsConfig } from '@/lib/docs';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://rethinkai.com';
 
   const routes: MetadataRoute.Sitemap = [];
@@ -21,11 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     // Doc pages
-    const docSlugs = getAllDocSlugs(locale);
-    for (const slug of docSlugs) {
+    const docsConfig = await getDocsConfig(locale);
+    for (const doc of docsConfig.flatMap((category) => category.items)) {
       routes.push({
-        url: `${baseUrl}/${locale}/docs/${slug}`,
-        lastModified: new Date(),
+        url: `${baseUrl}/${locale}/docs/${doc.slug}`,
+        lastModified: new Date(doc.lastModified),
         changeFrequency: 'weekly',
         priority: 0.7,
       });

@@ -1,19 +1,16 @@
-'use client';
-
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
-import { getDocsConfig } from '@/lib/docs';
+import type { DocCategory } from '@/lib/docs';
 
-export default function DocsSidebar() {
+interface DocsSidebarProps {
+  docsConfig: DocCategory[];
+  locale: string;
+  currentSlug: string;
+}
+
+export default function DocsSidebar({ docsConfig, locale, currentSlug }: DocsSidebarProps) {
   const t = useTranslations('docs.categories');
-  const params = useParams();
-  const pathname = usePathname();
-  const locale = params.locale as string;
-  const currentSlug = params.slug as string;
-
-  const docsConfig = getDocsConfig(locale);
 
   return (
     <nav className="w-64 shrink-0 border-r pr-6 hidden lg:block">
@@ -26,7 +23,7 @@ export default function DocsSidebar() {
             <ul className="space-y-1">
               {category.items.map((item) => {
                 const href = `/${locale}/docs/${item.slug}`;
-                const isActive = currentSlug === item.slug || pathname === href;
+                const isActive = currentSlug === item.slug;
 
                 return (
                   <li key={item.slug}>

@@ -1,0 +1,125 @@
+---
+title: Chat Log Integration
+description: Learn how to import chat logs from various tools
+category: chatlogIntegration
+order: 3
+---
+
+This document explains how to export logs from common chat tools and import them into Rethink AI for analysis.
+
+## Supported Chat Tools
+
+<table>
+  <thead>
+    <tr>
+      <th>Chat Tool</th>
+      <th>Supported Format</th>
+      <th>Export Method</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WeChat</td>
+      <td>TXT</td>
+      <td>Built-in export</td>
+    </tr>
+    <tr>
+      <td>WhatsApp</td>
+      <td>TXT</td>
+      <td>Built-in export</td>
+    </tr>
+    <tr>
+      <td>Telegram</td>
+      <td>JSON, HTML</td>
+      <td>Desktop export</td>
+    </tr>
+    <tr>
+      <td>iMessage</td>
+      <td>CSV</td>
+      <td>Third-party tools</td>
+    </tr>
+    <tr>
+      <td>LINE</td>
+      <td>TXT</td>
+      <td>Built-in export</td>
+    </tr>
+  </tbody>
+</table>
+
+## WhatsApp Export Guide
+
+### Export Steps
+
+1. Open WhatsApp
+2. Enter the target chat
+3. Tap the contact or group name
+4. Scroll down and find "Export Chat"
+5. Select "Without Media"
+6. Choose a save or share method
+
+### Notes
+
+- The exported file contains the full chat history
+- Selecting "Without Media" is recommended to reduce file size
+- The file format is `.txt`
+
+## Telegram Export Guide
+
+### Using Telegram Desktop
+
+1. Download and log in to Telegram Desktop
+2. Open the target chat
+3. Click the three dots in the top-right corner
+4. Select "Export Chat History"
+5. In the export settings:
+   - Choose "JSON" or "HTML" for format. JSON is recommended
+   - Uncheck media files
+   - Set the time range
+6. Click "Export"
+
+## File Format Requirements
+
+### TXT Format
+
+```text
+[2024-01-15 10:30:25] John: Hey, how are you doing?
+[2024-01-15 10:31:02] Jane: I'm good, thanks for asking!
+[2024-01-15 10:32:15] John: Are you free this weekend? I'd like to have dinner together
+```
+
+### JSON Format
+
+```json
+{
+  "messages": [
+    {
+      "date": "2024-01-15T10:30:25",
+      "from": "John",
+      "text": "Hey, how are you doing?"
+    },
+    {
+      "date": "2024-01-15T10:31:02",
+      "from": "Jane",
+      "text": "I'm good, thanks for asking!"
+    }
+  ]
+}
+```
+
+## FAQ
+
+### What if the exported file is too large?
+
+Export a narrower time range or exclude media files. Rethink AI supports uploads up to 50 MB.
+
+### File Encoding Issues
+
+Make sure the file uses UTF-8 encoding. If you see garbled text, re-save the file as UTF-8 with a text editor.
+
+### How is private content handled?
+
+You can remove sensitive information before uploading. Our system does not store the original chat logs.
+
+## Next Steps
+
+Now that you know how to export chat logs, read the [Usage Guide](./usage-guide) to make the most of your analysis results.

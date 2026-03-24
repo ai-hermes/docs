@@ -1,39 +1,18 @@
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
-import { getDocBySlug, getAllDocSlugs } from '@/lib/docs';
+import {
+  getDocBySlug,
+  getAllDocSlugs,
+  getDocComponent,
+  getDocsConfig,
+} from '@/lib/docs';
 import DocsSidebar from '@/components/docs/DocsSidebar';
 import MobileDocsSidebar from '@/components/docs/MobileDocsSidebar';
 import { locales } from '@/i18n/config';
 
-// Import doc content components
-import IntroductionZh from '@/content/zh/introduction';
-import QuickStartZh from '@/content/zh/quick-start';
-import ChatlogIntegrationZh from '@/content/zh/chatlog-integration';
-import UsageGuideZh from '@/content/zh/usage-guide';
-import IntroductionEn from '@/content/en/introduction';
-import QuickStartEn from '@/content/en/quick-start';
-import ChatlogIntegrationEn from '@/content/en/chatlog-integration';
-import UsageGuideEn from '@/content/en/usage-guide';
-
-const docComponents: Record<string, Record<string, React.ComponentType>> = {
-  zh: {
-    introduction: IntroductionZh,
-    'quick-start': QuickStartZh,
-    'chatlog-integration': ChatlogIntegrationZh,
-    'usage-guide': UsageGuideZh,
-  },
-  en: {
-    introduction: IntroductionEn,
-    'quick-start': QuickStartEn,
-    'chatlog-integration': ChatlogIntegrationEn,
-    'usage-guide': UsageGuideEn,
-  },
-};
-
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
   for (const locale of locales) {
-    const slugs = getAllDocSlugs(locale);
+    const slugs = await getAllDocSlugs(locale);
     for (const slug of slugs) {
       params.push({ locale, slug });
     }
@@ -47,7 +26,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const doc = getDocBySlug(locale, slug);
+  const doc = await getDocBySlug(locale, slug);
 
   if (!doc) {
     return { title: 'Not Found' };
@@ -65,29 +44,38 @@ export default async function DocPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const doc = getDocBySlug(locale, slug);
+  const [doc, docsConfig, DocContent] = await Promise.all([
+    getDocBySlug(locale, slug),
+    getDocsConfig(locale),
+    getDocComponent(locale, slug),
+  ]);
 
-  if (!doc) {
+  if (!doc || !DocContent) {
     notFound();
   }
 
-  const t = await getTranslations({ locale, namespace: 'docs' });
-
-  // Get the correct content component
-  const contentLocale = docComponents[locale] ? locale : 'en';
-  const DocContent = docComponents[contentLocale]?.[slug];
-
-  if (!DocContent) {
-    notFound();
-  }
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://rethinkai.com';
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: doc.title,
+    description: doc.description,
+    inLanguage: locale,
+    dateModified: doc.lastModified,
+    url: `${baseUrl}/${locale}/docs/${slug}`,
+  };
 
   return (
     <div className="container mx-auto px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="flex gap-10">
-        <DocsSidebar />
+        <DocsSidebar docsConfig={docsConfig} locale={locale} currentSlug={slug} />
 
         <article className="flex-1 min-w-0 max-w-3xl">
-          <MobileDocsSidebar />
+          <MobileDocsSidebar docsConfig={docsConfig} locale={locale} currentSlug={slug} />
 
           {/* Header */}
           <header className="mb-10">

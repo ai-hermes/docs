@@ -1,24 +1,27 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { getDocsConfig } from '@/lib/docs';
+import type { DocCategory } from '@/lib/docs';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
 
-export default function MobileDocsSidebar() {
-  const t = useTranslations('docs.categories');
-  const params = useParams();
-  const pathname = usePathname();
-  const locale = params.locale as string;
-  const currentSlug = params.slug as string;
-  const [open, setOpen] = useState(false);
+interface MobileDocsSidebarProps {
+  docsConfig: DocCategory[];
+  locale: string;
+  currentSlug: string;
+}
 
-  const docsConfig = getDocsConfig(locale);
+export default function MobileDocsSidebar({
+  docsConfig,
+  locale,
+  currentSlug,
+}: MobileDocsSidebarProps) {
+  const t = useTranslations('docs.categories');
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="lg:hidden mb-6">
@@ -39,7 +42,7 @@ export default function MobileDocsSidebar() {
                 <ul className="space-y-1">
                   {category.items.map((item) => {
                     const href = `/${locale}/docs/${item.slug}`;
-                    const isActive = currentSlug === item.slug || pathname === href;
+                    const isActive = currentSlug === item.slug;
 
                     return (
                       <li key={item.slug}>

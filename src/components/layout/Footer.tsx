@@ -23,8 +23,8 @@ export default function Footer() {
       { href: `/${locale}/careers`, label: t('careers') },
     ],
     legal: [
-      { href: `/${locale}/terms`, label: t('terms') },
-      { href: `/${locale}/privacy`, label: t('privacy') },
+      { href: `/${locale}/docs/terms`, label: t('terms') },
+      { href: `/${locale}/docs/privacy`, label: t('privacy') },
       { href: `/${locale}/contact`, label: t('contact') },
     ],
   };

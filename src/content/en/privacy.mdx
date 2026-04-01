@@ -1,0 +1,219 @@
+---
+title: Privacy Policy
+description: Learn how we collect, use, and protect your personal information
+category: legal
+order: 1
+---
+
+# Privacy Policy
+
+**Effective Date: April 1, 2026**
+
+Welcome to Rethink AI (hereinafter referred to as "the Application"). We take your privacy very seriously. This Privacy Policy explains how we collect, use, store, and protect your personal information.
+
+**Please read this policy carefully. By using the Application, you agree to the terms of this Privacy Policy.**
+
+---
+
+## 1. Core Privacy Commitments
+
+### 1.1 WeChat Data Stays Local
+**All your WeChat data — including contacts, group chats, and chat history — is stored exclusively on your local device. It is never uploaded to any cloud server or third-party service.**
+
+### 1.2 Minimal Data Collection
+We only collect essential anonymous behavioral analytics and error logs to improve the product experience. No chat content or personally identifiable information is involved.
+
+---
+
+## 2. Information We Collect
+
+### 2.1 WeChat Data (Stored Entirely on Your Device)
+The Application accesses your WeChat data through a Docker container, including:
+- Contact information (username, nickname, remarks)
+- Group chat information (group name, member list)
+- Chat history (message content, timestamps, senders)
+
+**Important:**
+- This data is stored only in a local SQLite database on your device
+- It is never uploaded to our servers or any third-party service
+- You may delete the local database file at any time to erase all records
+
+### 2.2 Account Information
+To provide user authentication, we collect:
+- Phone number (for login verification)
+- User ID, Tenant ID (system-generated unique identifiers)
+
+### 2.3 Device Information (Anonymous)
+- Operating system type (Windows/macOS/Linux)
+- System architecture (x64/arm64)
+- Application version
+- Language settings
+
+### 2.4 Usage Analytics (Anonymous)
+Through the PostHog analytics service, we collect:
+- Application launch/close events
+- Feature usage statistics (e.g., "clicked settings button", "switched model")
+- Session duration
+- Anonymous user ID (randomly generated UUID)
+
+**We explicitly do NOT collect:**
+- Chat message content
+- Contact names or phone numbers
+- Your conversations with the AI assistant
+- Any personally identifiable sensitive information
+
+### 2.5 Error Logs
+When an application error occurs, we may collect:
+- Error type and stack trace
+- Application state at the time of error (excluding user data)
+- Device environment information
+
+---
+
+## 3. How We Use Your Information
+
+### 3.1 Providing AI Assistant Services
+- **Local AI analysis**: Your WeChat data is processed locally to generate AI responses
+- **LLM API calls**: When you actively ask the AI a question, only your input is sent to the LLM provider you have configured (e.g., OpenAI, Anthropic). We do not proactively upload your WeChat data
+
+### 3.2 Product Improvement
+- Analyzing anonymous usage data to optimize feature design
+- Tracking error frequency to fix bugs
+
+### 3.3 User Support
+- Using your account information to provide technical support
+- Verifying user identity to protect account security
+
+---
+
+## 4. Information Sharing and Disclosure
+
+### 4.1 Third-Party Service Providers
+
+#### PostHog (Analytics)
+- **Purpose**: Anonymous behavioral statistics
+- **Data type**: Application usage events, device information (no chat content)
+- **Privacy control**: You can disable analytics in Settings
+- **Data location**: PostHog servers (GDPR-compliant)
+
+#### LLM Providers (OpenAI/Anthropic, etc.)
+- **Purpose**: Processing AI questions you actively submit
+- **Data type**: Only the question text you input
+- **Important**: Do not include sensitive personal information in your questions
+- **Privacy policy**: Subject to each LLM provider's own privacy policy
+
+#### Portal Authentication Service
+- **Purpose**: User login verification
+- **Data type**: Phone number, verification code, User ID
+
+### 4.2 Legal Requirements
+We may disclose your information in the following circumstances:
+- To comply with laws, regulations, court orders, or government requests
+- To protect our legitimate interests or user safety
+- To prevent fraud or security threats
+
+### 4.3 No Sale of Data
+**We will never sell, rent, or trade your personal information.**
+
+---
+
+## 5. Data Security
+
+### 5.1 Technical Measures
+- **Local encrypted storage**: Sensitive configurations (e.g., API keys) are encrypted using electron-store
+- **Transmission encryption**: All network communications use HTTPS/gRPC encryption
+- **Access control**: Only you can access the local database
+
+### 5.2 Data Isolation
+- WeChat data runs in an isolated Docker container
+- Data from different users is completely independent
+
+### 5.3 Security Recommendations
+- Keep your login credentials secure
+- Regularly update the Application to the latest version
+- Do not use the Application on public or shared devices
+
+---
+
+## 6. Your Rights
+
+### 6.1 Access and Export
+You may at any time:
+- View all locally stored data (located in the application data directory)
+- Export chat history and configuration files
+
+### 6.2 Data Deletion
+You have the right to delete:
+- **Local WeChat data**: Delete the SQLite database file in the application data directory
+- **Account data**: Use the "Delete Account" feature in Settings
+- **Analytics data**: Contact us to delete anonymous records in PostHog
+
+### 6.3 Disable Data Collection
+In Settings, you can:
+- Disable behavioral analytics (PostHog)
+- Disable error log reporting
+- Disable automatic update checks
+
+---
+
+## 7. Data Retention
+
+### 7.1 Local Data
+- **WeChat data**: Retained permanently on your device until you manually delete it
+- **Configuration files**: Automatically deleted when the Application is uninstalled
+
+### 7.2 Cloud Data
+- **Account information**: Deleted within 30 days after account deletion
+- **Analytics data**: Retained for 90 days (anonymous data)
+- **Error logs**: Automatically deleted after 180 days
+
+---
+
+## 8. Children's Privacy
+
+The Application is not intended for children under the age of 14. If we discover that we have inadvertently collected personal information from a child, we will promptly delete it.
+
+---
+
+## 9. Cross-Border Data Transfers
+
+- **WeChat data**: No cross-border transfer involved (stored entirely locally)
+- **Analytics data**: PostHog servers may be located outside your jurisdiction, but only anonymous data is transmitted
+- **LLM API**: Depends on the provider you select (e.g., OpenAI is based in the United States)
+
+---
+
+## 10. Policy Updates
+
+We may update this Privacy Policy from time to time. For significant changes, we will notify you through:
+- In-app pop-up notifications
+- An update summary displayed at application startup
+
+Continued use of the Application after changes constitutes acceptance of the updated policy.
+
+---
+
+## 11. Applicable Law
+
+This Privacy Policy is governed by the laws of the People's Republic of China, in compliance with:
+- Personal Information Protection Law (PIPL)
+- Cybersecurity Law
+- Data Security Law
+
+If you are located in the European Union, we also comply with the General Data Protection Regulation (GDPR).
+
+---
+
+## 12. Contact Us
+
+If you have any questions, comments, or requests regarding this Privacy Policy, please contact us through:
+
+- **Email**: privacy@example.com
+- **GitHub Issues**: https://github.com/ai-hermes/wechat-mem0/issues
+- **Address**: [Your Company Address]
+
+We will respond to your request within 15 business days.
+
+---
+
+**Thank you for trusting Rethink AI!**

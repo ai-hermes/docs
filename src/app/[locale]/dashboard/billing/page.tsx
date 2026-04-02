@@ -104,7 +104,7 @@ export default async function BillingPage({ params }: { params: Promise<{ locale
         <CardContent>
           {billingHistory.length > 0 ? (
             <div className="space-y-4">
-              {billingHistory.map((record) => (
+              {billingHistory.map((record: any) => (
                 <div
                   key={record.id}
                   className="flex items-center justify-between py-3 border-b last:border-0"

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { getCurrentUser } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -104,7 +104,7 @@ export default async function BillingPage({ params }: { params: Promise<{ locale
         <CardContent>
           {billingHistory.length > 0 ? (
             <div className="space-y-4">
-              {billingHistory.map((record: any) => (
+              {billingHistory.map((record: typeof billingHistory[number]) => (
                 <div
                   key={record.id}
                   className="flex items-center justify-between py-3 border-b last:border-0"

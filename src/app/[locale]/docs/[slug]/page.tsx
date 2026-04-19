@@ -78,15 +78,15 @@ export default async function DocPage({
           <MobileDocsSidebar docsConfig={docsConfig} locale={locale} currentSlug={slug} />
 
           {/* Header */}
-          <header className="mb-10">
-            <h1 className="text-4xl font-bold mb-4">{doc.title}</h1>
+          <header className="mb-12 pb-8 border-b border-border">
+            <h1 className="text-4xl font-bold tracking-tight mb-4">{doc.title}</h1>
             {doc.description && (
-              <p className="text-xl text-muted-foreground">{doc.description}</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">{doc.description}</p>
             )}
           </header>
 
-          {/* Content */}
-          <div className="prose prose-neutral dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-a:text-purple-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
+          {/* Content — hide YAML frontmatter rendered as hr + h2 by @next/mdx */}
+          <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none [&>hr:first-child]:hidden [&>hr:first-child+h2]:hidden prose-headings:scroll-mt-20 prose-headings:font-semibold prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-border prose-h3:mt-8 prose-h3:mb-4 prose-p:my-5 prose-p:leading-relaxed prose-ul:my-5 prose-ol:my-5 prose-li:my-1.5 prose-hr:my-10 prose-strong:text-foreground prose-a:text-purple-500 prose-a:no-underline hover:prose-a:underline prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-pre:my-6 prose-pre:rounded-lg prose-table:my-6 prose-blockquote:border-purple-400 prose-blockquote:bg-muted/30 prose-blockquote:py-1 prose-blockquote:rounded-r-lg">
             <DocContent />
           </div>
         </article>

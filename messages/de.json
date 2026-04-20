@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "Rethink AI",
-    "slogan": "Gespräche neu denken, Herzen verstehen",
+    "slogan": "Intelligenter Chat-Datenassistent",
     "getStarted": "Loslegen",
     "learnMore": "Mehr erfahren",
     "login": "Anmelden",
@@ -12,7 +12,7 @@
     "billing": "Abrechnung",
     "settings": "Einstellungen",
     "docs": "Dokumentation",
-    "pricing": "Preise",
+    "pricing": "Download",
     "home": "Startseite",
     "language": "Sprache",
     "loading": "Wird geladen...",
@@ -31,73 +31,73 @@
   },
   "home": {
     "hero": {
-      "title": "Gespräche neu denken",
-      "titleHighlight": "Herzen verstehen",
-      "subtitle": "Importieren Sie Chat-Verläufe, lassen Sie KI Persönlichkeit, Emotionen und Absichten analysieren",
-      "cta": "Kostenlos testen",
+      "title": "Intelligenter Chat-Datenassistent",
+      "titleHighlight": "Gespräche mit KI verstehen",
+      "subtitle": "Greifen Sie lokal auf Chatdaten zu und analysieren Sie Gespräche durch natürlichsprachlichen KI-Chat",
+      "cta": "Kostenloser Download",
       "secondaryCta": "Dokumentation"
     },
     "features": {
       "title": "Kernfunktionen",
-      "subtitle": "Leistungsstarke KI-Analyse für besseres Verständnis jedes Gesprächs",
+      "subtitle": "Leistungsstarke KI-Agent-Funktionen für effiziente Abfrage und Analyse Ihrer Chat-Daten",
       "personality": {
-        "title": "Persönlichkeitsanalyse",
-        "description": "Analysieren Sie Persönlichkeitsmerkmale durch Gesprächsinhalte"
+        "title": "KI-Agent-Chat",
+        "description": "Stellen Sie Fragen in natürlicher Sprache — der KI-Agent ruft automatisch Werkzeuge auf, um Kontakte, Chatverlauf und Nachrichten abzufragen"
       },
       "emotion": {
-        "title": "Emotionserkennung",
-        "description": "Erkennen Sie präzise emotionale Veränderungen in Gesprächen"
+        "title": "Multi-Engine-Unterstützung",
+        "description": "Unterstützt LangGraph, Claude Code, Pi-AI und mehr, mit flexiblem Deep/React-Agent-Moduswechsel"
       },
       "intent": {
-        "title": "Absichtseinblick",
-        "description": "Analysieren Sie tiefgehend die wahren Bedürfnisse und Absichten"
+        "title": "Lokale Datensicherheit",
+        "description": "Alle Chat-Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert und sicher über lokale Entschlüsselung oder Docker-Container zugänglich gemacht"
       },
       "multilingual": {
-        "title": "Mehrsprachig",
-        "description": "Unterstützung für Chinesisch, Englisch, Japanisch, Französisch, Koreanisch und mehr"
+        "title": "MCP-Werkzeugerweiterungen",
+        "description": "Unterstützt Model Context Protocol (MCP)-Server zur freien Erweiterung der KI-Agent-Werkzeugfähigkeiten"
       }
     },
     "howItWorks": {
       "title": "So funktioniert es",
-      "subtitle": "Drei Schritte zu Ihrer Insight-Reise",
+      "subtitle": "Drei Schritte zur intelligenten Chat-Datenabfrage",
       "step1": {
-        "title": "Chat-Verläufe importieren",
-        "description": "Unterstützt Exporte von WeChat, WhatsApp, Telegram und anderen"
+        "title": "App installieren",
+        "description": "Laden Sie das Installationsprogramm für Ihr Betriebssystem von GitHub Releases herunter — unterstützt macOS, Windows und Linux"
       },
       "step2": {
-        "title": "KI-Smart-Analyse",
-        "description": "Unser KI-Modell analysiert tiefgehend und erstellt mehrdimensionale Berichte"
+        "title": "Datenquelle konfigurieren",
+        "description": "Richten Sie Ihren LLM-API-Schlüssel ein und verbinden Sie Chat-Daten über lokale Entschlüsselung oder Docker"
       },
       "step3": {
-        "title": "Bericht erhalten",
-        "description": "Sehen Sie detaillierte Persönlichkeitsanalyse, Emotionskurven und Interpretation"
+        "title": "Chatten & Abfragen",
+        "description": "Stellen Sie der KI Fragen in natürlicher Sprache, um Ihren Chatverlauf abzufragen und zu analysieren"
       }
     },
     "testimonials": {
-      "title": "Testimonials",
-      "subtitle": "Was unsere Nutzer sagen",
+      "title": "Erfahrungsberichte",
+      "subtitle": "Was andere Nutzer sagen",
       "items": [
         {
-          "content": "Rethink AI half mir, Kundenbedürfnisse besser zu verstehen und den Umsatz um 30% zu steigern.",
+          "content": "Rethink AI ermöglicht es mir, wichtige Informationen in meinem Chatverlauf schnell zu finden und steigert die Produktivität enorm.",
           "author": "Michael Schmidt",
-          "role": "Vertriebsleiter"
+          "role": "Produktmanager"
         },
         {
-          "content": "Als Therapeut hilft mir dieses Tool, den Zustand meiner Klienten schnell zu verstehen.",
+          "content": "Daten bleiben vollständig lokal, Datenschutz ist garantiert. Die KI-Abfragefunktion ist unglaublich nützlich.",
           "author": "Dr. Anna Müller",
-          "role": "Psychotherapeutin"
+          "role": "Teamleiterin Betrieb"
         },
         {
-          "content": "Die Teamkommunikation hat sich deutlich verbessert, Missverständnisse wurden reduziert.",
+          "content": "Der Wechsel zwischen Agent-Modi ist flexibel — Deep-Modus für komplexe Analysen, React-Modus für schnelle Abfragen.",
           "author": "Thomas Weber",
-          "role": "Projektmanager"
+          "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Bereit, Gespräche neu zu denken?",
-      "subtitle": "Jetzt registrieren für kostenlose Analyse-Credits",
-      "button": "Kostenlos starten"
+      "title": "Bereit, Ihre Chat-Daten intelligent abzufragen?",
+      "subtitle": "Kostenlos und Open Source — jetzt herunterladen und loslegen",
+      "button": "Kostenloser Download"
     }
   },
   "auth": {
@@ -118,7 +118,7 @@
     },
     "register": {
       "title": "Konto erstellen",
-      "subtitle": "Starten Sie Ihre KI-Analyse-Reise",
+      "subtitle": "Nutzen Sie den intelligenten Assistenten von Rethink AI",
       "phone": "Telefonnummer",
       "phonePlaceholder": "Nummer eingeben",
       "code": "Verifizierungscode",
@@ -146,7 +146,7 @@
     "categories": {
       "introduction": "Einführung",
       "quickStart": "Schnellstart",
-      "chatlogIntegration": "Chat-Integration",
+      "chatlogIntegration": "Chat-Datenintegration",
       "usageGuide": "Nutzungsanleitung",
       "legal": "Rechtliches"
     },
@@ -155,70 +155,68 @@
     "lastUpdated": "Zuletzt aktualisiert"
   },
   "pricing": {
-    "title": "Wählen Sie Ihren Plan",
-    "subtitle": "Flexible Preise für verschiedene Bedürfnisse",
-    "monthly": "Monatlich",
-    "yearly": "Jährlich",
-    "yearlyDiscount": "20% sparen",
+    "title": "Kostenlos & Open Source",
+    "subtitle": "Rethink AI ist vollständig kostenlos und Open Source — konfigurieren Sie einfach Ihren eigenen LLM-API-Schlüssel",
+    "monthly": "",
+    "yearly": "",
+    "yearlyDiscount": "",
     "plans": {
       "free": {
-        "name": "Kostenlos",
+        "name": "Open Source",
         "price": "0",
         "period": "Für immer kostenlos",
-        "description": "Perfekt zum Ausprobieren",
+        "description": "Alle Funktionen, kostenlos nutzbar",
         "features": [
-          "10 Analysen pro Monat",
-          "Basis-Persönlichkeitsanalyse",
-          "Basis-Emotionserkennung",
-          "Einsprachige Unterstützung"
+          "Alle KI-Agent-Funktionen",
+          "Multi-LLM-Engine-Wechsel",
+          "Lokale Entschlüsselung + Docker",
+          "MCP-Werkzeugerweiterungen",
+          "CDC-Echtzeitsynchronisation",
+          "Plattformübergreifend (macOS/Windows/Linux)"
         ],
-        "cta": "Loslegen"
+        "cta": "Kostenloser Download"
       },
       "pro": {
-        "name": "Pro",
-        "price": "9,99",
-        "period": "€/Monat",
-        "description": "Für Einzelnutzer",
+        "name": "LLM-API-Kosten",
+        "price": "Nach Verbrauch",
+        "period": "",
+        "description": "Abrechnung durch LLM-Anbieter",
         "features": [
-          "100 Analysen pro Monat",
-          "Vollständige Persönlichkeitsanalyse",
-          "Tiefe Emotionsverfolgung",
-          "Absichtsanalyse",
-          "Mehrsprachige Unterstützung",
-          "Verlauf gespeichert"
+          "OpenAI / Anthropic / Google usw.",
+          "DeepSeek / Groq / Moonshot usw.",
+          "Kosten abhängig vom gewählten Anbieter",
+          "Selbst gehostete Open-Source-Modelle kostenlos nutzen"
         ],
-        "cta": "Jetzt abonnieren"
+        "cta": "Mehr erfahren"
       },
       "enterprise": {
         "name": "Enterprise",
         "price": "Kontakt",
         "period": "",
-        "description": "Für Teams",
+        "description": "Für individuelle Teamanforderungen",
         "features": [
-          "Unbegrenzte Analysen",
-          "Team-Zusammenarbeit",
-          "API-Zugang",
-          "Dedizierter Account-Manager",
-          "Benutzerdefinierte Berichte",
-          "Prioritäts-Support"
+          "Private-Deployment-Unterstützung",
+          "Individuelle Agent-Entwicklung",
+          "Technischer Support",
+          "Schulung & Beratung"
         ],
-        "cta": "Vertrieb kontaktieren"
+        "cta": "Kontaktieren Sie uns"
       }
     },
     "faq": {
       "title": "FAQ",
       "items": [
         {
-          "question": "Kann ich es kostenlos testen?",
-          "answer": "Ja, wir bieten einen kostenlosen Plan mit 10 Analysen pro Monat, keine Kreditkarte erforderlich."
+          "question": "Ist die App selbst kostenlos?",
+          "answer": "Ja, Rethink AI ist vollständig kostenlos und Open Source. Sie müssen Ihren eigenen LLM-API-Schlüssel bereitstellen — die API-Nutzungsgebühren werden vom LLM-Anbieter berechnet."
         },
         {
           "question": "Welche Chat-Tools werden unterstützt?",
-          "answer": "Wir unterstützen derzeit WeChat, WhatsApp, Telegram, iMessage und mehr."
+          "answer": "Derzeit wird die lokale Abfrage und Analyse von Chatdaten unterstützt."
         },
         {
           "question": "Wie wird die Datensicherheit gewährleistet?",
-          "answer": "Wir verwenden End-to-End-Verschlüsselung und löschen Originaldaten sofort nach der Analyse."
+          "answer": "Alle Chat-Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert und niemals auf einen Server hochgeladen. Nur Ihr Fragetext wird an den LLM-Anbieter gesendet, wenn Sie aktiv eine Frage stellen."
         }
       ]
     }
@@ -226,11 +224,11 @@
   "dashboard": {
     "welcome": "Willkommen zurück",
     "overview": "Übersicht",
-    "recentAnalysis": "Letzte Analysen",
-    "noAnalysis": "Keine Analysen",
-    "startAnalysis": "Neue Analyse",
+    "recentAnalysis": "Letzte Gespräche",
+    "noAnalysis": "Keine Gesprächsaufzeichnungen",
+    "startAnalysis": "Neues Gespräch starten",
     "quota": {
-      "title": "Monatliches Kontingent",
+      "title": "Nutzungsstatistiken",
       "used": "Verwendet",
       "remaining": "Verbleibend",
       "total": "Gesamt"
@@ -244,7 +242,7 @@
       "nickname": "Spitzname",
       "avatar": "Avatar",
       "changeAvatar": "Avatar ändern",
-      "createdAt": "Registriert am"
+      "createdAt": "Registriert"
     },
     "billing": {
       "title": "Abrechnung",
@@ -260,12 +258,12 @@
   "footer": {
     "product": "Produkt",
     "features": "Funktionen",
-    "pricing": "Preise",
+    "pricing": "Download",
     "docs": "Dokumentation",
-    "company": "Unternehmen",
+    "company": "Projekt",
     "about": "Über uns",
     "blog": "Blog",
-    "careers": "Karriere",
+    "careers": "Beitragen",
     "legal": "Rechtliches",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutz",

@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Rethink AI — an AI-powered conversation analysis SaaS tool built with Next.js 16 (App Router), deployed on Vercel. Supports 8 languages via next-intl with phone-based authentication.
+This is the documentation website for [Rethink AI](https://github.com/ai-hermes/wechat-mem0) — an Electron desktop application for intelligent WeChat data analysis using AI Agents. The docs site is built with Next.js 14 (App Router) and deployed on Vercel. Supports 8 languages via next-intl with phone-based authentication.
+
+**Note**: The actual product (Rethink AI) is a desktop Electron app, NOT a web SaaS. This repo only contains the marketing website and documentation.
 
 ## Commands
 
@@ -34,14 +36,14 @@ No test framework is configured yet.
 - `src/components/ui/` — shadcn/ui primitives (New York style, RSC-enabled)
 - `src/components/layout/` — Header, Footer, LanguageSwitcher
 - `src/components/home/` — Landing page sections
-- `src/content/{locale}/` — Documentation content as TSX components
+- `src/content/{locale}/` — Documentation content as MDX files
 - `src/lib/` — Shared utilities (auth, prisma, docs config, cn helper)
 
 ### Database
 
 - Prisma with SQLite (`prisma/schema.prisma`)
 - Models: User, Session, Analysis, BillingHistory, VerificationCode
-- User plans: free/pro/enterprise with analysis quotas
+- Used for the docs website's own user management (not for the Rethink AI desktop app)
 
 ### Authentication
 
@@ -63,9 +65,22 @@ No test framework is configured yet.
 - `next.config.ts` composes next-intl plugin + MDX plugin
 - Page extensions include `.md` and `.mdx`
 - Docs use `generateStaticParams()` for static generation across all locales
+- Documentation content covers: Introduction, Quick Start, WeChat Data Integration, Usage Guide, Privacy Policy
 
 ### Client vs Server Components
 
 - Pages are server components (async data fetching, `getTranslations()`)
 - Interactive components (`LoginForm`, `Header`) use `'use client'`
 - `NextIntlClientProvider` wraps locale layouts for client-side translations
+
+## Content Guidelines
+
+When updating documentation content in `src/content/`:
+
+- Rethink AI is an **Electron desktop app**, not a web SaaS
+- Core feature is **AI Agent chat for querying local WeChat data**
+- Data access is via **local decryption** or **Docker container** (not file upload)
+- The app supports multiple **LLM engines**: LangGraph, Claude Code, Pi-AI
+- All WeChat data stays **local** — never uploaded to cloud
+- There are **no pricing tiers** (free/pro/enterprise) for the app itself — it's open source
+- LLM API costs are the user's responsibility

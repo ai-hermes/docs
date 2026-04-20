@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "Rethink AI",
-    "slogan": "Ripensa le conversazioni, comprendi i cuori",
+    "slogan": "Assistente intelligente per dati di chat",
     "getStarted": "Inizia",
     "learnMore": "Scopri di più",
     "login": "Accedi",
@@ -12,7 +12,7 @@
     "billing": "Fatturazione",
     "settings": "Impostazioni",
     "docs": "Documentazione",
-    "pricing": "Prezzi",
+    "pricing": "Download",
     "home": "Home",
     "language": "Lingua",
     "loading": "Caricamento...",
@@ -31,73 +31,73 @@
   },
   "home": {
     "hero": {
-      "title": "Ripensa le conversazioni",
-      "titleHighlight": "Comprendi i cuori",
-      "subtitle": "Importa le cronologie chat, lascia che l'IA analizzi personalità, emozioni e intenzioni",
-      "cta": "Prova gratis",
+      "title": "Assistente intelligente per dati di chat",
+      "titleHighlight": "Comprendi le conversazioni con l'IA",
+      "subtitle": "Accedi ai dati delle chat in locale, interroga e analizza le conversazioni tramite chat IA in linguaggio naturale",
+      "cta": "Download gratuito",
       "secondaryCta": "Vedi documentazione"
     },
     "features": {
       "title": "Funzionalità principali",
-      "subtitle": "Potente analisi IA per comprendere meglio ogni conversazione",
+      "subtitle": "Potenti capacità AI Agent per aiutarti a interrogare e comprendere i dati di chat in modo efficiente",
       "personality": {
-        "title": "Analisi della personalità",
-        "description": "Analizza i tratti della personalità attraverso il contenuto delle conversazioni"
+        "title": "Chat AI Agent",
+        "description": "Fai domande in linguaggio naturale — l'IA invoca automaticamente gli strumenti per interrogare contatti, cronologia chat, cercare messaggi e altro"
       },
       "emotion": {
-        "title": "Riconoscimento emotivo",
-        "description": "Identifica precisamente i cambiamenti emotivi nelle conversazioni"
+        "title": "Supporto multi-motore",
+        "description": "Supporta LangGraph, Claude Code, Pi-AI e altro, con flessibile cambio modalità Deep/React Agent"
       },
       "intent": {
-        "title": "Insight delle intenzioni",
-        "description": "Analizza in profondità i reali bisogni e intenzioni dietro le conversazioni"
+        "title": "Sicurezza dati locale",
+        "description": "Tutti i dati di chat sono archiviati solo sul tuo dispositivo locale, accessibili in sicurezza tramite decrittazione locale o container Docker"
       },
       "multilingual": {
-        "title": "Supporto multilingue",
-        "description": "Supporto per l'analisi in cinese, inglese, giapponese, francese, coreano e altro"
+        "title": "Estensioni strumenti MCP",
+        "description": "Supporta server Model Context Protocol (MCP) per estendere liberamente le capacità degli strumenti AI Agent"
       }
     },
     "howItWorks": {
       "title": "Come funziona",
-      "subtitle": "Tre passi per iniziare il tuo viaggio di insight",
+      "subtitle": "Tre passi per iniziare le interrogazioni intelligenti dei dati di chat",
       "step1": {
-        "title": "Importa le cronologie",
-        "description": "Supporta esportazioni da WeChat, WhatsApp, Telegram e altri"
+        "title": "Installa l'app",
+        "description": "Scarica il programma di installazione per il tuo sistema operativo da GitHub Releases — supporta macOS, Windows e Linux"
       },
       "step2": {
-        "title": "Analisi IA intelligente",
-        "description": "Il nostro modello IA analizza in profondità e genera report multidimensionali"
+        "title": "Configura la sorgente dati",
+        "description": "Imposta la tua chiave API LLM e connetti i dati di chat tramite decrittazione locale o Docker"
       },
       "step3": {
-        "title": "Ottieni il report",
-        "description": "Visualizza analisi della personalità, curve emotive e interpretazione"
+        "title": "Chatta e interroga",
+        "description": "Fai domande all'IA in linguaggio naturale per interrogare e analizzare la cronologia delle chat"
       }
     },
     "testimonials": {
       "title": "Testimonianze",
-      "subtitle": "Cosa dicono i nostri utenti",
+      "subtitle": "Cosa dicono gli altri utenti",
       "items": [
         {
-          "content": "Rethink AI mi ha aiutato a capire meglio le esigenze dei clienti, aumentando le vendite del 30%.",
+          "content": "Rethink AI mi permette di trovare rapidamente informazioni chiave nella cronologia delle chat, migliorando notevolmente la produttività.",
           "author": "Marco Rossi",
-          "role": "Direttore vendite"
+          "role": "Product Manager"
         },
         {
-          "content": "Come terapeuta, questo strumento mi aiuta a capire rapidamente lo stato dei miei clienti.",
+          "content": "I dati restano completamente in locale, garantendo la privacy. La funzione di interrogazione IA è incredibilmente utile.",
           "author": "Dott.ssa Maria Bianchi",
-          "role": "Psicoterapeuta"
+          "role": "Responsabile operazioni"
         },
         {
-          "content": "L'efficienza della comunicazione del team è migliorata notevolmente.",
+          "content": "Il cambio tra le modalità Agent è flessibile — modalità Deep per analisi complesse, modalità React per interrogazioni rapide.",
           "author": "Giuseppe Verdi",
-          "role": "Project Manager"
+          "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Pronto a ripensare le conversazioni?",
-      "subtitle": "Registrati ora per crediti di analisi gratuiti",
-      "button": "Inizia gratis"
+      "title": "Pronto a interrogare i tuoi dati di chat in modo intelligente?",
+      "subtitle": "Gratuito e open-source — scarica e inizia subito",
+      "button": "Download gratuito"
     }
   },
   "auth": {
@@ -105,9 +105,9 @@
       "title": "Bentornato",
       "subtitle": "Accedi al tuo account",
       "phone": "Numero di telefono",
-      "phonePlaceholder": "Inserisci il numero",
+      "phonePlaceholder": "Inserisci il numero di telefono",
       "code": "Codice di verifica",
-      "codePlaceholder": "Inserisci il codice",
+      "codePlaceholder": "Inserisci il codice di verifica",
       "sendCode": "Invia codice",
       "codeSent": "Codice inviato",
       "submit": "Accedi",
@@ -118,11 +118,11 @@
     },
     "register": {
       "title": "Crea account",
-      "subtitle": "Inizia il tuo viaggio di analisi IA",
+      "subtitle": "Inizia a usare l'assistente intelligente di Rethink AI",
       "phone": "Numero di telefono",
-      "phonePlaceholder": "Inserisci il numero",
+      "phonePlaceholder": "Inserisci il numero di telefono",
       "code": "Codice di verifica",
-      "codePlaceholder": "Inserisci il codice",
+      "codePlaceholder": "Inserisci il codice di verifica",
       "sendCode": "Invia codice",
       "codeSent": "Codice inviato",
       "submit": "Registrati",
@@ -134,9 +134,9 @@
       "privacyLink": "Privacy Policy"
     },
     "social": {
-      "wechat": "WeChat",
-      "qq": "QQ",
-      "google": "Google"
+      "wechat": "Accesso WeChat",
+      "qq": "Accesso QQ",
+      "google": "Accesso Google"
     }
   },
   "docs": {
@@ -146,7 +146,7 @@
     "categories": {
       "introduction": "Introduzione",
       "quickStart": "Avvio rapido",
-      "chatlogIntegration": "Integrazione chat",
+      "chatlogIntegration": "Integrazione dati di chat",
       "usageGuide": "Guida all'uso",
       "legal": "Legale"
     },
@@ -155,70 +155,68 @@
     "lastUpdated": "Ultimo aggiornamento"
   },
   "pricing": {
-    "title": "Scegli il tuo piano",
-    "subtitle": "Prezzi flessibili per diverse esigenze",
-    "monthly": "Mensile",
-    "yearly": "Annuale",
-    "yearlyDiscount": "Risparmia il 20%",
+    "title": "Gratuito e open-source",
+    "subtitle": "Rethink AI è completamente gratuito e open-source — basta configurare la propria chiave API LLM",
+    "monthly": "",
+    "yearly": "",
+    "yearlyDiscount": "",
     "plans": {
       "free": {
-        "name": "Gratuito",
+        "name": "Open Source",
         "price": "0",
         "period": "Gratis per sempre",
-        "description": "Perfetto per provare",
+        "description": "Tutte le funzionalità, uso gratuito",
         "features": [
-          "10 analisi al mese",
-          "Analisi personalità base",
-          "Riconoscimento emotivo base",
-          "Supporto monolingue"
+          "Tutte le funzionalità AI Agent",
+          "Cambio multi-motore LLM",
+          "Decrittazione locale + Docker",
+          "Estensioni strumenti MCP",
+          "Sincronizzazione in tempo reale CDC",
+          "Multipiattaforma (macOS/Windows/Linux)"
         ],
-        "cta": "Inizia"
+        "cta": "Download gratuito"
       },
       "pro": {
-        "name": "Pro",
-        "price": "9,99",
-        "period": "€/mese",
-        "description": "Per utenti individuali",
+        "name": "Costo API LLM",
+        "price": "A consumo",
+        "period": "",
+        "description": "Addebitato dai fornitori LLM",
         "features": [
-          "100 analisi al mese",
-          "Analisi personalità completa",
-          "Tracciamento emotivo profondo",
-          "Analisi delle intenzioni",
-          "Supporto multilingue",
-          "Cronologia salvata"
+          "OpenAI / Anthropic / Google ecc.",
+          "DeepSeek / Groq / Moonshot ecc.",
+          "Il costo dipende dal fornitore scelto",
+          "Usa modelli open self-hosted gratuitamente"
         ],
-        "cta": "Abbonati ora"
+        "cta": "Scopri di più"
       },
       "enterprise": {
         "name": "Enterprise",
         "price": "Contattaci",
         "period": "",
-        "description": "Per team",
+        "description": "Per esigenze di personalizzazione team",
         "features": [
-          "Analisi illimitate",
-          "Collaborazione team",
-          "Accesso API",
-          "Account manager dedicato",
-          "Report personalizzati",
-          "Supporto prioritario"
+          "Supporto distribuzione privata",
+          "Sviluppo Agent personalizzato",
+          "Servizi di supporto tecnico",
+          "Formazione e consulenza"
         ],
-        "cta": "Contatta le vendite"
+        "cta": "Contattaci"
       }
     },
     "faq": {
       "title": "FAQ",
       "items": [
         {
-          "question": "Posso provare gratuitamente?",
-          "answer": "Sì, offriamo un piano gratuito con 10 analisi al mese, senza carta di credito."
+          "question": "L'app stessa è gratuita?",
+          "answer": "Sì, Rethink AI è completamente gratuito e open-source. Devi fornire la tua chiave API LLM — i costi di utilizzo dell'API sono addebitati dal fornitore LLM."
         },
         {
           "question": "Quali strumenti di chat sono supportati?",
-          "answer": "Attualmente supportiamo WeChat, WhatsApp, Telegram, iMessage e altri."
+          "answer": "Attualmente supporta l'interrogazione e l'analisi locale dei dati delle chat."
         },
         {
           "question": "Come viene garantita la sicurezza dei dati?",
-          "answer": "Usiamo crittografia end-to-end e cancelliamo i dati originali subito dopo l'analisi."
+          "answer": "Tutti i dati di chat sono archiviati solo sul tuo dispositivo locale e non vengono mai caricati su alcun server. Solo il testo della tua domanda viene inviato al fornitore LLM quando fai attivamente una domanda."
         }
       ]
     }
@@ -226,11 +224,11 @@
   "dashboard": {
     "welcome": "Bentornato",
     "overview": "Panoramica",
-    "recentAnalysis": "Analisi recenti",
-    "noAnalysis": "Nessuna analisi",
-    "startAnalysis": "Nuova analisi",
+    "recentAnalysis": "Conversazioni recenti",
+    "noAnalysis": "Nessun record di conversazione",
+    "startAnalysis": "Nuova conversazione",
     "quota": {
-      "title": "Quota mensile",
+      "title": "Statistiche di utilizzo",
       "used": "Usato",
       "remaining": "Rimanente",
       "total": "Totale"
@@ -250,26 +248,26 @@
       "title": "Fatturazione",
       "currentPlan": "Piano attuale",
       "expireDate": "Scade il",
-      "autoRenew": "Rinnovo auto",
-      "history": "Cronologia",
-      "noHistory": "Nessuna cronologia",
-      "upgrade": "Aggiorna",
-      "cancel": "Annulla"
+      "autoRenew": "Rinnovo automatico",
+      "history": "Cronologia fatturazione",
+      "noHistory": "Nessun record di fatturazione",
+      "upgrade": "Aggiorna piano",
+      "cancel": "Annulla abbonamento"
     }
   },
   "footer": {
     "product": "Prodotto",
     "features": "Funzionalità",
-    "pricing": "Prezzi",
+    "pricing": "Download",
     "docs": "Documentazione",
-    "company": "Azienda",
+    "company": "Progetto",
     "about": "Chi siamo",
     "blog": "Blog",
-    "careers": "Lavora con noi",
+    "careers": "Contribuisci",
     "legal": "Legale",
-    "terms": "Termini",
-    "privacy": "Privacy",
-    "contact": "Contatti",
+    "terms": "Termini di servizio",
+    "privacy": "Privacy Policy",
+    "contact": "Contattaci",
     "copyright": "© 2024 Rethink AI. Tutti i diritti riservati."
   }
 }

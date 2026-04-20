@@ -5,102 +5,142 @@ category: usageGuide
 order: 4
 ---
 
-This guide will help you make the most of Rethink AI and extract more value from your analysis reports.
+This guide will help you make the most of Rethink AI's features.
 
-## Understanding Analysis Reports
+## Chat Interface
 
-### Personality Profile
+### Sending Messages
 
-The personality profile is based on the Big Five personality model and evaluates conversation partners across five dimensions:
+Type your question in the input box at the bottom and press Enter or click the send button. The AI Agent will automatically invoke relevant tools to query your chat data and respond in natural language.
 
-- **Extraversion**  
-  Reflects social tendencies. High scores indicate outgoing and talkative behavior, while low scores indicate introversion and quietness.
-- **Openness**  
-  Reflects acceptance of new ideas. High scores indicate curiosity and creativity, while low scores indicate practicality and tradition.
-- **Conscientiousness**  
-  Reflects work attitude. High scores indicate organization and reliability, while low scores indicate spontaneity and flexibility.
-- **Agreeableness**  
-  Reflects interpersonal attitude. High scores indicate friendliness and cooperation, while low scores indicate competition and independence.
-- **Emotional Stability**  
-  Reflects emotional control. High scores indicate calmness and stability, while low scores indicate sensitivity and emotional volatility.
+### Agent Mode Switching
 
-### Emotion Curve
+You can switch Agent modes next to the input box:
 
-The emotion curve shows how emotions change throughout the conversation:
+- **Deep Mode**: Deep reasoning mode based on DeepAgents, suitable for complex analysis tasks, with persistent memory (SQLite checkpointer)
+- **React Mode**: Lightweight ReAct Agent, suitable for simple data queries with faster responses
 
-- **Positive emotions**: happiness, excitement, satisfaction, and similar signals
-- **Neutral emotions**: calm tone and factual description
-- **Negative emotions**: dissatisfaction, worry, frustration, and similar signals
+### Session Management
 
-By observing the emotion curve, you can:
+- **New Session**: Click the "New Chat" button in the sidebar
+- **Switch Sessions**: Click on a historical session in the sidebar
+- **Delete Sessions**: Right-click or swipe to delete unwanted sessions
+- **Auto Titles**: The AI automatically generates titles for each session
 
-- Identify key moments of emotional fluctuation
-- Understand which topics trigger strong emotional responses
-- Assess the overall emotional tone of the conversation
+### Tool Calls
 
-### Intent Analysis
+When the AI uses tools to query data, tool call status is displayed in messages:
 
-Intent analysis classifies needs expressed in a conversation into three types:
+- Tool name and execution status (running/completed/failed)
+- Click on tool status to view call details (input parameters and return results) in the sidebar
 
-- **Explicit needs**: directly stated requests and demands
-- **Implicit needs**: needs expressed indirectly through hints
-- **Latent needs**: deeper needs inferred from context
+### Continue Execution
 
-## Using Analysis Results
+When an Agent stops due to reaching the maximum execution step limit, you can click the "Continue" button to resume the Agent from where it left off.
 
-### Improving Communication
+## Available AI Tools
 
-Adjust your communication style based on personality results:
+The AI Agent can use the following built-in tools to query your chat data:
 
-- Be more direct and enthusiastic with highly extraverted people
-- Provide detailed information and clear plans for highly conscientious people
-- Focus on emotional connection and relationship maintenance for highly agreeable people
+| Tool | Function |
+|------|----------|
+| Get Recent Sessions | View the recent chat list |
+| Get Chat History | View message history for a specific contact or group |
+| Search Messages | Full-text search across chat history |
+| Get Contacts | Query the contact list with filtering |
+| Get Contact Tags | View tag/group categories |
+| Get Tag Members | View contacts under a specific tag |
+| Get New Messages | View unread messages |
+| Get Chat Images | Extract images from chats |
+| Decode Image | Decrypt chat image files |
+| Web Search | Search the web via Tavily (requires API key) |
 
-### Timing Matters
+## Settings
 
-Use the emotion curve to choose better timing:
+Click the Settings button in the bottom-left corner to open the Settings panel.
 
-- Make important requests when the other person's mood is positive
-- Avoid sensitive discussions when they are emotionally low
-- Pay attention to turning points and understand their triggers
+### LLM Provider Configuration
 
-### Meeting Needs
+- Configure multiple LLM providers
+- Each provider requires: name, API Base URL, API Key
+- Select the active provider and model
+- Connectivity testing supported
 
-Respond more effectively based on intent analysis:
+### LLM Engine Selection
 
-- Prioritize explicitly stated needs
-- Proactively address implied expectations
-- Anticipate potential concerns ahead of time
+Switch the underlying AI engine in Settings:
 
-## Advanced Features
+- **LangGraph** (default): Supports both Deep and React Agent modes
+- **Claude Code**: Uses the Anthropic Claude SDK
+- **Pi-AI**: Uses the Pi-AI engine with MCP tool bridging
 
-### Historical Comparison
+### MCP Server Configuration
 
-Pro users can compare multiple analyses of the same contact and track long-term changes in personality signals and emotional patterns.
+Configure MCP (Model Context Protocol) servers to extend AI tool capabilities:
 
-### Team Collaboration
+1. Find the **MCP Servers** section in Settings
+2. Add a new MCP server configuration
+3. Enter server name, command/URL, and arguments
+4. Supports both stdio and SSE connection methods
 
-The enterprise plan supports shared analysis results for teams such as sales and customer support.
+### IM Runtime Configuration
 
-### API Integration
+Configure Docker container for running the IM client:
 
-The enterprise plan offers an API so you can integrate Rethink AI capabilities into your own systems.
+- Docker image name and tag
+- VNC connection port
+- Container data mount path
 
-## Best Practices
+### Local Decryption Configuration
 
-1. **Choose representative conversations**  
-   Include multiple topics and situations for more reliable results.
-2. **Update analyses regularly**  
-   People change over time, so periodic re-analysis is useful.
-3. **Combine results with real-world context**  
-   AI analysis is a support tool, not a replacement for judgment.
-4. **Respect privacy**  
-   Get consent before analyzing conversations and do not misuse the results.
+Configure local chat database decryption:
+
+- Chat database file path
+- Decryption service status monitoring
+- CDC sync toggle and configuration
+
+### Langfuse Observability (Optional)
+
+Add tracing to AI Agent execution:
+
+1. Enable Langfuse integration
+2. Enter Langfuse Public Key and Secret Key
+3. Configure the Langfuse server URL
+4. View Agent execution traces in the Langfuse dashboard
+
+### Log Management
+
+- Set log level (debug/info/warn/error)
+- Open log folder
+- Export log files for troubleshooting
+
+## Model Switching
+
+Switch the active LLM model at the top of the chat interface:
+
+1. Click the model switcher
+2. Select from the list of configured providers and models
+3. Changes take effect immediately without restart
+
+## Session Recording
+
+Rethink AI integrates rrweb session recording:
+
+- The app automatically records user interaction sessions
+- View and manage recorded sessions in Settings
+- Supports session playback
+
+## Auto Updates
+
+The app supports automatic updates:
+
+- Checks for updates on launch
+- Downloads update packages (supports differential updates)
+- Automatic update checks can be disabled in Settings
 
 ## Need Help?
 
-If you run into issues, you can get help through the following channels:
+If you encounter any issues:
 
-- Email support@rethinkai.com
-- Visit the help center
-- Join the user community
+- Check application logs (Settings → Logs → Open Log Folder)
+- Submit an Issue: [GitHub Issues](https://github.com/ai-hermes/wechat-mem0/issues)

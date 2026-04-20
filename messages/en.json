@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "Rethink AI",
-    "slogan": "Rethink Conversations, Understand Hearts",
+    "slogan": "Intelligent Chat Data Assistant",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
     "login": "Login",
@@ -12,7 +12,7 @@
     "billing": "Billing",
     "settings": "Settings",
     "docs": "Docs",
-    "pricing": "Pricing",
+    "pricing": "Download",
     "home": "Home",
     "language": "Language",
     "loading": "Loading...",
@@ -31,46 +31,46 @@
   },
   "home": {
     "hero": {
-      "title": "Rethink Conversations",
-      "titleHighlight": "Understand Hearts",
-      "subtitle": "Import chat logs, let AI analyze personality, emotions, and true intentions of your conversation partners",
-      "cta": "Try for Free",
+      "title": "Intelligent Chat Data Assistant",
+      "titleHighlight": "Understand Conversations with AI",
+      "subtitle": "Access chat data locally, query and analyze conversations through natural language AI chat",
+      "cta": "Free Download",
       "secondaryCta": "View Docs"
     },
     "features": {
       "title": "Core Features",
-      "subtitle": "Powerful AI analysis to help you better understand every conversation",
+      "subtitle": "Powerful AI Agent capabilities to help you efficiently query and understand chat data",
       "personality": {
-        "title": "Personality Analysis",
-        "description": "Analyze personality traits through conversation content, including extraversion, openness, conscientiousness and more"
+        "title": "AI Agent Chat",
+        "description": "Ask questions in natural language — the AI automatically invokes tools to query contacts, chat history, search messages, and more"
       },
       "emotion": {
-        "title": "Emotion Recognition",
-        "description": "Precisely identify emotional changes in conversations, track sentiment trends, and seize the best communication moments"
+        "title": "Multi-Engine Support",
+        "description": "Supports LangGraph, Claude Code, Pi-AI and more, with flexible Deep/React Agent mode switching"
       },
       "intent": {
-        "title": "Intent Insight",
-        "description": "Deeply analyze the real needs and intentions behind conversations to help you respond better"
+        "title": "Local Data Security",
+        "description": "All chat data is stored only on your local device, accessed securely via local decryption or Docker container"
       },
       "multilingual": {
-        "title": "Multilingual Support",
-        "description": "Support for chat log analysis in Chinese, English, Japanese, French, Korean and more"
+        "title": "MCP Tool Extensions",
+        "description": "Supports Model Context Protocol (MCP) servers to freely extend AI Agent tool capabilities"
       }
     },
     "howItWorks": {
       "title": "How It Works",
-      "subtitle": "Three steps to start your conversation insight journey",
+      "subtitle": "Three steps to start intelligent chat data queries",
       "step1": {
-        "title": "Import Chat Logs",
-        "description": "Support exports from WeChat, WhatsApp, Telegram and other mainstream chat tools"
+        "title": "Install the App",
+        "description": "Download the installer for your OS from GitHub Releases — supports macOS, Windows, and Linux"
       },
       "step2": {
-        "title": "AI Smart Analysis",
-        "description": "Our AI model deeply analyzes conversation content and generates multi-dimensional reports"
+        "title": "Configure Data Source",
+        "description": "Set up your LLM API key and connect chat data via local decryption or Docker"
       },
       "step3": {
-        "title": "Get Insights Report",
-        "description": "View detailed personality analysis, emotion curves and intent interpretation"
+        "title": "Chat & Query",
+        "description": "Ask the AI questions in natural language to query and analyze your chat history"
       }
     },
     "testimonials": {
@@ -78,26 +78,26 @@
       "subtitle": "See what other users say",
       "items": [
         {
-          "content": "Rethink AI helped me better understand customer needs, increasing sales by 30%.",
+          "content": "Rethink AI lets me quickly find key information in my chat history, greatly improving productivity.",
           "author": "Michael Zhang",
-          "role": "Sales Manager"
+          "role": "Product Manager"
         },
         {
-          "content": "As a therapist, this tool helps me quickly understand my clients' states.",
+          "content": "Data stays completely local, so privacy is guaranteed. The AI query feature is incredibly useful.",
           "author": "Dr. Lisa Chen",
-          "role": "Psychotherapist"
+          "role": "Operations Lead"
         },
         {
-          "content": "Team communication efficiency improved significantly, reducing many unnecessary misunderstandings.",
+          "content": "Switching between Agent modes is flexible — Deep mode for complex analysis, React mode for quick queries.",
           "author": "David Wang",
-          "role": "Project Manager"
+          "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Ready to Rethink Conversations?",
-      "subtitle": "Sign up now for free analysis credits",
-      "button": "Start Free"
+      "title": "Ready to Query Your Chat Data Intelligently?",
+      "subtitle": "Free and open-source — download and start using now",
+      "button": "Free Download"
     }
   },
   "auth": {
@@ -118,7 +118,7 @@
     },
     "register": {
       "title": "Create Account",
-      "subtitle": "Start your AI conversation analysis journey",
+      "subtitle": "Start using the Rethink AI intelligent assistant",
       "phone": "Phone Number",
       "phonePlaceholder": "Enter your phone number",
       "code": "Verification Code",
@@ -146,7 +146,7 @@
     "categories": {
       "introduction": "Introduction",
       "quickStart": "Quick Start",
-      "chatlogIntegration": "Chat Log Integration",
+      "chatlogIntegration": "Chat Data Integration",
       "usageGuide": "Usage Guide",
       "legal": "Legal"
     },
@@ -155,70 +155,68 @@
     "lastUpdated": "Last Updated"
   },
   "pricing": {
-    "title": "Choose Your Plan",
-    "subtitle": "Flexible pricing for different needs",
-    "monthly": "Monthly",
-    "yearly": "Yearly",
-    "yearlyDiscount": "Save 20%",
+    "title": "Free & Open Source",
+    "subtitle": "Rethink AI is completely free and open-source — just configure your own LLM API key",
+    "monthly": "",
+    "yearly": "",
+    "yearlyDiscount": "",
     "plans": {
       "free": {
-        "name": "Free",
+        "name": "Open Source",
         "price": "0",
         "period": "Forever free",
-        "description": "Perfect for trying out",
+        "description": "Full features, free to use",
         "features": [
-          "10 analyses per month",
-          "Basic personality analysis",
-          "Basic emotion recognition",
-          "Single language support"
+          "All AI Agent features",
+          "Multi LLM engine switching",
+          "Local decryption + Docker",
+          "MCP tool extensions",
+          "CDC real-time sync",
+          "Cross-platform (macOS/Windows/Linux)"
         ],
-        "cta": "Get Started"
+        "cta": "Free Download"
       },
       "pro": {
-        "name": "Pro",
-        "price": "9.99",
-        "period": "/month",
-        "description": "For individual users",
+        "name": "LLM API Cost",
+        "price": "Pay as you go",
+        "period": "",
+        "description": "Charged by LLM providers",
         "features": [
-          "100 analyses per month",
-          "Full personality analysis",
-          "Deep emotion tracking",
-          "Intent insight analysis",
-          "Multi-language support",
-          "History saved"
+          "OpenAI / Anthropic / Google etc.",
+          "DeepSeek / Groq / Moonshot etc.",
+          "Cost depends on your chosen provider",
+          "Use self-hosted open models for free"
         ],
-        "cta": "Subscribe Now"
+        "cta": "Learn More"
       },
       "enterprise": {
         "name": "Enterprise",
         "price": "Contact Us",
         "period": "",
-        "description": "For teams",
+        "description": "For team customization needs",
         "features": [
-          "Unlimited analyses",
-          "Team collaboration",
-          "API access",
-          "Dedicated account manager",
-          "Custom reports",
-          "Priority support"
+          "Private deployment support",
+          "Custom Agent development",
+          "Technical support services",
+          "Training & consulting"
         ],
-        "cta": "Contact Sales"
+        "cta": "Contact Us"
       }
     },
     "faq": {
       "title": "FAQ",
       "items": [
         {
-          "question": "Can I try it for free?",
-          "answer": "Yes, we offer a free tier with 10 analyses per month, no credit card required."
+          "question": "Is the app itself free?",
+          "answer": "Yes, Rethink AI is completely free and open-source. You need to provide your own LLM API key — API usage fees are charged by the LLM provider."
         },
         {
           "question": "Which chat tools are supported?",
-          "answer": "We currently support exports from WeChat, WhatsApp, Telegram, iMessage and more."
+          "answer": "Currently supports local querying and analysis of chat data."
         },
         {
           "question": "How is data security ensured?",
-          "answer": "We use end-to-end encryption and delete original data immediately after analysis to ensure your privacy."
+          "answer": "All chat data is stored only on your local device and is never uploaded to any server. Only your question text is sent to the LLM provider when you actively ask a question."
         }
       ]
     }
@@ -226,11 +224,11 @@
   "dashboard": {
     "welcome": "Welcome Back",
     "overview": "Overview",
-    "recentAnalysis": "Recent Analysis",
-    "noAnalysis": "No analysis records",
-    "startAnalysis": "Start New Analysis",
+    "recentAnalysis": "Recent Conversations",
+    "noAnalysis": "No conversation records",
+    "startAnalysis": "Start New Conversation",
     "quota": {
-      "title": "Monthly Quota",
+      "title": "Usage Statistics",
       "used": "Used",
       "remaining": "Remaining",
       "total": "Total"
@@ -260,12 +258,12 @@
   "footer": {
     "product": "Product",
     "features": "Features",
-    "pricing": "Pricing",
+    "pricing": "Download",
     "docs": "Documentation",
-    "company": "Company",
+    "company": "Project",
     "about": "About Us",
     "blog": "Blog",
-    "careers": "Careers",
+    "careers": "Contribute",
     "legal": "Legal",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",

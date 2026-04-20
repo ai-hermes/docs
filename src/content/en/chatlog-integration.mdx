@@ -1,125 +1,141 @@
 ---
-title: Chat Log Integration
-description: Learn how to import chat logs from various tools
+title: Chat Data Integration
+description: Learn how to connect your chat data to Rethink AI
 category: chatlogIntegration
 order: 3
 ---
 
-This document explains how to export logs from common chat tools and import them into Rethink AI for analysis.
+This document explains how to connect your chat data to Rethink AI for intelligent querying and analysis.
 
-## Supported Chat Tools
+## Integration Methods
+
+Rethink AI supports two methods for accessing chat data. Both are performed locally — no data is uploaded to any server.
 
 <table>
   <thead>
     <tr>
-      <th>Chat Tool</th>
-      <th>Supported Format</th>
-      <th>Export Method</th>
+      <th>Method</th>
+      <th>Use Case</th>
+      <th>Dependencies</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>WeChat</td>
-      <td>TXT</td>
-      <td>Built-in export</td>
+      <td>Local Decryption</td>
+      <td>IM client already installed on this machine</td>
+      <td>None</td>
     </tr>
     <tr>
-      <td>WhatsApp</td>
-      <td>TXT</td>
-      <td>Built-in export</td>
-    </tr>
-    <tr>
-      <td>Telegram</td>
-      <td>JSON, HTML</td>
-      <td>Desktop export</td>
-    </tr>
-    <tr>
-      <td>iMessage</td>
-      <td>CSV</td>
-      <td>Third-party tools</td>
-    </tr>
-    <tr>
-      <td>LINE</td>
-      <td>TXT</td>
-      <td>Built-in export</td>
+      <td>Docker Container</td>
+      <td>Need isolated IM environment</td>
+      <td>Docker Desktop</td>
     </tr>
   </tbody>
 </table>
 
-## WhatsApp Export Guide
+## Local Decryption (Recommended)
 
-### Export Steps
+Local decryption reads and decrypts chat database files directly from your device, without requiring Docker.
 
-1. Open WhatsApp
-2. Enter the target chat
-3. Tap the contact or group name
-4. Scroll down and find "Export Chat"
-5. Select "Without Media"
-6. Choose a save or share method
+### How It Works
 
-### Notes
+The IM client stores encrypted SQLite database files locally. Rethink AI uses a native C decryption module to decrypt these databases and extract contacts, group chats, and chat history.
 
-- The exported file contains the full chat history
-- Selecting "Without Media" is recommended to reduce file size
-- The file format is `.txt`
+### Configuration Steps
 
-## Telegram Export Guide
+1. Ensure the IM client is installed and logged in on your machine
+2. Open the Rethink AI Settings panel
+3. Find the **Local Decryption** section
+4. Set the chat database path:
+   - **macOS**: Usually auto-detected, located in the IM client's application data directory
+   - **Windows**: Usually under the IM data folder in your user documents directory
+5. Click **Start Decryption Service**
+6. Wait for decryption to complete
 
-### Using Telegram Desktop
+### Supported Data Types
 
-1. Download and log in to Telegram Desktop
-2. Open the target chat
-3. Click the three dots in the top-right corner
-4. Select "Export Chat History"
-5. In the export settings:
-   - Choose "JSON" or "HTML" for format. JSON is recommended
-   - Uncheck media files
-   - Set the time range
-6. Click "Export"
+- **Contacts**: Username, nickname, alias
+- **Group Chats**: Group name, member list
+- **Chat History**: Message content, timestamps, senders
+- **Images**: Supports decryption and viewing of chat images
 
-## File Format Requirements
+## Docker Container Method
 
-### TXT Format
+The Docker container method runs the IM client in an isolated environment to access data.
 
-```text
-[2024-01-15 10:30:25] John: Hey, how are you doing?
-[2024-01-15 10:31:02] Jane: I'm good, thanks for asking!
-[2024-01-15 10:32:15] John: Are you free this weekend? I'd like to have dinner together
-```
+### Prerequisites
 
-### JSON Format
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
+- Docker service running
 
-```json
-{
-  "messages": [
-    {
-      "date": "2024-01-15T10:30:25",
-      "from": "John",
-      "text": "Hey, how are you doing?"
-    },
-    {
-      "date": "2024-01-15T10:31:02",
-      "from": "Jane",
-      "text": "I'm good, thanks for asking!"
-    }
-  ]
-}
-```
+### Configuration Steps
+
+1. Open the Rethink AI Settings panel
+2. Find the **IM Runtime** section
+3. Configure the following:
+   - **Docker Image**: Use the default image or specify a custom one
+   - **VNC Port**: For remote connection to the IM client interface (default 5900)
+   - **Data Mount Path**: Local mapping path for container chat data
+4. Click **Start Container**
+5. Connect via a VNC client and log in to the IM client
+6. After successful login, data will automatically sync locally
+
+### Environment Check
+
+Before starting the container, the app automatically verifies:
+
+- Docker service is running
+- Required ports are available
+- Image has been downloaded
+
+## CDC Real-Time Sync
+
+CDC (Change Data Capture) automatically monitors chat database file changes and decrypts new messages incrementally in real time.
+
+### Enabling CDC
+
+1. Find the **CDC Sync** configuration in Settings
+2. Turn on the CDC toggle
+3. Configure the watch directory (usually the chat database directory)
+
+### How It Works
+
+- **Event-Driven**: Uses file system watchers to detect database file changes
+- **Polling**: Reconciliation every 60 seconds
+- **Incremental Decryption**: Only processes changed data to save resources
+- **Failure Retry**: Exponential backoff strategy, up to 10-minute intervals
+
+## Data Storage
+
+All imported chat data is stored in a local SQLite database:
+
+- **Location**: Inside the application data directory
+- **Format**: SQLite database files
+- **Cleanup**: You can delete the database files manually at any time
 
 ## FAQ
 
-### What if the exported file is too large?
+### What if decryption fails?
 
-Export a narrower time range or exclude media files. Rethink AI supports uploads up to 50 MB.
+1. Confirm the IM client is running and logged in
+2. Verify the database file path is correct
+3. Check application logs for detailed error information
+4. Make sure your client version is compatible
 
-### File Encoding Issues
+### Docker container won't start?
 
-Make sure the file uses UTF-8 encoding. If you see garbled text, re-save the file as UTF-8 with a text editor.
+1. Confirm Docker Desktop is running
+2. Check that required ports (e.g., VNC port) are not in use
+3. Try manually pulling the Docker image
 
-### How is private content handled?
+### Data sync is delayed?
 
-You can remove sensitive information before uploading. Our system does not store the original chat logs.
+Enable CDC real-time sync to reduce delays. Without CDC, you need to manually restart the decryption service to get the latest data.
+
+### Does it support multiple accounts?
+
+Currently, only a single IM account is supported. To switch accounts, switch in the IM client first, then restart the decryption service.
 
 ## Next Steps
 
-Now that you know how to export chat logs, read the [Usage Guide](./usage-guide) to make the most of your analysis results.
+Once data integration is complete, read the [Usage Guide](./usage-guide) to learn how to query and analyze your chat data through AI conversations.

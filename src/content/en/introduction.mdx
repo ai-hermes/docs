@@ -5,55 +5,72 @@ category: introduction
 order: 1
 ---
 
-Rethink AI is an intelligent conversation analysis tool powered by advanced large language models. By importing your chat logs, our AI can help you deeply analyze the personality traits, emotional changes, and true intentions of your conversation partners.
+Rethink AI is an intelligent desktop application built with Electron that lets you query and understand your chat data through natural language conversations with AI. The application accesses your chat database locally, combining multiple LLM engines and AI Agents to help you efficiently search chat history and analyze conversations.
 
 ## Core Features
 
-### Personality Analysis
+### AI Agent Chat
 
-Our AI analyzes personality traits from multiple dimensions based on conversation content:
+Ask questions in natural language to query and analyze your chat data:
 
-- **Extraversion**: Social tendencies and expression style
-- **Openness**: Acceptance of new things
-- **Conscientiousness**: Seriousness and reliability
-- **Agreeableness**: Friendliness in interpersonal interactions
-- **Emotional Stability**: Frequency and degree of emotional fluctuations
+- **Contact Lookup**: "Find contact info for Zhang San"
+- **Chat History**: "What did we discuss in the product team group last week?"
+- **Message Search**: "Who mentioned the weekend dinner recently?"
+- **Data Analysis**: "How often did I communicate with Client A this month?"
 
-### Emotion Recognition
+### Multi-Engine Support
 
-Track emotional changes in conversations in real time to help you:
+Switch between different AI engines to suit different use cases:
 
-- Understand which topics cause significant emotional fluctuations
-- Identify potential dissatisfaction or concerns
-- Seize the best communication opportunities
+- **LangGraph (Deep Agent)**: Deep reasoning agent based on DeepAgents, with persistent memory
+- **LangGraph (ReAct Agent)**: Lightweight ReAct agent for quick query responses
+- **Claude Code**: Agent execution powered by Anthropic Claude SDK
+- **Pi-AI**: Pi-AI engine with MCP tool bridging
 
-### Intent Insight
+### Multiple LLM Providers
 
-Deeply analyze the true intentions behind conversations, including:
+Built-in support for major LLM providers, switchable at runtime:
 
-- Explicitly expressed needs
-- Implied expectations
-- Potential concerns or worries
+- OpenAI / Anthropic / Google
+- DeepSeek / Groq / Moonshot / Zhipu AI
+- Custom OpenAI-compatible endpoints
 
-## Use Cases
+### Local Chat Data Access
 
-Rethink AI can help various groups better understand their conversation partners:
+Access your chat data securely through two methods — data always stays on your device:
 
-- **Sales Professionals**: More accurately grasp customer needs
-- **Psychotherapists**: Quickly understand client states
-- **Team Managers**: Improve team communication efficiency
-- **Customer Service**: Enhance service quality
-- **Regular Users**: Better understand friends and family
+- **Docker Container**: Run the IM client in an isolated Docker/VirtualBox environment
+- **Local Decryption**: Directly decrypt local chat database files (native C implementation)
+- **CDC Real-Time Sync**: Automatically detect chat database changes and decrypt incrementally
+
+### MCP Tool Extensions
+
+Extend AI Agent capabilities with Model Context Protocol (MCP) servers:
+
+- Connect MCP servers via stdio or SSE protocols
+- Configure multiple MCP servers in Settings
+- Built-in Tavily web search and other tools
+
+## Technical Architecture
+
+Rethink AI is built with Electron + React + TypeScript:
+
+- **Desktop Framework**: Electron 39 + electron-vite
+- **Frontend UI**: React 19 + TailwindCSS 4 + shadcn/ui
+- **AI/Agent**: LangChain + LangGraph + DeepAgents
+- **Local Database**: SQLite (better-sqlite3)
+- **Observability**: Langfuse (optional) + PostHog (anonymous analytics)
+- **Cross-Platform**: macOS, Windows, Linux
 
 ## Data Security
 
 We take your data privacy seriously:
 
-- All data transmission uses end-to-end encryption
-- Original chat logs are deleted immediately after analysis
-- Your data will not be used for model training
-- Compliant with GDPR and other international data protection standards
+- All chat data is stored only on your local device — never uploaded to the cloud
+- Only your question text is sent to the LLM provider when you actively ask a question
+- Anonymous analytics can be disabled in Settings
+- See our [Privacy Policy](./privacy) for details
 
 ## Next Steps
 
-Ready to get started? Continue reading the [Quick Start](./quick-start) guide to learn how to start using Rethink AI in 5 minutes.
+Ready to get started? Continue reading the [Quick Start](./quick-start) guide to learn how to install and configure Rethink AI.

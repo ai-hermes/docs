@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "Rethink AI",
-    "slogan": "重新思考对话，洞察人心",
+    "slogan": "智能聊天数据助手",
     "getStarted": "开始使用",
     "learnMore": "了解更多",
     "login": "登录",
@@ -12,7 +12,7 @@
     "billing": "付费信息",
     "settings": "设置",
     "docs": "文档",
-    "pricing": "定价",
+    "pricing": "下载",
     "home": "首页",
     "language": "语言",
     "loading": "加载中...",
@@ -31,46 +31,46 @@
   },
   "home": {
     "hero": {
-      "title": "重新思考对话",
-      "titleHighlight": "洞察人心",
-      "subtitle": "导入聊天记录，AI 帮你分析对话者的性格、情绪和真实诉求",
-      "cta": "免费试用",
+      "title": "智能聊天数据助手",
+      "titleHighlight": "用 AI 理解对话",
+      "subtitle": "本地访问聊天数据，通过自然语言 AI 对话查询和分析聊天记录",
+      "cta": "免费下载",
       "secondaryCta": "查看文档"
     },
     "features": {
       "title": "核心功能",
-      "subtitle": "强大的 AI 分析能力，帮你更好地理解每一次对话",
+      "subtitle": "强大的 AI Agent 能力，帮你高效查询和理解聊天数据",
       "personality": {
-        "title": "性格分析",
-        "description": "通过对话内容分析对方的性格特征，包括外向性、开放性、责任心等多维度画像"
+        "title": "AI Agent 对话",
+        "description": "通过自然语言提问，AI 自动调用工具查询联系人、聊天记录、搜索消息等数据"
       },
       "emotion": {
-        "title": "情绪识别",
-        "description": "精准识别对话中的情绪变化，追踪情感走向，把握沟通最佳时机"
+        "title": "多引擎支持",
+        "description": "支持 LangGraph、Claude Code、Pi-AI 等多种 AI 引擎，灵活切换 Deep/React Agent 模式"
       },
       "intent": {
-        "title": "诉求洞察",
-        "description": "深度解析对话背后的真实需求和意图，帮你更好地回应对方"
+        "title": "本地数据安全",
+        "description": "所有聊天数据仅存储在本地设备，通过本地解密或 Docker 容器方式安全访问"
       },
       "multilingual": {
-        "title": "多语言支持",
-        "description": "支持中、英、日、法、韩等主流语言的聊天记录分析"
+        "title": "MCP 工具扩展",
+        "description": "支持 Model Context Protocol (MCP) 服务器，自由扩展 AI Agent 的工具能力"
       }
     },
     "howItWorks": {
       "title": "如何使用",
-      "subtitle": "三步开始你的对话洞察之旅",
+      "subtitle": "三步开始智能聊天数据查询",
       "step1": {
-        "title": "导入聊天记录",
-        "description": "支持微信、WhatsApp、Telegram 等主流聊天工具的记录导出"
+        "title": "安装应用",
+        "description": "从 GitHub Releases 下载适合您操作系统的安装包，支持 macOS、Windows 和 Linux"
       },
       "step2": {
-        "title": "AI 智能分析",
-        "description": "我们的 AI 模型会深度分析对话内容，生成多维度报告"
+        "title": "配置数据源",
+        "description": "配置 LLM API Key，通过本地解密或 Docker 方式接入聊天数据"
       },
       "step3": {
-        "title": "获取洞察报告",
-        "description": "查看详细的性格分析、情绪曲线和诉求解读"
+        "title": "对话查询",
+        "description": "用自然语言向 AI 提问，即可查询和分析您的聊天记录"
       }
     },
     "testimonials": {
@@ -78,26 +78,26 @@
       "subtitle": "看看其他用户怎么说",
       "items": [
         {
-          "content": "Rethink AI 帮我更好地理解了客户的需求，销售业绩提升了30%。",
+          "content": "Rethink AI 让我能快速找到历史聊天记录中的关键信息，工作效率大幅提升。",
           "author": "张明",
-          "role": "销售经理"
+          "role": "产品经理"
         },
         {
-          "content": "作为心理咨询师，这个工具让我能更快地了解来访者的状态。",
+          "content": "数据完全在本地，隐私安全有保障。AI 查询功能非常实用。",
           "author": "李婷",
-          "role": "心理咨询师"
+          "role": "运营主管"
         },
         {
-          "content": "团队沟通效率大幅提升，减少了很多不必要的误解。",
+          "content": "多种 Agent 模式切换很灵活，复杂分析用 Deep 模式，简单查询用 React 模式。",
           "author": "王强",
-          "role": "项目经理"
+          "role": "技术负责人"
         }
       ]
     },
     "cta": {
-      "title": "准备好重新思考对话了吗？",
-      "subtitle": "立即注册，获得免费分析额度",
-      "button": "免费开始"
+      "title": "准备好智能查询聊天数据了吗？",
+      "subtitle": "免费开源，立即下载使用",
+      "button": "免费下载"
     }
   },
   "auth": {
@@ -118,7 +118,7 @@
     },
     "register": {
       "title": "创建账户",
-      "subtitle": "开始你的 AI 对话分析之旅",
+      "subtitle": "开始使用 Rethink AI 智能助手",
       "phone": "手机号",
       "phonePlaceholder": "请输入手机号",
       "code": "验证码",
@@ -146,7 +146,7 @@
     "categories": {
       "introduction": "产品介绍",
       "quickStart": "快速上手",
-      "chatlogIntegration": "对接聊天记录",
+      "chatlogIntegration": "聊天数据接入",
       "usageGuide": "使用说明",
       "legal": "法律条款"
     },
@@ -155,70 +155,68 @@
     "lastUpdated": "最后更新"
   },
   "pricing": {
-    "title": "选择适合你的方案",
-    "subtitle": "灵活的定价，满足不同需求",
-    "monthly": "月付",
-    "yearly": "年付",
-    "yearlyDiscount": "节省 20%",
+    "title": "免费开源",
+    "subtitle": "Rethink AI 完全免费开源，您只需自行配置 LLM API Key",
+    "monthly": "",
+    "yearly": "",
+    "yearlyDiscount": "",
     "plans": {
       "free": {
-        "name": "免费版",
+        "name": "开源版",
         "price": "0",
         "period": "永久免费",
-        "description": "适合个人体验",
+        "description": "完整功能，免费使用",
         "features": [
-          "每月 10 次分析",
-          "基础性格分析",
-          "基础情绪识别",
-          "单一语言支持"
+          "全部 AI Agent 功能",
+          "多 LLM 引擎切换",
+          "本地解密 + Docker 方式",
+          "MCP 工具扩展",
+          "CDC 实时同步",
+          "跨平台支持 (macOS/Windows/Linux)"
         ],
-        "cta": "开始使用"
+        "cta": "免费下载"
       },
       "pro": {
-        "name": "专业版",
-        "price": "99",
-        "period": "/月",
-        "description": "适合个人用户",
+        "name": "LLM API 费用",
+        "price": "按量计费",
+        "period": "",
+        "description": "由 LLM 服务商收取",
         "features": [
-          "每月 100 次分析",
-          "完整性格分析",
-          "深度情绪追踪",
-          "诉求洞察分析",
-          "多语言支持",
-          "历史记录保存"
+          "OpenAI / Anthropic / Google 等",
+          "DeepSeek / Groq / Moonshot 等",
+          "费用取决于您选择的服务商",
+          "可使用自部署的开源模型免费使用"
         ],
-        "cta": "立即订阅"
+        "cta": "了解更多"
       },
       "enterprise": {
-        "name": "企业版",
+        "name": "企业部署",
         "price": "联系我们",
         "period": "",
-        "description": "适合团队使用",
+        "description": "适合团队定制需求",
         "features": [
-          "无限次分析",
-          "团队协作功能",
-          "API 接口调用",
-          "专属客户经理",
-          "定制化报告",
-          "优先技术支持"
+          "私有化部署支持",
+          "定制化 Agent 开发",
+          "技术支持服务",
+          "培训与咨询"
         ],
-        "cta": "联系销售"
+        "cta": "联系我们"
       }
     },
     "faq": {
       "title": "常见问题",
       "items": [
         {
-          "question": "可以免费试用吗？",
-          "answer": "是的，我们提供免费版，每月可进行 10 次分析，无需绑定信用卡。"
+          "question": "应用本身是免费的吗？",
+          "answer": "是的，Rethink AI 完全免费开源。您需要自行提供 LLM 服务的 API Key，API 调用费用由 LLM 服务商收取。"
         },
         {
           "question": "支持哪些聊天工具？",
-          "answer": "目前支持微信、WhatsApp、Telegram、iMessage 等主流聊天工具的记录导出。"
+          "answer": "目前支持聊天数据的本地查询和分析。"
         },
         {
           "question": "数据安全如何保障？",
-          "answer": "我们采用端到端加密，分析完成后立即删除原始数据，确保你的隐私安全。"
+          "answer": "所有聊天数据仅存储在您的本地设备上，不会上传到任何服务器。仅在您主动向 AI 提问时，问题文本会发送到您配置的 LLM 服务商。"
         }
       ]
     }
@@ -226,11 +224,11 @@
   "dashboard": {
     "welcome": "欢迎回来",
     "overview": "概览",
-    "recentAnalysis": "最近分析",
-    "noAnalysis": "暂无分析记录",
-    "startAnalysis": "开始新分析",
+    "recentAnalysis": "最近对话",
+    "noAnalysis": "暂无对话记录",
+    "startAnalysis": "开始新对话",
     "quota": {
-      "title": "本月配额",
+      "title": "使用统计",
       "used": "已使用",
       "remaining": "剩余",
       "total": "总计"
@@ -260,12 +258,12 @@
   "footer": {
     "product": "产品",
     "features": "功能特性",
-    "pricing": "定价方案",
+    "pricing": "下载",
     "docs": "使用文档",
-    "company": "公司",
+    "company": "项目",
     "about": "关于我们",
     "blog": "博客",
-    "careers": "加入我们",
+    "careers": "参与贡献",
     "legal": "法律条款",
     "terms": "服务条款",
     "privacy": "隐私政策",

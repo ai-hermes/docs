@@ -15,8 +15,8 @@ Welcome to Rethink AI (hereinafter referred to as "the Application"). We take yo
 
 ## 1. Core Privacy Commitments
 
-### 1.1 WeChat Data Stays Local
-**All your WeChat data — including contacts, group chats, and chat history — is stored exclusively on your local device. It is never uploaded to any cloud server or third-party service.**
+### 1.1 Chat Data Stays Local
+**All your chat data — including contacts, group chats, and chat history — is stored exclusively on your local device. It is never uploaded to any cloud server or third-party service.**
 
 ### 1.2 Minimal Data Collection
 We only collect essential anonymous behavioral analytics and error logs to improve the product experience. No chat content or personally identifiable information is involved.
@@ -25,8 +25,8 @@ We only collect essential anonymous behavioral analytics and error logs to impro
 
 ## 2. Information We Collect
 
-### 2.1 WeChat Data (Stored Entirely on Your Device)
-The Application accesses your WeChat data through a Docker container, including:
+### 2.1 Chat Data (Stored Entirely on Your Device)
+The Application accesses your chat data through local decryption or a Docker container, including:
 - Contact information (username, nickname, remarks)
 - Group chat information (group name, member list)
 - Chat history (message content, timestamps, senders)
@@ -71,8 +71,8 @@ When an application error occurs, we may collect:
 ## 3. How We Use Your Information
 
 ### 3.1 Providing AI Assistant Services
-- **Local AI analysis**: Your WeChat data is processed locally to generate AI responses
-- **LLM API calls**: When you actively ask the AI a question, only your input is sent to the LLM provider you have configured (e.g., OpenAI, Anthropic). We do not proactively upload your WeChat data
+- **Local AI analysis**: Your chat data is processed locally to generate AI responses
+- **LLM API calls**: When you actively ask the AI a question, only your input is sent to the LLM provider you have configured (e.g., OpenAI, Anthropic). We do not proactively upload your chat data
 
 ### 3.2 Product Improvement
 - Analyzing anonymous usage data to optimize feature design
@@ -123,7 +123,7 @@ We may disclose your information in the following circumstances:
 - **Access control**: Only you can access the local database
 
 ### 5.2 Data Isolation
-- WeChat data runs in an isolated Docker container
+- Chat data runs in an isolated Docker container
 - Data from different users is completely independent
 
 ### 5.3 Security Recommendations
@@ -142,7 +142,7 @@ You may at any time:
 
 ### 6.2 Data Deletion
 You have the right to delete:
-- **Local WeChat data**: Delete the SQLite database file in the application data directory
+- **Local chat data**: Delete the SQLite database file in the application data directory
 - **Account data**: Use the "Delete Account" feature in Settings
 - **Analytics data**: Contact us to delete anonymous records in PostHog
 
@@ -157,7 +157,7 @@ In Settings, you can:
 ## 7. Data Retention
 
 ### 7.1 Local Data
-- **WeChat data**: Retained permanently on your device until you manually delete it
+- **Chat data**: Retained permanently on your device until you manually delete it
 - **Configuration files**: Automatically deleted when the Application is uninstalled
 
 ### 7.2 Cloud Data
@@ -175,7 +175,7 @@ The Application is not intended for children under the age of 14. If we discover
 
 ## 9. Cross-Border Data Transfers
 
-- **WeChat data**: No cross-border transfer involved (stored entirely locally)
+- **Chat data**: No cross-border transfer involved (stored entirely locally)
 - **Analytics data**: PostHog servers may be located outside your jurisdiction, but only anonymous data is transmitted
 - **LLM API**: Depends on the provider you select (e.g., OpenAI is based in the United States)
 

@@ -82,7 +82,8 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          {t('copyright')}
+          <p>{t('copyright')}</p>
+          <p className="mt-1 text-xs opacity-50">Build {process.env.BUILD_ID}</p>
         </div>
       </div>
     </footer>

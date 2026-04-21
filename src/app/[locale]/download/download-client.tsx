@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const RELEASES_URL = '/api/releases';
+const BASE_URL = 'http://static.rethinkai.spotty.com.cn';
 const GITHUB_RELEASES = 'https://github.com/ai-hermes/wechat-mem0/releases';
 
 interface Release {
@@ -122,7 +123,7 @@ export default function DownloadClient() {
             {(() => {
               const config = platformConfig[detected];
               const Icon = config.icon;
-              const downloadUrl = `/api/download?file=${encodeURIComponent(latest.downloads[detected])}`;
+              const downloadUrl = `${BASE_URL}/${latest.downloads[detected]}`;
               return (
                 <>
                   <Icon className="w-16 h-16 text-purple-500" />
@@ -130,11 +131,12 @@ export default function DownloadClient() {
                     <p className="text-xl font-semibold">{config.label}</p>
                     <p className="text-sm text-muted-foreground mt-1">{config.sublabel}</p>
                   </div>
-                  <Button asChild className="w-full max-w-xs gap-2 cursor-pointer gradient-primary hover:gradient-primary-hover text-white shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/25 transition-shadow duration-200 h-12 text-base">
-                    <a href={downloadUrl}>
-                      <Download className="w-5 h-5" />
-                      {t('downloadBtn')}
-                    </a>
+                  <Button
+                    className="w-full max-w-xs gap-2 cursor-pointer gradient-primary hover:gradient-primary-hover text-white shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/25 transition-shadow duration-200 h-12 text-base"
+                    onClick={() => { window.location.href = downloadUrl; }}
+                  >
+                    <Download className="w-5 h-5" />
+                    {t('downloadBtn')}
                   </Button>
                 </>
               );
@@ -160,7 +162,7 @@ export default function DownloadClient() {
           {(detected ? otherPlatforms : allPlatforms).map((platform) => {
             const config = platformConfig[platform];
             const Icon = config.icon;
-            const downloadUrl = `/api/download?file=${encodeURIComponent(latest.downloads[platform])}`;
+            const downloadUrl = `${BASE_URL}/${latest.downloads[platform]}`;
 
             return (
               <div
@@ -172,11 +174,14 @@ export default function DownloadClient() {
                   <p className="font-semibold">{config.label}</p>
                   <p className="text-xs text-muted-foreground">{config.sublabel}</p>
                 </div>
-                <Button asChild variant="outline" size="sm" className="gap-1.5 cursor-pointer shrink-0">
-                  <a href={downloadUrl}>
-                    <Download className="w-3.5 h-3.5" />
-                    {t('downloadBtn')}
-                  </a>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="gap-1.5 cursor-pointer shrink-0"
+                  onClick={() => { window.location.href = downloadUrl; }}
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  {t('downloadBtn')}
                 </Button>
               </div>
             );

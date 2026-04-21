@@ -11,7 +11,5 @@ export async function GET(request: NextRequest) {
 
   const url = `${BASE_URL}/${file}`;
 
-  // Server-side redirect to HTTP resource — browser treats this as a
-  // same-origin navigation so mixed-content blocking does not apply.
   return NextResponse.redirect(url, 302);
 }

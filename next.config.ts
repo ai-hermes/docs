@@ -11,8 +11,7 @@ const withMDX = createMDX({
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   env: {
-    BUILD_TIME: new Date().toISOString(),
-    BUILD_ID: `${new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14)}`,
+    BUILD_TIME: new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Shanghai' }).replace(' ', 'T'),
   },
 };
 

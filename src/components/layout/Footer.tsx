@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
           <p>{t('copyright')}</p>
-          <p className="mt-1 text-xs opacity-50">Build {process.env.BUILD_ID}</p>
+          <p className="mt-1 text-xs opacity-50">Build {process.env.BUILD_TIME?.replace('T', ' ').slice(0, 16)}</p>
         </div>
       </div>
     </footer>

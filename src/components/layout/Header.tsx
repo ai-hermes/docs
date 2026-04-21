@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,13 +14,19 @@ export default function Header() {
   const t = useTranslations('common');
   const params = useParams();
   const locale = params.locale as string;
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: `/${locale}`, label: t('home') },
-    { href: `/${locale}/docs`, label: t('docs') },
-    { href: `/${locale}/download`, label: t('pricing') },
+    { href: `/${locale}`, label: t('home'), exact: true },
+    { href: `/${locale}/docs`, label: t('docs'), exact: false },
+    { href: `/${locale}/download`, label: t('pricing'), exact: false },
   ];
+
+  function isActive(href: string, exact: boolean) {
+    if (exact) return pathname === href;
+    return pathname.startsWith(href);
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -45,7 +51,11 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                isActive(item.href, item.exact)
+                  ? 'text-foreground'
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
             >
               {item.label}
             </Link>
@@ -72,7 +82,11 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  className={`text-lg font-medium transition-colors ${
+                    isActive(item.href, item.exact)
+                      ? 'text-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
                 >
                   {item.label}
                 </Link>

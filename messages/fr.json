@@ -33,7 +33,7 @@
     "hero": {
       "title": "Assistant intelligent pour données de chat",
       "titleHighlight": "Comprenez vos conversations avec l'IA",
-      "subtitle": "Accédez localement à vos données de chat, interrogez et analysez vos conversations via un chat IA en langage naturel",
+      "subtitle": "Déchiffrement local en temps réel sans export répété — interrogez et analysez vos conversations via un chat IA en langage naturel",
       "cta": "Téléchargement gratuit",
       "secondaryCta": "Voir la documentation"
     },
@@ -49,8 +49,8 @@
         "description": "Compatible avec LangGraph, Claude Code, Pi-AI et plus, avec un basculement flexible entre les modes Deep/React Agent"
       },
       "intent": {
-        "title": "Sécurité locale des données",
-        "description": "Toutes les données de chat sont stockées uniquement sur votre appareil local, accessibles de manière sécurisée via le déchiffrement local ou un conteneur Docker"
+        "title": "Déchiffrement en temps réel, sans export",
+        "description": "Déchiffrez directement les bases de données de chat locales avec synchronisation incrémentale CDC en temps réel — plus besoin d'exporter vos conversations"
       },
       "multilingual": {
         "title": "Extensions d'outils MCP",
@@ -65,8 +65,8 @@
         "description": "Téléchargez l'installateur pour votre système depuis GitHub Releases — compatible macOS et Windows"
       },
       "step2": {
-        "title": "Configurer la source de données",
-        "description": "Configurez votre clé API LLM et connectez les données de chat via le déchiffrement local ou Docker"
+        "title": "Configurer le déchiffrement",
+        "description": "Ouvrez le déchiffrement des données dans les paramètres et suivez l'assistant pour vérifier l'environnement, sélectionner l'utilisateur et déchiffrer la base de données"
       },
       "step3": {
         "title": "Discuter et interroger",
@@ -148,6 +148,7 @@
       "quickStart": "Démarrage rapide",
       "chatlogIntegration": "Intégration des données de chat",
       "usageGuide": "Guide d'utilisation",
+      "troubleshooting": "Dépannage",
       "legal": "Légal"
     },
     "onThisPage": "Sur cette page",

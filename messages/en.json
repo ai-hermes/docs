@@ -33,7 +33,7 @@
     "hero": {
       "title": "Intelligent Chat Data Assistant",
       "titleHighlight": "Understand Conversations with AI",
-      "subtitle": "Access chat data locally, query and analyze conversations through natural language AI chat",
+      "subtitle": "Real-time local decryption with no repeated exports — query and analyze conversations through natural language AI chat",
       "cta": "Free Download",
       "secondaryCta": "View Docs"
     },
@@ -49,8 +49,8 @@
         "description": "Supports LangGraph, Claude Code, Pi-AI and more, with flexible Deep/React Agent mode switching"
       },
       "intent": {
-        "title": "Local Data Security",
-        "description": "All chat data is stored only on your local device, accessed securely via local decryption or Docker container"
+        "title": "Real-Time Decryption, No Export Needed",
+        "description": "Decrypt local chat databases directly with CDC real-time incremental sync — no need to repeatedly export chat logs"
       },
       "multilingual": {
         "title": "MCP Tool Extensions",
@@ -65,8 +65,8 @@
         "description": "Download the installer for your OS from GitHub Releases — supports macOS and Windows"
       },
       "step2": {
-        "title": "Configure Data Source",
-        "description": "Set up your LLM API key and connect chat data via local decryption or Docker"
+        "title": "Configure Decryption",
+        "description": "Open Data Decryption in Settings and follow the wizard to complete environment check, user selection, and database decryption"
       },
       "step3": {
         "title": "Chat & Query",
@@ -148,6 +148,7 @@
       "quickStart": "Quick Start",
       "chatlogIntegration": "Chat Data Integration",
       "usageGuide": "Usage Guide",
+      "troubleshooting": "Troubleshooting",
       "legal": "Legal"
     },
     "onThisPage": "On This Page",

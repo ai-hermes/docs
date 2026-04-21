@@ -33,7 +33,7 @@
     "hero": {
       "title": "Intelligenter Chat-Datenassistent",
       "titleHighlight": "Gespräche mit KI verstehen",
-      "subtitle": "Greifen Sie lokal auf Chatdaten zu und analysieren Sie Gespräche durch natürlichsprachlichen KI-Chat",
+      "subtitle": "Lokale Echtzeit-Entschlüsselung ohne wiederholten Export — Gespräche per natürlichsprachlichem KI-Chat abfragen und analysieren",
       "cta": "Kostenloser Download",
       "secondaryCta": "Dokumentation"
     },
@@ -49,8 +49,8 @@
         "description": "Unterstützt LangGraph, Claude Code, Pi-AI und mehr, mit flexiblem Deep/React-Agent-Moduswechsel"
       },
       "intent": {
-        "title": "Lokale Datensicherheit",
-        "description": "Alle Chat-Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert und sicher über lokale Entschlüsselung oder Docker-Container zugänglich gemacht"
+        "title": "Echtzeit-Entschlüsselung, kein Export nötig",
+        "description": "Lokale Chat-Datenbanken direkt entschlüsseln mit CDC-Echtzeit-Synchronisation — kein wiederholtes Exportieren von Chatverläufen nötig"
       },
       "multilingual": {
         "title": "MCP-Werkzeugerweiterungen",
@@ -65,8 +65,8 @@
         "description": "Laden Sie das Installationsprogramm für Ihr Betriebssystem von GitHub Releases herunter — unterstützt macOS und Windows"
       },
       "step2": {
-        "title": "Datenquelle konfigurieren",
-        "description": "Richten Sie Ihren LLM-API-Schlüssel ein und verbinden Sie Chat-Daten über lokale Entschlüsselung oder Docker"
+        "title": "Entschlüsselung konfigurieren",
+        "description": "Öffnen Sie die Datenentschlüsselung in den Einstellungen und folgen Sie dem Assistenten für Umgebungsprüfung, Benutzerauswahl und Datenbankentschlüsselung"
       },
       "step3": {
         "title": "Chatten & Abfragen",
@@ -148,6 +148,7 @@
       "quickStart": "Schnellstart",
       "chatlogIntegration": "Chat-Datenintegration",
       "usageGuide": "Nutzungsanleitung",
+      "troubleshooting": "Fehlerbehebung",
       "legal": "Rechtliches"
     },
     "onThisPage": "Auf dieser Seite",

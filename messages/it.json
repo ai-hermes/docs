@@ -33,7 +33,7 @@
     "hero": {
       "title": "Assistente intelligente per dati di chat",
       "titleHighlight": "Comprendi le conversazioni con l'IA",
-      "subtitle": "Accedi ai dati delle chat in locale, interroga e analizza le conversazioni tramite chat IA in linguaggio naturale",
+      "subtitle": "Decrittazione locale in tempo reale senza export ripetuti — interroga e analizza le conversazioni tramite chat IA in linguaggio naturale",
       "cta": "Download gratuito",
       "secondaryCta": "Vedi documentazione"
     },
@@ -49,8 +49,8 @@
         "description": "Supporta LangGraph, Claude Code, Pi-AI e altro, con flessibile cambio modalità Deep/React Agent"
       },
       "intent": {
-        "title": "Sicurezza dati locale",
-        "description": "Tutti i dati di chat sono archiviati solo sul tuo dispositivo locale, accessibili in sicurezza tramite decrittazione locale o container Docker"
+        "title": "Decrittazione in tempo reale, senza export",
+        "description": "Decrittazione diretta dei database di chat locali con sincronizzazione incrementale CDC in tempo reale — nessun bisogno di esportare ripetutamente le conversazioni"
       },
       "multilingual": {
         "title": "Estensioni strumenti MCP",
@@ -65,8 +65,8 @@
         "description": "Scarica il programma di installazione per il tuo sistema operativo da GitHub Releases — supporta macOS e Windows"
       },
       "step2": {
-        "title": "Configura la sorgente dati",
-        "description": "Imposta la tua chiave API LLM e connetti i dati di chat tramite decrittazione locale o Docker"
+        "title": "Configura la decrittazione",
+        "description": "Apri la decrittazione dati nelle impostazioni e segui la procedura guidata per il controllo ambiente, la selezione utente e la decrittazione del database"
       },
       "step3": {
         "title": "Chatta e interroga",
@@ -148,6 +148,7 @@
       "quickStart": "Avvio rapido",
       "chatlogIntegration": "Integrazione dati di chat",
       "usageGuide": "Guida all'uso",
+      "troubleshooting": "Risoluzione problemi",
       "legal": "Legale"
     },
     "onThisPage": "In questa pagina",

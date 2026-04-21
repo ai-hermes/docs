@@ -33,7 +33,7 @@
     "hero": {
       "title": "インテリジェント チャットデータアシスタント",
       "titleHighlight": "AIで会話を理解する",
-      "subtitle": "チャットデータにローカルでアクセスし、自然言語AIチャットで会話を検索・分析",
+      "subtitle": "ローカルでリアルタイム復号化、繰り返しエクスポート不要 — 自然言語AIチャットで会話を検索・分析",
       "cta": "無料ダウンロード",
       "secondaryCta": "ドキュメントを見る"
     },
@@ -49,8 +49,8 @@
         "description": "LangGraph、Claude Code、Pi-AIなどに対応し、Deep/React Agentモードを柔軟に切り替え可能"
       },
       "intent": {
-        "title": "ローカルデータセキュリティ",
-        "description": "すべてのチャットデータはローカルデバイスにのみ保存され、ローカル復号化またはDockerコンテナで安全にアクセス"
+        "title": "リアルタイム復号化、エクスポート不要",
+        "description": "ローカルのチャットデータベースを直接復号化し、CDCでリアルタイム増分同期 — チャット履歴の手動エクスポートは不要"
       },
       "multilingual": {
         "title": "MCPツール拡張",
@@ -65,8 +65,8 @@
         "description": "GitHub Releasesからお使いのOS向けインストーラーをダウンロード — macOSとWindowsに対応"
       },
       "step2": {
-        "title": "データソースを設定",
-        "description": "LLM APIキーを設定し、ローカル復号化またはDockerでチャットデータを接続"
+        "title": "復号化を設定",
+        "description": "設定画面でデータ復号化を開き、ウィザードに従って環境チェック、ユーザー選択、データベース復号化を完了"
       },
       "step3": {
         "title": "チャット＆クエリ",
@@ -148,6 +148,7 @@
       "quickStart": "クイックスタート",
       "chatlogIntegration": "チャットデータ連携",
       "usageGuide": "使用ガイド",
+      "troubleshooting": "トラブルシューティング",
       "legal": "法的事項"
     },
     "onThisPage": "このページの目次",

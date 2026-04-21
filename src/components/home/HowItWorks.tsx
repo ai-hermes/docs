@@ -1,22 +1,22 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Upload, Cpu, FileText, ArrowRight } from 'lucide-react';
+import { Download, KeyRound, MessageCircle, ArrowRight } from 'lucide-react';
 
 const steps = [
   {
     key: 'step1',
-    icon: Upload,
+    icon: Download,
     number: '01',
   },
   {
     key: 'step2',
-    icon: Cpu,
+    icon: KeyRound,
     number: '02',
   },
   {
     key: 'step3',
-    icon: FileText,
+    icon: MessageCircle,
     number: '03',
   },
 ];

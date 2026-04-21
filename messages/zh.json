@@ -33,7 +33,7 @@
     "hero": {
       "title": "智能聊天数据助手",
       "titleHighlight": "用 AI 理解对话",
-      "subtitle": "本地访问聊天数据，通过自然语言 AI 对话查询和分析聊天记录",
+      "subtitle": "实时解密本地聊天数据，无需反复导出，通过自然语言 AI 对话查询和分析聊天记录",
       "cta": "免费下载",
       "secondaryCta": "查看文档"
     },
@@ -49,8 +49,8 @@
         "description": "支持 LangGraph、Claude Code、Pi-AI 等多种 AI 引擎，灵活切换 Deep/React Agent 模式"
       },
       "intent": {
-        "title": "本地数据安全",
-        "description": "所有聊天数据仅存储在本地设备，通过本地解密或 Docker 容器方式安全访问"
+        "title": "实时解密，无需导出",
+        "description": "直接解密本地聊天数据库，CDC 实时增量同步新消息，无需反复手动导出聊天记录"
       },
       "multilingual": {
         "title": "MCP 工具扩展",
@@ -65,8 +65,8 @@
         "description": "从 GitHub Releases 下载适合您操作系统的安装包，支持 macOS 和 Windows"
       },
       "step2": {
-        "title": "配置数据源",
-        "description": "配置 LLM API Key，通过本地解密或 Docker 方式接入聊天数据"
+        "title": "配置解密",
+        "description": "在设置中打开数据解密，按照向导完成环境检测、用户选择和数据库解密"
       },
       "step3": {
         "title": "对话查询",
@@ -148,6 +148,7 @@
       "quickStart": "快速上手",
       "chatlogIntegration": "聊天数据接入",
       "usageGuide": "使用说明",
+      "troubleshooting": "故障排查",
       "legal": "法律条款"
     },
     "onThisPage": "本页目录",

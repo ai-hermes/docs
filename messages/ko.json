@@ -33,7 +33,7 @@
     "hero": {
       "title": "지능형 채팅 데이터 어시스턴트",
       "titleHighlight": "AI로 대화를 이해하세요",
-      "subtitle": "로컬에서 채팅 데이터에 접근하고, 자연어 AI 대화를 통해 대화를 조회하고 분석하세요",
+      "subtitle": "실시간 로컬 복호화, 반복 내보내기 불필요 — 자연어 AI 대화를 통해 대화를 조회하고 분석하세요",
       "cta": "무료 다운로드",
       "secondaryCta": "문서 보기"
     },
@@ -49,8 +49,8 @@
         "description": "LangGraph, Claude Code, Pi-AI 등을 지원하며, Deep/React Agent 모드를 유연하게 전환 가능"
       },
       "intent": {
-        "title": "로컬 데이터 보안",
-        "description": "모든 채팅 데이터는 로컬 기기에만 저장되며, 로컬 복호화 또는 Docker 컨테이너를 통해 안전하게 접근"
+        "title": "실시간 복호화, 내보내기 불필요",
+        "description": "로컬 채팅 데이터베이스를 직접 복호화하고 CDC로 실시간 증분 동기화 — 채팅 기록을 반복 내보낼 필요 없음"
       },
       "multilingual": {
         "title": "MCP 도구 확장",
@@ -65,8 +65,8 @@
         "description": "GitHub Releases에서 OS에 맞는 설치 파일을 다운로드하세요 — macOS, Windows 지원"
       },
       "step2": {
-        "title": "데이터 소스 구성",
-        "description": "LLM API 키를 설정하고, 로컬 복호화 또는 Docker를 통해 채팅 데이터를 연결하세요"
+        "title": "복호화 설정",
+        "description": "설정에서 데이터 복호화를 열고, 마법사에 따라 환경 확인, 사용자 선택, 데이터베이스 복호화를 완료하세요"
       },
       "step3": {
         "title": "대화 및 조회",
@@ -148,6 +148,7 @@
       "quickStart": "빠른 시작",
       "chatlogIntegration": "채팅 데이터 연동",
       "usageGuide": "사용 가이드",
+      "troubleshooting": "문제 해결",
       "legal": "법률"
     },
     "onThisPage": "이 페이지에서",

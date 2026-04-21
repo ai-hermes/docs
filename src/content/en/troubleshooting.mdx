@@ -1,0 +1,51 @@
+---
+title: Troubleshooting
+description: Common issues and how to resolve them
+category: troubleshooting
+order: 1
+---
+
+Running into issues? This page covers common problems and how to fix them.
+
+## How to choose the right account with multiple users?
+
+In the "Select User" step, if the dropdown shows multiple wxid entries, it means multiple accounts have been logged in on this device:
+
+![Multiple user selection dropdown](/images/docs/multi-account.png)
+
+### How to identify the correct account
+
+1. **Select any user** and click "Confirm"
+2. The system will auto-match the data directory (Step 3)
+3. Open that directory and check the folder contents to verify it belongs to the account you want to decrypt
+4. If it's not the target account, go back to Step 2, select a different user, and repeat
+
+> Folders usually contain chat database files. You can use folder size or modification time to help identify the right one — the most recently active account typically has a larger folder with a more recent modification date.
+
+## Environment check failed
+
+If Step 1 does not pass:
+
+- Make sure the IM client is installed and running
+- Make sure you are logged in to the IM client
+- Try restarting the IM client and running the check again
+
+## Failed to get data key
+
+If Step 4 does not show passed:
+
+- Make sure the IM client is running and logged in
+- Make sure you selected the correct user
+- Try clicking "Refresh" to reload the user list, then select again
+
+## Database decryption failed
+
+If Step 5 fails:
+
+- Verify the data directory path is correct
+- Make sure you have enough disk space
+- Check the application logs for detailed error information
+
+## Still stuck?
+
+If none of the above resolves your issue, please submit feedback on [GitHub Issues](https://github.com/ai-hermes/wechat-mem0/issues).

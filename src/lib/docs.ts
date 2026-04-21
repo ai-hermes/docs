@@ -8,7 +8,7 @@ import matter from 'gray-matter';
 const CONTENT_ROOT = path.join(process.cwd(), 'src/content');
 const DEFAULT_DOC_LOCALE = 'en';
 const MDX_EXTENSION = '.mdx';
-const CATEGORY_ORDER = ['introduction', 'quickStart', 'chatlogIntegration', 'usageGuide', 'legal'];
+const CATEGORY_ORDER = ['introduction', 'quickStart', 'chatlogIntegration', 'usageGuide', 'troubleshooting', 'legal'];
 
 export interface DocItem {
   slug: string;

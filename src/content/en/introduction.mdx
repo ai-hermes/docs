@@ -35,13 +35,13 @@ Built-in support for major LLM providers, switchable at runtime:
 - DeepSeek / Groq / Moonshot / Zhipu AI
 - Custom OpenAI-compatible endpoints
 
-### Local Chat Data Access
+### Real-Time Decryption, No Repeated Export
 
-Access your chat data securely through two methods — data always stays on your device:
+Unlike traditional approaches, Rethink AI decrypts local chat databases directly and uses CDC (Change Data Capture) to monitor database changes in real time, automatically decrypting new messages incrementally. Configure once and it keeps working — no need to manually export chat logs every time.
 
-- **Docker Container**: Run the IM client in an isolated Docker/VirtualBox environment
-- **Local Decryption**: Directly decrypt local chat database files (native C implementation)
-- **CDC Real-Time Sync**: Automatically detect chat database changes and decrypt incrementally
+- **Local Decryption**: Directly decrypt local chat database files (native C implementation) — data never leaves your device
+- **CDC Real-Time Sync**: Automatically detect database changes and decrypt new messages incrementally, keeping your data up to date
+- **Docker Container**: Alternatively, run the IM client in an isolated Docker/VirtualBox environment for data access
 
 ### MCP Tool Extensions
 

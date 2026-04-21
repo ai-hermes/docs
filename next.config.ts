@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
   env: {
     BUILD_TIME: new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Shanghai' }).replace(' ', 'T'),
   },
+  async rewrites() {
+    return [
+      {
+        source: '/dl/:path*',
+        destination: 'http://static.rethinkai.spotty.com.cn/:path*',
+      },
+    ];
+  },
 };
 
 export default withNextIntl(withMDX(nextConfig));

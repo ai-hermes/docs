@@ -62,7 +62,7 @@
       "subtitle": "Drei Schritte zur intelligenten Chat-Datenabfrage",
       "step1": {
         "title": "App installieren",
-        "description": "Laden Sie das Installationsprogramm für Ihr Betriebssystem von GitHub Releases herunter — unterstützt macOS, Windows und Linux"
+        "description": "Laden Sie das Installationsprogramm für Ihr Betriebssystem von GitHub Releases herunter — unterstützt macOS und Windows"
       },
       "step2": {
         "title": "Datenquelle konfigurieren",
@@ -155,64 +155,28 @@
     "lastUpdated": "Zuletzt aktualisiert"
   },
   "pricing": {
-    "title": "Kostenlos & Open Source",
-    "subtitle": "Rethink AI ist vollständig kostenlos und Open Source — konfigurieren Sie einfach Ihren eigenen LLM-API-Schlüssel",
-    "monthly": "",
-    "yearly": "",
-    "yearlyDiscount": "",
-    "plans": {
-      "free": {
-        "name": "Open Source",
-        "price": "0",
-        "period": "Für immer kostenlos",
-        "description": "Alle Funktionen, kostenlos nutzbar",
-        "features": [
-          "Alle KI-Agent-Funktionen",
-          "Multi-LLM-Engine-Wechsel",
-          "Lokale Entschlüsselung + Docker",
-          "MCP-Werkzeugerweiterungen",
-          "CDC-Echtzeitsynchronisation",
-          "Plattformübergreifend (macOS/Windows/Linux)"
-        ],
-        "cta": "Kostenloser Download"
-      },
-      "pro": {
-        "name": "LLM-API-Kosten",
-        "price": "Nach Verbrauch",
-        "period": "",
-        "description": "Abrechnung durch LLM-Anbieter",
-        "features": [
-          "OpenAI / Anthropic / Google usw.",
-          "DeepSeek / Groq / Moonshot usw.",
-          "Kosten abhängig vom gewählten Anbieter",
-          "Selbst gehostete Open-Source-Modelle kostenlos nutzen"
-        ],
-        "cta": "Mehr erfahren"
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "price": "Kontakt",
-        "period": "",
-        "description": "Für individuelle Teamanforderungen",
-        "features": [
-          "Private-Deployment-Unterstützung",
-          "Individuelle Agent-Entwicklung",
-          "Technischer Support",
-          "Schulung & Beratung"
-        ],
-        "cta": "Kontaktieren Sie uns"
-      }
+    "title": "Kostenloser Download",
+    "subtitle": "Rethink AI ist vollständig kostenlos und Open Source, verfügbar für macOS und Windows",
+    "downloadBtn": "Download",
+    "recommended": "Empfohlen",
+    "fetchError": "Die neuesten Versionsinformationen konnten nicht abgerufen werden",
+    "githubFallback": "Von GitHub herunterladen",
+    "openSourceNote": "Rethink AI ist kostenlos und Open Source. Quellcode verfügbar auf",
+    "requirements": {
+      "title": "Systemanforderungen",
+      "mac": "macOS 12 (Monterey) oder neuer",
+      "windows": "Windows 10 oder neuer (64-bit)"
     },
     "faq": {
       "title": "FAQ",
       "items": [
         {
           "question": "Ist die App selbst kostenlos?",
-          "answer": "Ja, Rethink AI ist vollständig kostenlos und Open Source. Sie müssen Ihren eigenen LLM-API-Schlüssel bereitstellen — die API-Nutzungsgebühren werden vom LLM-Anbieter berechnet."
+          "answer": "Ja, Rethink AI ist vollständig kostenlos und Open Source. Jeder Nutzer erhält ein kostenloses Kontingent von 10 $ — nach Verbrauch wird automatisch auf ein kostenloses Modell umgestellt."
         },
         {
-          "question": "Welche Chat-Tools werden unterstützt?",
-          "answer": "Derzeit wird die lokale Abfrage und Analyse von Chatdaten unterstützt."
+          "question": "Welche Betriebssysteme werden unterstützt?",
+          "answer": "macOS (Apple Silicon und Intel) und Windows (64-bit) werden unterstützt."
         },
         {
           "question": "Wie wird die Datensicherheit gewährleistet?",

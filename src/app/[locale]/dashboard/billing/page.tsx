@@ -64,7 +64,7 @@ export default async function BillingPage({ params }: { params: Promise<{ locale
               )}
             </div>
             {user.plan === 'free' ? (
-              <Link href={`/${locale}/pricing`}>
+              <Link href={`/${locale}/download`}>
                 <Button className="gradient-primary hover:gradient-primary-hover text-white">
                   {t('upgrade')}
                 </Button>

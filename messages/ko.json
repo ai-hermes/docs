@@ -62,7 +62,7 @@
       "subtitle": "3단계로 지능형 채팅 데이터 조회를 시작하세요",
       "step1": {
         "title": "앱 설치",
-        "description": "GitHub Releases에서 OS에 맞는 설치 파일을 다운로드하세요 — macOS, Windows, Linux 지원"
+        "description": "GitHub Releases에서 OS에 맞는 설치 파일을 다운로드하세요 — macOS, Windows 지원"
       },
       "step2": {
         "title": "데이터 소스 구성",
@@ -155,64 +155,28 @@
     "lastUpdated": "마지막 업데이트"
   },
   "pricing": {
-    "title": "무료 & 오픈소스",
-    "subtitle": "Rethink AI는 완전히 무료이며 오픈소스입니다 — LLM API 키만 직접 설정하면 됩니다",
-    "monthly": "",
-    "yearly": "",
-    "yearlyDiscount": "",
-    "plans": {
-      "free": {
-        "name": "오픈소스",
-        "price": "0",
-        "period": "영구 무료",
-        "description": "전체 기능, 무료 사용",
-        "features": [
-          "모든 AI Agent 기능",
-          "멀티 LLM 엔진 전환",
-          "로컬 복호화 + Docker",
-          "MCP 도구 확장",
-          "CDC 실시간 동기화",
-          "크로스 플랫폼 (macOS/Windows/Linux)"
-        ],
-        "cta": "무료 다운로드"
-      },
-      "pro": {
-        "name": "LLM API 비용",
-        "price": "종량제",
-        "period": "",
-        "description": "LLM 제공업체에서 청구",
-        "features": [
-          "OpenAI / Anthropic / Google 등",
-          "DeepSeek / Groq / Moonshot 등",
-          "비용은 선택한 제공업체에 따라 결정",
-          "자체 호스팅 오픈 모델은 무료 사용 가능"
-        ],
-        "cta": "더 알아보기"
-      },
-      "enterprise": {
-        "name": "기업용",
-        "price": "문의",
-        "period": "",
-        "description": "팀 맞춤화 요구 사항",
-        "features": [
-          "프라이빗 배포 지원",
-          "맞춤 Agent 개발",
-          "기술 지원 서비스",
-          "교육 및 컨설팅"
-        ],
-        "cta": "문의하기"
-      }
+    "title": "무료 다운로드",
+    "subtitle": "Rethink AI는 완전히 무료이며 오픈소스입니다. macOS와 Windows를 지원합니다",
+    "downloadBtn": "다운로드",
+    "recommended": "추천",
+    "fetchError": "최신 버전 정보를 가져올 수 없습니다",
+    "githubFallback": "GitHub에서 다운로드",
+    "openSourceNote": "Rethink AI는 무료 오픈소스입니다. 소스 코드는",
+    "requirements": {
+      "title": "시스템 요구 사항",
+      "mac": "macOS 12 (Monterey) 이상",
+      "windows": "Windows 10 이상 (64-bit)"
     },
     "faq": {
       "title": "자주 묻는 질문",
       "items": [
         {
           "question": "앱 자체는 무료인가요?",
-          "answer": "네, Rethink AI는 완전히 무료이며 오픈소스입니다. LLM API 키를 직접 제공해야 하며, API 사용 요금은 LLM 제공업체에서 청구됩니다."
+          "answer": "네, Rethink AI는 완전히 무료이며 오픈소스입니다. 각 사용자에게 10달러의 무료 한도가 제공되며, 소진 후에는 무료 모델로 자동 전환됩니다."
         },
         {
-          "question": "어떤 채팅 도구를 지원하나요?",
-          "answer": "현재 채팅 데이터의 로컬 조회 및 분석을 지원합니다."
+          "question": "어떤 운영 체제를 지원하나요?",
+          "answer": "macOS (Apple Silicon 및 Intel)와 Windows (64-bit)를 지원합니다."
         },
         {
           "question": "데이터 보안은 어떻게 보장되나요?",

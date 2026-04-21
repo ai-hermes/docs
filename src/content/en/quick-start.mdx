@@ -5,98 +5,52 @@ category: quickStart
 order: 2
 ---
 
-This guide will help you install, configure, and start using the Rethink AI desktop application.
+This guide will help you quickly install and start using the Rethink AI desktop application.
 
-## Step 1: Download and Install
+## Step 1: Download, Install, and Launch
 
-Download the installer for your operating system from [GitHub Releases](https://github.com/ai-hermes/wechat-mem0/releases):
+Go to the [Download page](/en/download) to get the installer for your operating system:
 
 - **macOS**: `.dmg` installer (supports Apple Silicon and Intel)
-- **Windows**: `.exe` NSIS installer
-- **Linux**: `.AppImage` / `.deb` / `.snap`
+- **Windows**: `.exe` installer
 
-Follow the system prompts to complete installation.
+Follow the system prompts to complete installation, then launch the app.
 
-## Step 2: Configure LLM Service
+## Step 2: Configure Data Source
 
-After launching the app, click the **Settings** button in the bottom-left corner to configure your LLM service:
+After launching, click the **Settings** button in the bottom-left corner to open the settings page:
 
-### Configure API Key
+![Click Settings in the bottom-left corner](/images/docs/main-settings.png)
 
-1. Find the **LLM Providers** section in the Settings panel
-2. Select an LLM provider (e.g., OpenAI, DeepSeek)
-3. Enter the API Base URL and API Key
-4. Select the model to use
-5. Click **Check Connectivity** to verify the configuration
+### Configure Decryption
 
-### Optional: Configure Tavily Search
+Select **Data Decryption** from the left sidebar in Settings, then follow the wizard steps:
 
-If you want the AI Agent to perform web searches, configure a Tavily API Key as well.
+![Decryption configuration wizard](/images/docs/settings-decryption.png)
 
-## Step 3: Connect Chat Data
+1. **Environment Check** — Click "Check" and wait for the status to show passed
+2. **Select User** — Choose the target user from the dropdown, then click "Confirm"
+3. **Auto-Match Directory** — The system will automatically fill in the data directory path
+4. **Get Data Key** — Click "Execute" and wait for the status to show passed
+5. **Decrypt Database** — Click "Execute" and wait for decryption to complete
+6. **Enable CDC Sync** (Optional) — Turn on to sync new messages in real time
 
-Rethink AI offers two ways to access your chat data:
+Once all steps are complete, click the **Save** button in the bottom-right corner.
 
-### Option A: Local Decryption (Recommended)
+## Start Using
 
-For when the IM client is already installed on your machine:
+Return to the main screen — you're ready to chat with the AI:
 
-1. Find the **Local Decryption** section in Settings
-2. Set the chat database file path (usually auto-detected)
-3. Click **Start Decryption Service**
-4. Wait for decryption to complete, then start querying
-
-### Option B: Docker Container
-
-For when you need the IM client running in an isolated environment:
-
-1. Make sure Docker Desktop is installed
-2. Find the **IM Runtime** section in Settings
-3. Configure Docker image and ports
-4. Click **Start Container**
-5. Connect via VNC and log in to the IM client
-
-### CDC Real-Time Sync (Optional)
-
-Enable CDC (Change Data Capture) to automatically detect chat database changes and decrypt new messages in real time:
-
-1. Enable **CDC Sync** in Settings
-2. Configure the watch directory
-3. The app will automatically detect and sync new data
-
-## Step 4: Start Chatting
-
-Once everything is configured, you can start chatting with the AI:
-
-1. Type your question in the input box on the main screen
-2. Select an Agent mode: **Deep** (deep reasoning) or **React** (quick response)
-3. The AI will automatically use data query tools to search and analyze your data
-4. Click on tool status indicators in messages to view call details
+1. Type your question in natural language in the input box
+2. Select an Agent mode: **Fast** (quick response) or **Deep** (deep reasoning)
+3. The AI will automatically use tools to query and analyze your chat data
 
 ### Example Questions
 
 - "Show me my recent chat list"
-- "Find my chat history with Xiao Ming"
+- "Find my chat history with John"
 - "Search all messages mentioning 'project progress'"
 - "Who sent me messages in the last week?"
-
-## FAQ
-
-### Which operating systems are supported?
-
-macOS (Intel/Apple Silicon), Windows, and Linux.
-
-### Is it free?
-
-The Rethink AI application itself is free and open-source. However, you need to provide your own LLM API key (e.g., OpenAI, DeepSeek), and usage fees are charged by the LLM provider.
-
-### Is my chat data secure?
-
-All chat data is stored only on your local device and is never uploaded to any server. Only your question text is sent to the LLM provider when you actively ask a question.
-
-### What if the decryption service fails to start?
-
-Make sure the IM client is running and logged in, then verify the database file path is correct. Check the application logs in Settings for detailed error information.
 
 ## Next Steps
 

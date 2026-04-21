@@ -62,7 +62,7 @@
       "subtitle": "三步开始智能聊天数据查询",
       "step1": {
         "title": "安装应用",
-        "description": "从 GitHub Releases 下载适合您操作系统的安装包，支持 macOS、Windows 和 Linux"
+        "description": "从 GitHub Releases 下载适合您操作系统的安装包，支持 macOS 和 Windows"
       },
       "step2": {
         "title": "配置数据源",
@@ -155,64 +155,28 @@
     "lastUpdated": "最后更新"
   },
   "pricing": {
-    "title": "免费开源",
-    "subtitle": "Rethink AI 完全免费开源，您只需自行配置 LLM API Key",
-    "monthly": "",
-    "yearly": "",
-    "yearlyDiscount": "",
-    "plans": {
-      "free": {
-        "name": "开源版",
-        "price": "0",
-        "period": "永久免费",
-        "description": "完整功能，免费使用",
-        "features": [
-          "全部 AI Agent 功能",
-          "多 LLM 引擎切换",
-          "本地解密 + Docker 方式",
-          "MCP 工具扩展",
-          "CDC 实时同步",
-          "跨平台支持 (macOS/Windows/Linux)"
-        ],
-        "cta": "免费下载"
-      },
-      "pro": {
-        "name": "LLM API 费用",
-        "price": "按量计费",
-        "period": "",
-        "description": "由 LLM 服务商收取",
-        "features": [
-          "OpenAI / Anthropic / Google 等",
-          "DeepSeek / Groq / Moonshot 等",
-          "费用取决于您选择的服务商",
-          "可使用自部署的开源模型免费使用"
-        ],
-        "cta": "了解更多"
-      },
-      "enterprise": {
-        "name": "企业部署",
-        "price": "联系我们",
-        "period": "",
-        "description": "适合团队定制需求",
-        "features": [
-          "私有化部署支持",
-          "定制化 Agent 开发",
-          "技术支持服务",
-          "培训与咨询"
-        ],
-        "cta": "联系我们"
-      }
+    "title": "免费下载",
+    "subtitle": "Rethink AI 完全免费开源，支持 macOS 和 Windows",
+    "downloadBtn": "下载",
+    "recommended": "推荐",
+    "fetchError": "无法获取最新版本信息",
+    "githubFallback": "前往 GitHub 下载",
+    "openSourceNote": "Rethink AI 完全免费开源，源代码托管在",
+    "requirements": {
+      "title": "系统要求",
+      "mac": "macOS 12 (Monterey) 或更高版本",
+      "windows": "Windows 10 或更高版本 (64-bit)"
     },
     "faq": {
       "title": "常见问题",
       "items": [
         {
           "question": "应用本身是免费的吗？",
-          "answer": "是的，Rethink AI 完全免费开源。您需要自行提供 LLM 服务的 API Key，API 调用费用由 LLM 服务商收取。"
+          "answer": "是的，Rethink AI 完全免费开源。每位用户享有 10 美元的免费额度，用完后将自动降级为免费模型。"
         },
         {
-          "question": "支持哪些聊天工具？",
-          "answer": "目前支持聊天数据的本地查询和分析。"
+          "question": "支持哪些操作系统？",
+          "answer": "支持 macOS (Apple Silicon 和 Intel)、Windows (64-bit)。"
         },
         {
           "question": "数据安全如何保障？",

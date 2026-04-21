@@ -63,7 +63,7 @@ export default async function DashboardPage({ params }: { params: Promise<{ loca
           </CardHeader>
           <CardContent>
             {user.plan === 'free' ? (
-              <Link href={`/${locale}/pricing`}>
+              <Link href={`/${locale}/download`}>
                 <Button size="sm" className="gradient-primary hover:gradient-primary-hover text-white">
                   {t('billing.upgrade')}
                 </Button>

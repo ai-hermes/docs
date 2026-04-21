@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -19,7 +19,7 @@ export default function Header() {
   const navItems = [
     { href: `/${locale}`, label: t('home') },
     { href: `/${locale}/docs`, label: t('docs') },
-    { href: `/${locale}/pricing`, label: t('pricing') },
+    { href: `/${locale}/download`, label: t('pricing') },
   ];
 
   return (
@@ -55,16 +55,6 @@ export default function Header() {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <LanguageSwitcher />
-          <Link href={`/${locale}/auth/login`}>
-            <Button variant="ghost" size="sm">
-              {t('login')}
-            </Button>
-          </Link>
-          <Link href={`/${locale}/auth/register`}>
-            <Button size="sm" className="gradient-primary hover:gradient-primary-hover text-white">
-              {t('register')}
-            </Button>
-          </Link>
         </div>
 
         {/* Mobile Menu */}
@@ -89,18 +79,6 @@ export default function Header() {
               ))}
               <div className="border-t pt-4 mt-4">
                 <LanguageSwitcher />
-              </div>
-              <div className="flex flex-col gap-2 mt-4">
-                <Link href={`/${locale}/auth/login`} onClick={() => setIsOpen(false)}>
-                  <Button variant="outline" className="w-full">
-                    {t('login')}
-                  </Button>
-                </Link>
-                <Link href={`/${locale}/auth/register`} onClick={() => setIsOpen(false)}>
-                  <Button className="w-full gradient-primary hover:gradient-primary-hover text-white">
-                    {t('register')}
-                  </Button>
-                </Link>
               </div>
             </nav>
           </SheetContent>

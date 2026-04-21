@@ -14,25 +14,18 @@ export default function Footer() {
   const footerLinks = {
     product: [
       { href: `/${locale}/#features`, label: t('features') },
-      { href: `/${locale}/pricing`, label: t('pricing') },
+      { href: `/${locale}/download`, label: t('pricing') },
       { href: `/${locale}/docs`, label: t('docs') },
     ],
-    company: [
-      { href: `/${locale}/about`, label: t('about') },
-      { href: `/${locale}/blog`, label: t('blog') },
-      { href: `/${locale}/careers`, label: t('careers') },
-    ],
     legal: [
-      { href: `/${locale}/docs/terms`, label: t('terms') },
       { href: `/${locale}/docs/privacy`, label: t('privacy') },
-      { href: `/${locale}/contact`, label: t('contact') },
     ],
   };
 
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href={`/${locale}`} className="flex items-center gap-2 mb-4">
@@ -57,23 +50,6 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">{t('product')}</h3>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h3 className="font-semibold mb-4">{t('company')}</h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

@@ -6,7 +6,8 @@ import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { DocCategory } from '@/lib/docs';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { VisuallyHidden } from 'radix-ui';
 import { useState } from 'react';
 
 interface MobileDocsSidebarProps {
@@ -32,7 +33,10 @@ export default function MobileDocsSidebar({
             Menu
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="w-72">
+        <SheetContent side="left" className="w-72 px-6">
+          <VisuallyHidden.Root>
+            <SheetTitle>Documentation menu</SheetTitle>
+          </VisuallyHidden.Root>
           <nav className="mt-6 space-y-6">
             {docsConfig.map((category) => (
               <div key={category.key}>

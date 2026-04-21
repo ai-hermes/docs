@@ -162,6 +162,7 @@
     "recommended": "おすすめ",
     "fetchError": "最新バージョン情報を取得できませんでした",
     "githubFallback": "GitHub からダウンロード",
+    "otherPlatforms": "他のプラットフォーム",
     "openSourceNote": "Rethink AI は完全に無料かつオープンソースです。ソースコードは",
     "requirements": {
       "title": "システム要件",

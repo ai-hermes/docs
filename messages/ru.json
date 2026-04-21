@@ -162,6 +162,7 @@
     "recommended": "Рекомендуется",
     "fetchError": "Не удалось получить информацию о последней версии",
     "githubFallback": "Скачать с GitHub",
+    "otherPlatforms": "Другие платформы",
     "openSourceNote": "Rethink AI бесплатен и имеет открытый исходный код. Исходный код доступен на",
     "requirements": {
       "title": "Системные требования",

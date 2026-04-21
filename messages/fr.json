@@ -162,6 +162,7 @@
     "recommended": "Recommandé",
     "fetchError": "Impossible de récupérer les informations de la dernière version",
     "githubFallback": "Télécharger depuis GitHub",
+    "otherPlatforms": "Autres plateformes",
     "openSourceNote": "Rethink AI est gratuit et open source. Code source disponible sur",
     "requirements": {
       "title": "Configuration requise",

@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Monitor, Apple, Download, ExternalLink, Loader2 } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Monitor, Apple, Download, ExternalLink, Loader2, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -28,12 +27,28 @@ interface ReleasesData {
 
 type Platform = 'mac-arm64' | 'mac-x64' | 'windows';
 
+function detectAppleSilicon(): boolean {
+  try {
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+    if (!gl) return true; // default to arm64 if WebGL unavailable
+    const ext = gl.getExtension('WEBGL_debug_renderer_info');
+    if (!ext) return true;
+    const renderer = gl.getParameter(ext.UNMASKED_RENDERER_WEBGL).toLowerCase();
+    // Apple GPU = Apple Silicon; Intel HD/Iris/UHD = Intel Mac
+    if (renderer.includes('apple')) return true;
+    if (renderer.includes('intel')) return false;
+    return true; // default arm64 for unknown
+  } catch {
+    return true;
+  }
+}
+
 function detectPlatform(): Platform | null {
   if (typeof navigator === 'undefined') return null;
   const ua = navigator.userAgent.toLowerCase();
   if (ua.includes('mac')) {
-    // Default to arm64 for modern Macs
-    return 'mac-arm64';
+    return detectAppleSilicon() ? 'mac-arm64' : 'mac-x64';
   }
   if (ua.includes('win')) return 'windows';
   return null;
@@ -50,6 +65,7 @@ export default function DownloadClient() {
   const [data, setData] = useState<ReleasesData | null>(null);
   const [error, setError] = useState(false);
   const [detected, setDetected] = useState<Platform | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     setDetected(detectPlatform());
@@ -64,10 +80,10 @@ export default function DownloadClient() {
 
   if (error) {
     return (
-      <div className="text-center py-12">
-        <p className="text-muted-foreground mb-4">{t('fetchError')}</p>
+      <div className="text-center py-16">
+        <p className="text-muted-foreground mb-5">{t('fetchError')}</p>
         <a href={GITHUB_RELEASES} target="_blank" rel="noopener noreferrer">
-          <Button variant="outline" className="gap-2">
+          <Button variant="outline" className="gap-2 cursor-pointer">
             <ExternalLink className="w-4 h-4" />
             {t('githubFallback')}
           </Button>
@@ -78,75 +94,105 @@ export default function DownloadClient() {
 
   if (!data) {
     return (
-      <div className="flex justify-center py-12">
+      <div className="flex justify-center py-16">
         <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
       </div>
     );
   }
 
   const latest = data.releases[0];
-  const platforms: Platform[] = ['mac-arm64', 'mac-x64', 'windows'];
+  const allPlatforms: Platform[] = ['mac-arm64', 'mac-x64', 'windows'];
+  const otherPlatforms = allPlatforms.filter((p) => p !== detected);
 
   return (
     <div className="max-w-4xl mx-auto">
       {/* Version badge */}
-      <div className="text-center mb-8">
-        <Badge variant="secondary" className="text-sm px-3 py-1">
+      <div className="text-center mb-10">
+        <Badge variant="secondary" className="text-sm px-4 py-1.5 font-medium">
           v{latest.version} &middot; {latest.date}
         </Badge>
       </div>
 
-      {/* Download cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {platforms.map((platform) => {
-          const config = platformConfig[platform];
-          const Icon = config.icon;
-          const isDetected = detected === platform;
-          const downloadUrl = `${BASE_URL}/${latest.downloads[platform]}`;
+      {/* Recommended download — prominent card */}
+      {detected && (
+        <div className="max-w-lg mx-auto mb-8">
+          <div className="relative rounded-2xl border-2 border-purple-500/60 bg-card p-10 flex flex-col items-center text-center gap-6 shadow-lg shadow-purple-500/10">
+            <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 gradient-primary text-white text-xs px-4 py-1">
+              {t('recommended')}
+            </Badge>
+            {(() => {
+              const config = platformConfig[detected];
+              const Icon = config.icon;
+              const downloadUrl = `${BASE_URL}/${latest.downloads[detected]}`;
+              return (
+                <>
+                  <Icon className="w-16 h-16 text-purple-500" />
+                  <div>
+                    <p className="text-xl font-semibold">{config.label}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{config.sublabel}</p>
+                  </div>
+                  <a href={downloadUrl} className="w-full max-w-xs">
+                    <Button className="w-full gap-2 cursor-pointer gradient-primary hover:gradient-primary-hover text-white shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/25 transition-shadow duration-200 h-12 text-base">
+                      <Download className="w-5 h-5" />
+                      {t('downloadBtn')}
+                    </Button>
+                  </a>
+                </>
+              );
+            })()}
+          </div>
+        </div>
+      )}
 
-          return (
-            <Card
-              key={platform}
-              className={`relative transition-all hover:shadow-lg ${
-                isDetected ? 'border-purple-500 border-2 shadow-md shadow-purple-500/20' : ''
-              }`}
-            >
-              {isDetected && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 gradient-primary text-white">
-                  {t('recommended')}
-                </Badge>
-              )}
-              <CardContent className="pt-8 pb-6 flex flex-col items-center text-center gap-4">
-                <Icon className="w-12 h-12 text-muted-foreground" />
-                <div>
-                  <p className="text-lg font-semibold">{config.label}</p>
-                  <p className="text-sm text-muted-foreground">{config.sublabel}</p>
+      {/* Toggle other platforms */}
+      <div className="text-center mb-6">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 inline-flex items-center gap-1 cursor-pointer"
+        >
+          {t('otherPlatforms')}
+          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${showAll ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
+
+      {/* Other platform cards */}
+      {showAll && (
+        <div className={`grid grid-cols-1 ${detected ? 'md:grid-cols-2 max-w-2xl' : 'md:grid-cols-3 max-w-4xl'} gap-4 mx-auto`}>
+          {(detected ? otherPlatforms : allPlatforms).map((platform) => {
+            const config = platformConfig[platform];
+            const Icon = config.icon;
+            const downloadUrl = `${BASE_URL}/${latest.downloads[platform]}`;
+
+            return (
+              <div
+                key={platform}
+                className="rounded-xl border border-border/60 bg-card p-6 flex items-center gap-4 hover:border-border hover:shadow-md transition-all duration-200"
+              >
+                <Icon className="w-10 h-10 text-muted-foreground shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold">{config.label}</p>
+                  <p className="text-xs text-muted-foreground">{config.sublabel}</p>
                 </div>
-                <a href={downloadUrl} className="w-full">
-                  <Button
-                    className={`w-full gap-2 ${
-                      isDetected ? 'gradient-primary hover:gradient-primary-hover text-white' : ''
-                    }`}
-                    variant={isDetected ? 'default' : 'outline'}
-                  >
-                    <Download className="w-4 h-4" />
+                <a href={downloadUrl}>
+                  <Button variant="outline" size="sm" className="gap-1.5 cursor-pointer shrink-0">
+                    <Download className="w-3.5 h-3.5" />
                     {t('downloadBtn')}
                   </Button>
                 </a>
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* Open source note */}
-      <p className="text-center text-sm text-muted-foreground mt-8">
+      <p className="text-center text-sm text-muted-foreground mt-10">
         {t('openSourceNote')}{' '}
         <a
           href={GITHUB_RELEASES}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-foreground"
+          className="underline hover:text-foreground transition-colors duration-200"
         >
           GitHub
         </a>

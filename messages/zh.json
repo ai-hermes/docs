@@ -162,6 +162,7 @@
     "recommended": "推荐",
     "fetchError": "无法获取最新版本信息",
     "githubFallback": "前往 GitHub 下载",
+    "otherPlatforms": "其他平台",
     "openSourceNote": "Rethink AI 完全免费开源，源代码托管在",
     "requirements": {
       "title": "系统要求",

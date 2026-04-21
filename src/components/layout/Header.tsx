@@ -7,7 +7,8 @@ import { useParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { VisuallyHidden } from 'radix-ui';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
@@ -29,32 +30,32 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2">
+        <Link href={`/${locale}`} className="flex items-center gap-2.5">
           <Image
             src="/images/logo.png"
             alt="Rethink AI"
-            width={40}
-            height={40}
+            width={36}
+            height={36}
             className="rounded-lg"
           />
-          <span className="text-xl font-bold text-gradient-primary">
+          <span className="text-lg font-bold text-gradient-primary">
             {t('brand')}
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                 isActive(item.href, item.exact)
-                  ? 'text-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'text-foreground bg-accent'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
               }`}
             >
               {item.label}
@@ -76,16 +77,19 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-4 mt-8">
+            <VisuallyHidden.Root>
+              <SheetTitle>Navigation</SheetTitle>
+            </VisuallyHidden.Root>
+            <nav className="flex flex-col gap-2 mt-8">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 ${
                     isActive(item.href, item.exact)
-                      ? 'text-foreground'
-                      : 'text-muted-foreground hover:text-foreground'
+                      ? 'text-foreground bg-accent'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
                   }`}
                 >
                   {item.label}

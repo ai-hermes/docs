@@ -162,6 +162,7 @@
     "recommended": "추천",
     "fetchError": "최신 버전 정보를 가져올 수 없습니다",
     "githubFallback": "GitHub에서 다운로드",
+    "otherPlatforms": "다른 플랫폼",
     "openSourceNote": "Rethink AI는 무료 오픈소스입니다. 소스 코드는",
     "requirements": {
       "title": "시스템 요구 사항",

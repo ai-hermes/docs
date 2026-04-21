@@ -17,43 +17,44 @@ export default async function DownloadPage({ params }: { params: Promise<{ local
   }));
 
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-24 md:py-32">
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
-        <p className="text-xl text-muted-foreground">{t('subtitle')}</p>
+      <div className="text-center max-w-2xl mx-auto mb-20">
+        <p className="text-sm font-semibold text-gradient-primary uppercase tracking-wider mb-3">Download</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-5 tracking-tight">{t('title')}</h1>
+        <p className="text-xl text-muted-foreground leading-relaxed">{t('subtitle')}</p>
       </div>
 
       {/* Download Cards - Client Component */}
       <DownloadClient />
 
       {/* System Requirements */}
-      <div className="max-w-3xl mx-auto mt-20 mb-16">
-        <h2 className="text-2xl font-bold text-center mb-8">{t('requirements.title')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-muted-foreground">
-          <div className="text-center p-4">
+      <div className="max-w-3xl mx-auto mt-24 mb-20">
+        <h2 className="text-2xl font-bold text-center mb-10 tracking-tight">{t('requirements.title')}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="text-center p-6 rounded-2xl border border-border/60 bg-card">
             <p className="font-semibold text-foreground mb-2">macOS</p>
-            <p>{t('requirements.mac')}</p>
+            <p className="text-sm text-muted-foreground">{t('requirements.mac')}</p>
           </div>
-          <div className="text-center p-4">
+          <div className="text-center p-6 rounded-2xl border border-border/60 bg-card">
             <p className="font-semibold text-foreground mb-2">Windows</p>
-            <p>{t('requirements.windows')}</p>
+            <p className="text-sm text-muted-foreground">{t('requirements.windows')}</p>
           </div>
         </div>
       </div>
 
       {/* FAQ Section */}
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">{t('faq.title')}</h2>
-        <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-center mb-10 tracking-tight">{t('faq.title')}</h2>
+        <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <details key={i} className="group border rounded-lg">
-              <summary className="flex items-center justify-between cursor-pointer p-4 font-medium">
+            <details key={i} className="group rounded-xl border border-border/60 bg-card transition-colors duration-200 hover:border-border">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-[0.95rem]">
                 {faq.question}
-                <span className="ml-2 transition-transform group-open:rotate-180">&#9662;</span>
+                <span className="ml-3 text-muted-foreground transition-transform duration-200 group-open:rotate-180">&#9662;</span>
               </summary>
-              <div className="px-4 pb-4">
-                <p className="text-muted-foreground">{faq.answer}</p>
+              <div className="px-5 pb-5 -mt-1">
+                <p className="text-muted-foreground text-[0.925rem] leading-relaxed">{faq.answer}</p>
               </div>
             </details>
           ))}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Rethink AI' }],
   icons: {
     icon: '/favicon.ico',
-    apple: '/images/icon-192.png',
+    apple: '/apple-touch-icon.png',
   },
   openGraph: {
     type: 'website',

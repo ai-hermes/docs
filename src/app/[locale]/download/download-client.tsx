@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const RELEASES_URL = '/api/releases';
+const BASE_URL = 'https://static.rethinkai.spotty.com.cn';
 const GITHUB_RELEASES = 'https://github.com/ai-hermes/wechat-mem0/releases';
 
 interface Release {
@@ -122,7 +123,7 @@ export default function DownloadClient() {
             {(() => {
               const config = platformConfig[detected];
               const Icon = config.icon;
-              const downloadUrl = `/dl/${latest.downloads[detected]}`;
+              const downloadUrl = `${BASE_URL}/${latest.downloads[detected]}`;
               return (
                 <>
                   <Icon className="w-16 h-16 text-purple-500" />
@@ -160,7 +161,7 @@ export default function DownloadClient() {
           {(detected ? otherPlatforms : allPlatforms).map((platform) => {
             const config = platformConfig[platform];
             const Icon = config.icon;
-            const downloadUrl = `/dl/${latest.downloads[platform]}`;
+            const downloadUrl = `${BASE_URL}/${latest.downloads[platform]}`;
 
             return (
               <div

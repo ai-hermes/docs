@@ -5,9 +5,15 @@ category: troubleshooting
 order: 1
 ---
 
-使用过程中遇到问题？本页面汇总了常见故障的排查方法。
+使用过程中遇到问题？从下方找到对应的问题，点击跳转到解决方案。
 
-## 多用户时如何选择正确的账号？
+- [1. 多用户时如何选择正确的账号？](#1-多用户时如何选择正确的账号)
+- [2. 环境检测失败](#2-环境检测失败)
+- [3. macOS 获取数据密钥失败（task_for_pid failed）](#3-macos-获取数据密钥失败task_for_pid-failed)
+
+---
+
+## 1. 多用户时如何选择正确的账号？
 
 在「选择用户」步骤中，如果下拉列表里出现多个 wxid，说明当前设备上曾登录过多个账号：
 
@@ -22,7 +28,7 @@ order: 1
 
 > 文件夹中通常包含聊天数据库文件，可以根据文件夹大小或修改时间来辅助判断。最近活跃的账号对应的文件夹通常体积更大、修改时间更新。
 
-## 环境检测失败
+## 2. 环境检测失败
 
 如果 Step 1 环境检测未通过：
 
@@ -30,22 +36,38 @@ order: 1
 - 确认 IM 客户端已登录账号
 - 尝试重启 IM 客户端后再次检测
 
-## 获取数据密钥失败
+## 3. macOS 获取数据密钥失败（task_for_pid failed）
 
-如果 Step 4 执行后状态不是 passed：
+如果在 macOS 上获取密钥时遇到以下报错：
 
-- 确认 IM 客户端正在运行且已登录
-- 确认选择了正确的用户
-- 尝试点击「刷新」重新获取用户列表，然后重新选择
+```
+获取数据密钥失败: Error invoking remote method 'localDecrypt:getDataKey':
+LocalDecryptCommandError: 0:211: execution error: task_for_pid failed: 5
+Make sure: (1) running as root, (2) WeChat is ad-hoc signed (1)
+[ERROR] find_all_keys_macos failed with code=1
+[HINT] macOS key scan needs permission to read WeChat memory.
+```
 
-## 解密数据库失败
+这是因为 macOS 的安全机制阻止了应用读取进程内存。有两种解决办法：
 
-如果 Step 5 解密失败：
+### 方法一：对微信重新签名（推荐）
 
-- 确认数据目录路径正确
-- 确认磁盘空间充足
-- 查看应用日志获取详细错误信息
+打开终端，执行以下命令：
 
-## 下一步
+```bash
+sudo codesign --force --deep --sign - /Applications/WeChat.app
+```
+
+输入系统密码后等待完成，然后重启重新解密即可。
+
+### 方法二：关闭系统 SIP
+
+SIP（System Integrity Protection）是 macOS 的系统完整性保护机制。关闭后可解除进程内存读取限制。
+
+详细操作步骤请参考：[macOS 开启或关闭 SIP — 少数派](https://sspai.com/post/55066)
+
+> **注意**：关闭 SIP 会降低系统安全性，建议优先尝试方法一。操作完成后建议重新开启 SIP。
+
+---
 
 如果以上方法仍无法解决问题，请搜索 QQ 群号 **740412645** 入群留言反馈。

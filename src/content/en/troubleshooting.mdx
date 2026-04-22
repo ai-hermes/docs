@@ -5,9 +5,15 @@ category: troubleshooting
 order: 1
 ---
 
-Running into issues? This page covers common problems and how to fix them.
+Running into issues? Find your problem below and click to jump to the solution.
 
-## How to choose the right account with multiple users?
+- [1. How to choose the right account with multiple users?](#1-how-to-choose-the-right-account-with-multiple-users)
+- [2. Environment check failed](#2-environment-check-failed)
+- [3. macOS: Failed to get data key (task_for_pid failed)](#3-macos-failed-to-get-data-key-task_for_pid-failed)
+
+---
+
+## 1. How to choose the right account with multiple users?
 
 In the "Select User" step, if the dropdown shows multiple wxid entries, it means multiple accounts have been logged in on this device:
 
@@ -22,7 +28,7 @@ In the "Select User" step, if the dropdown shows multiple wxid entries, it means
 
 > Folders usually contain chat database files. You can use folder size or modification time to help identify the right one — the most recently active account typically has a larger folder with a more recent modification date.
 
-## Environment check failed
+## 2. Environment check failed
 
 If Step 1 does not pass:
 
@@ -30,22 +36,38 @@ If Step 1 does not pass:
 - Make sure you are logged in to the IM client
 - Try restarting the IM client and running the check again
 
-## Failed to get data key
+## 3. macOS: Failed to get data key (task_for_pid failed)
 
-If Step 4 does not show passed:
+If you encounter the following error on macOS when retrieving the key:
 
-- Make sure the IM client is running and logged in
-- Make sure you selected the correct user
-- Try clicking "Refresh" to reload the user list, then select again
+```
+Error invoking remote method 'localDecrypt:getDataKey':
+LocalDecryptCommandError: 0:211: execution error: task_for_pid failed: 5
+Make sure: (1) running as root, (2) WeChat is ad-hoc signed (1)
+[ERROR] find_all_keys_macos failed with code=1
+[HINT] macOS key scan needs permission to read WeChat memory.
+```
 
-## Database decryption failed
+This happens because macOS security mechanisms prevent the app from reading process memory. There are two solutions:
 
-If Step 5 fails:
+### Option 1: Re-sign WeChat (Recommended)
 
-- Verify the data directory path is correct
-- Make sure you have enough disk space
-- Check the application logs for detailed error information
+Open Terminal and run:
 
-## Still stuck?
+```bash
+sudo codesign --force --deep --sign - /Applications/WeChat.app
+```
+
+Enter your system password, wait for it to complete, then restart and retry decryption.
+
+### Option 2: Disable System Integrity Protection (SIP)
+
+SIP is a macOS security feature that restricts process memory access. Disabling it will remove this limitation.
+
+For detailed instructions, see: [macOS Enable or Disable SIP — sspai.com](https://sspai.com/post/55066)
+
+> **Note**: Disabling SIP reduces system security. Try Option 1 first. If you do disable SIP, re-enable it after completing the decryption setup.
+
+---
 
 If none of the above resolves your issue, please search for QQ group **740412645** and join to leave feedback.

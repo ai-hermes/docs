@@ -183,6 +183,10 @@
         {
           "question": "Wie wird die Datensicherheit gewährleistet?",
           "answer": "Alle Chat-Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert und niemals auf einen Server hochgeladen. Nur Ihr Fragetext wird an den LLM-Anbieter gesendet, wenn Sie aktiv eine Frage stellen."
+        },
+        {
+          "question": "Wie benutze ich die App? Gibt es eine Dokumentation?",
+          "answer": "Schauen Sie sich unsere <docLink>Dokumentation</docLink> an — mit Schnellstart, Funktionsübersicht und Fehlerbehebung."
         }
       ]
     }

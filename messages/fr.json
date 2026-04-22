@@ -183,6 +183,10 @@
         {
           "question": "Comment la sécurité des données est-elle assurée ?",
           "answer": "Toutes les données de chat sont stockées uniquement sur votre appareil local et ne sont jamais envoyées vers un serveur. Seul le texte de votre question est envoyé au fournisseur LLM lorsque vous posez activement une question."
+        },
+        {
+          "question": "Comment l'utiliser ? Y a-t-il une documentation ?",
+          "answer": "Consultez notre <docLink>documentation</docLink> pour un guide complet incluant le démarrage rapide, les fonctionnalités et le dépannage."
         }
       ]
     }

@@ -183,6 +183,10 @@
         {
           "question": "How is data security ensured?",
           "answer": "All chat data is stored only on your local device and is never uploaded to any server. Only your question text is sent to the LLM provider when you actively ask a question."
+        },
+        {
+          "question": "How do I get started? Is there documentation?",
+          "answer": "Check out our <docLink>documentation</docLink> for a complete guide including quick start, feature overview, and troubleshooting."
         }
       ]
     }

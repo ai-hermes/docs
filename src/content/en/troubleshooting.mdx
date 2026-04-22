@@ -10,6 +10,7 @@ Running into issues? Find your problem below and click to jump to the solution.
 - [1. How to choose the right account with multiple users?](#1-how-to-choose-the-right-account-with-multiple-users)
 - [2. Environment check failed](#2-environment-check-failed)
 - [3. macOS: Failed to get data key (task_for_pid failed)](#3-macos-failed-to-get-data-key-task_for_pid-failed)
+- [4. Windows: Unable to check for updates](#4-windows-unable-to-check-for-updates)
 
 ---
 
@@ -67,6 +68,14 @@ SIP is a macOS security feature that restricts process memory access. Disabling 
 For detailed instructions, see: [macOS Enable or Disable SIP — sspai.com](https://sspai.com/post/55066)
 
 > **Note**: Disabling SIP reduces system security. Try Option 1 first. If you do disable SIP, re-enable it after completing the decryption setup.
+
+## 4. Windows: Unable to check for updates
+
+The Windows version does not currently support in-app automatic updates. This is because the digital signing certificate for the Windows installer is still being applied for — unsigned installers cannot pass the system's auto-update verification.
+
+We are actively working on obtaining the certificate. Stay tuned.
+
+In the meantime, to update to the latest version, please visit the [Download page](/en/download) to manually download and install the latest installer.
 
 ---
 

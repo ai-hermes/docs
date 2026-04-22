@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import DownloadClient from './download-client';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -11,9 +12,16 @@ export default async function DownloadPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pricing' });
 
-  const faqs = [0, 1, 2].map((i) => ({
+  const faqCount = 4;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
     question: t(`faq.items.${i}.question`),
-    answer: t(`faq.items.${i}.answer`),
+    answer: t.rich(`faq.items.${i}.answer`, {
+      docLink: (chunks) => (
+        <Link href={`/${locale}/docs/introduction`} className="text-purple-500 hover:underline">
+          {chunks}
+        </Link>
+      ),
+    }),
   }));
 
   return (

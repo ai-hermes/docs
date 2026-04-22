@@ -137,28 +137,31 @@ export default function DownloadClient() {
           return (
             <div
               key={platform}
-              className={`relative rounded-2xl border bg-card p-8 flex flex-col items-center text-center gap-5 transition-all duration-200 ${
+              className={`group relative rounded-2xl border bg-card p-8 flex flex-col items-center text-center gap-5 transition-[border-color,box-shadow] duration-300 ease-out ${
                 isDetected
                   ? 'border-purple-500/60 shadow-lg shadow-purple-500/10 scale-[1.02]'
-                  : 'border-border/60 hover:border-border hover:shadow-md'
+                  : 'border-border/60 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/10'
               }`}
+              style={{ transition: 'border-color 300ms ease-out, box-shadow 400ms ease-out, transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1)' }}
+              onMouseEnter={(e) => { if (!isDetected) e.currentTarget.style.transform = 'scale(1.025)'; }}
+              onMouseLeave={(e) => { if (!isDetected) e.currentTarget.style.transform = 'scale(1)'; }}
             >
               {isDetected && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 gradient-primary text-white text-xs px-3 py-1">
                   {t('recommended')}
                 </Badge>
               )}
-              <Icon className={`w-12 h-12 ${isDetected ? 'text-purple-500' : 'text-muted-foreground'}`} />
+              <Icon className={`w-12 h-12 transition-colors duration-500 ease-out ${isDetected ? 'text-purple-500' : 'text-muted-foreground group-hover:text-purple-500'}`} />
               <div>
                 <p className="text-lg font-semibold">{config.label}</p>
-                <p className="text-sm text-muted-foreground">{config.sublabel}</p>
+                <p className="text-sm text-muted-foreground transition-colors duration-500 ease-out group-hover:text-foreground/80">{config.sublabel}</p>
               </div>
               <Button
                 asChild
-                className={`w-full gap-2 cursor-pointer transition-shadow duration-200 ${
+                className={`w-full gap-2 cursor-pointer transition-all duration-500 ease-out ${
                   isDetected
                     ? 'gradient-primary hover:gradient-primary-hover text-white shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/25'
-                    : ''
+                    : 'group-hover:gradient-primary'
                 }`}
                 variant={isDetected ? 'default' : 'outline'}
               >

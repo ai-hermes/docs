@@ -183,6 +183,10 @@
         {
           "question": "Come viene garantita la sicurezza dei dati?",
           "answer": "Tutti i dati di chat sono archiviati solo sul tuo dispositivo locale e non vengono mai caricati su alcun server. Solo il testo della tua domanda viene inviato al fornitore LLM quando fai attivamente una domanda."
+        },
+        {
+          "question": "Come si usa? C'è una documentazione?",
+          "answer": "Consulta la nostra <docLink>documentazione</docLink> per una guida completa con avvio rapido, panoramica delle funzionalità e risoluzione dei problemi."
         }
       ]
     }

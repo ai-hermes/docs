@@ -135,6 +135,13 @@
   .gradient-primary-hover {
     background: linear-gradient(135deg, #4F46E5 0%, #9333EA 50%, #DB2777 100%);
   }
+  .group:hover .group-hover\:gradient-primary {
+    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 6px -1px rgb(168 85 247 / 0.2);
+    transition: background 500ms ease-out, color 400ms ease-out, border-color 300ms ease-out, box-shadow 400ms ease-out;
+  }
   .text-gradient-primary {
     background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
     -webkit-background-clip: text;

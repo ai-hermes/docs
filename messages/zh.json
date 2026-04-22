@@ -159,7 +159,7 @@
     "title": "免费下载",
     "subtitle": "Rethink AI 完全免费开源，支持 macOS 和 Windows",
     "downloadBtn": "下载",
-    "recommended": "推荐",
+    "recommended": "根据当前系统推荐",
     "fetchError": "无法获取最新版本信息",
     "githubFallback": "前往 GitHub 下载",
     "otherPlatforms": "其他平台",

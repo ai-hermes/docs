@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Kernfunktionen",
-      "subtitle": "Leistungsstarke KI-Agent-Funktionen für effiziente Abfrage und Analyse Ihrer Chat-Daten",
+      "subtitle": "KI-Agent-Funktionen für effiziente Abfrage und Analyse Ihrer Chat-Daten",
       "personality": {
         "title": "KI-Agent-Chat",
         "description": "Stellen Sie Fragen in natürlicher Sprache — der KI-Agent ruft automatisch Werkzeuge auf, um Kontakte, Chatverlauf und Nachrichten abzufragen"
@@ -78,24 +78,24 @@
       "subtitle": "Was andere Nutzer sagen",
       "items": [
         {
-          "content": "Rethink AI ermöglicht es mir, wichtige Informationen in meinem Chatverlauf schnell zu finden und steigert die Produktivität enorm.",
+          "content": "Früher habe ich ewig durch Chatverläufe gescrollt, um etwas zu finden. Jetzt frage ich einfach und bekomme sofort die Antwort.",
           "author": "Michael Schmidt",
           "role": "Produktmanager"
         },
         {
-          "content": "Daten bleiben vollständig lokal, Datenschutz ist garantiert. Die KI-Abfragefunktion ist unglaublich nützlich.",
+          "content": "Was mich überzeugt hat: Alle Daten bleiben auf meinem Rechner. Kein Datenschutz-Problem.",
           "author": "Dr. Anna Müller",
           "role": "Teamleiterin Betrieb"
         },
         {
-          "content": "Der Wechsel zwischen Agent-Modi ist flexibel — Deep-Modus für komplexe Analysen, React-Modus für schnelle Abfragen.",
+          "content": "Die verschiedenen Agent-Modi sind praktisch — schnelle Antworten für einfache Fragen, tiefere Analyse wenn nötig.",
           "author": "Thomas Weber",
           "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Bereit, Ihre Chat-Daten intelligent abzufragen?",
+      "title": "Probieren Sie es aus — Chatverlauf per Gespräch durchsuchen",
       "subtitle": "Kostenlos und Open Source — jetzt herunterladen und loslegen",
       "button": "Kostenloser Download"
     }

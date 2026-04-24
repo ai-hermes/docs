@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "核心功能",
-      "subtitle": "强大的 AI Agent 能力，帮你高效查询和理解聊天数据",
+      "subtitle": "AI Agent 帮你高效查询和理解聊天数据",
       "personality": {
         "title": "AI Agent 对话",
         "description": "通过自然语言提问，AI 自动调用工具查询联系人、聊天记录、搜索消息等数据"
@@ -78,24 +78,24 @@
       "subtitle": "看看其他用户怎么说",
       "items": [
         {
-          "content": "Rethink AI 让我能快速找到历史聊天记录中的关键信息，工作效率大幅提升。",
+          "content": "以前翻聊天记录找信息特别费时间，现在直接问一句就出来了，省了不少事。",
           "author": "张明",
           "role": "产品经理"
         },
         {
-          "content": "数据完全在本地，隐私安全有保障。AI 查询功能非常实用。",
+          "content": "最打动我的是数据都在本地，不用担心隐私问题。用着放心。",
           "author": "李婷",
           "role": "运营主管"
         },
         {
-          "content": "多种 Agent 模式切换很灵活，复杂分析用 Deep 模式，简单查询用 React 模式。",
+          "content": "配合不同的 Agent 模式，简单问题秒回，复杂分析也能搞定，挺灵活的。",
           "author": "王强",
           "role": "技术负责人"
         }
       ]
     },
     "cta": {
-      "title": "准备好智能查询聊天数据了吗？",
+      "title": "试试用对话查聊天记录",
       "subtitle": "免费开源，立即下载使用",
       "button": "免费下载"
     }

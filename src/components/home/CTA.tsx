@@ -13,12 +13,8 @@ export default function CTA() {
 
   return (
     <section className="py-24 md:py-36 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 gradient-primary opacity-[0.03]" />
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-400/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-pink-400/10 rounded-full blur-[100px]" />
-      </div>
+      {/* Subtle background */}
+      <div className="absolute inset-0 -z-10 bg-primary/[0.03]" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center">
@@ -34,7 +30,7 @@ export default function CTA() {
 
           {/* CTA Button */}
           <Link href={`/${locale}/download`}>
-            <Button size="lg" className="gradient-primary hover:gradient-primary-hover text-white px-10 gap-2 shadow-lg shadow-purple-500/25 cursor-pointer transition-shadow duration-200 hover:shadow-xl hover:shadow-purple-500/30">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 gap-2 cursor-pointer transition-colors duration-200">
               {t('button')}
               <ArrowRight className="w-4 h-4" />
             </Button>

@@ -38,7 +38,7 @@ function AppleIcon({ className }: { className?: string }) {
 function WindowsIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M3 12V6.75l6-1.32v6.48L3 12zm6.73-.07 8.27-.9V2.46l-8.27 1.33v8.14zm-6.73 1.01 6 .09v6.81l-6-1.08V12.94zm6.73.17 8.27.14v8.78l-8.27-1.24v-7.68z" />
+      <path d="M3 3h8.5v8.5H3V3zm9.5 0H21v8.5h-8.5V3zM3 12.5h8.5V21H3v-8.5zm9.5 0H21V21h-8.5v-8.5z" />
     </svg>
   );
 }
@@ -137,31 +137,28 @@ export default function DownloadClient() {
           return (
             <div
               key={platform}
-              className={`group relative rounded-2xl border bg-card p-8 flex flex-col items-center text-center gap-5 transition-[border-color,box-shadow] duration-300 ease-out ${
+              className={`group relative rounded-2xl border bg-card p-8 flex flex-col items-center text-center gap-5 transition-[border-color,box-shadow] duration-200 ${
                 isDetected
-                  ? 'border-purple-500/60 shadow-lg shadow-purple-500/10 scale-[1.02]'
-                  : 'border-border/60 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/10'
+                  ? 'border-primary/60 shadow-lg shadow-primary/10 scale-[1.02]'
+                  : 'border-border/60 hover:border-primary/40 hover:shadow-md'
               }`}
-              style={{ transition: 'border-color 300ms ease-out, box-shadow 400ms ease-out, transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1)' }}
-              onMouseEnter={(e) => { if (!isDetected) e.currentTarget.style.transform = 'scale(1.025)'; }}
-              onMouseLeave={(e) => { if (!isDetected) e.currentTarget.style.transform = 'scale(1)'; }}
             >
               {isDetected && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 gradient-primary text-white text-xs px-3 py-1">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs px-3 py-1">
                   {t('recommended')}
                 </Badge>
               )}
-              <Icon className={`w-12 h-12 transition-colors duration-500 ease-out ${isDetected ? 'text-purple-500' : 'text-muted-foreground group-hover:text-purple-500'}`} />
+              <Icon className={`w-12 h-12 transition-colors duration-200 ${isDetected ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'}`} />
               <div>
                 <p className="text-lg font-semibold">{config.label}</p>
-                <p className="text-sm text-muted-foreground transition-colors duration-500 ease-out group-hover:text-foreground/80">{config.sublabel}</p>
+                <p className="text-sm text-muted-foreground">{config.sublabel}</p>
               </div>
               <Button
                 asChild
-                className={`w-full gap-2 cursor-pointer transition-all duration-500 ease-out ${
+                className={`w-full gap-2 cursor-pointer transition-colors duration-200 ${
                   isDetected
-                    ? 'gradient-primary hover:gradient-primary-hover text-white shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/25'
-                    : 'group-hover:gradient-primary'
+                    ? 'bg-primary hover:bg-primary/90 text-primary-foreground'
+                    : ''
                 }`}
                 variant={isDetected ? 'default' : 'outline'}
               >

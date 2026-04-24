@@ -17,7 +17,7 @@ export default async function DownloadPage({ params }: { params: Promise<{ local
     question: t(`faq.items.${i}.question`),
     answer: t.rich(`faq.items.${i}.answer`, {
       docLink: (chunks) => (
-        <Link href={`/${locale}/docs/introduction`} className="text-purple-500 hover:underline">
+        <Link href={`/${locale}/docs/introduction`} className="text-primary hover:underline">
           {chunks}
         </Link>
       ),
@@ -28,7 +28,7 @@ export default async function DownloadPage({ params }: { params: Promise<{ local
     <div className="container mx-auto px-4 py-24 md:py-32">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-20">
-        <p className="text-sm font-semibold text-gradient-primary uppercase tracking-wider mb-3">Download</p>
+        <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Download</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-5 tracking-tight">{t('title')}</h1>
         <p className="text-xl text-muted-foreground leading-relaxed">{t('subtitle')}</p>
       </div>

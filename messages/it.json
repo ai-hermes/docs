@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Funzionalità principali",
-      "subtitle": "Potenti capacità AI Agent per aiutarti a interrogare e comprendere i dati di chat in modo efficiente",
+      "subtitle": "Capacità AI Agent per aiutarti a interrogare e comprendere i dati di chat in modo efficiente",
       "personality": {
         "title": "Chat AI Agent",
         "description": "Fai domande in linguaggio naturale — l'IA invoca automaticamente gli strumenti per interrogare contatti, cronologia chat, cercare messaggi e altro"
@@ -78,24 +78,24 @@
       "subtitle": "Cosa dicono gli altri utenti",
       "items": [
         {
-          "content": "Rethink AI mi permette di trovare rapidamente informazioni chiave nella cronologia delle chat, migliorando notevolmente la produttività.",
+          "content": "Prima passavo un sacco di tempo a scorrere le chat per trovare qualcosa. Ora chiedo e ho subito la risposta.",
           "author": "Marco Rossi",
           "role": "Product Manager"
         },
         {
-          "content": "I dati restano completamente in locale, garantendo la privacy. La funzione di interrogazione IA è incredibilmente utile.",
+          "content": "Quello che mi ha convinto è che tutto resta sul mio computer. Nessun problema di privacy.",
           "author": "Dott.ssa Maria Bianchi",
           "role": "Responsabile operazioni"
         },
         {
-          "content": "Il cambio tra le modalità Agent è flessibile — modalità Deep per analisi complesse, modalità React per interrogazioni rapide.",
+          "content": "Le diverse modalità Agent sono comode — risposte rapide per le cose semplici, analisi approfondita quando serve.",
           "author": "Giuseppe Verdi",
           "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Pronto a interrogare i tuoi dati di chat in modo intelligente?",
+      "title": "Prova a consultare le tue chat con una conversazione",
       "subtitle": "Gratuito e open-source — scarica e inizia subito",
       "button": "Download gratuito"
     }

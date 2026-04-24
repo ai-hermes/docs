@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Star, Quote } from 'lucide-react';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Testimonials() {
@@ -33,7 +32,6 @@ export default function Testimonials() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-sm font-semibold text-gradient-primary uppercase tracking-wider mb-3">Testimonials</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-5 tracking-tight">{t('title')}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">{t('subtitle')}</p>
         </div>
@@ -45,16 +43,6 @@ export default function Testimonials() {
               key={index}
               className="relative rounded-2xl border border-border/60 bg-card p-8 transition-all duration-200 hover:shadow-lg hover:border-border"
             >
-              {/* Quote icon */}
-              <Quote className="w-8 h-8 text-purple-500/15 mb-4" />
-
-              {/* Stars */}
-              <div className="flex gap-1 mb-5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-
               {/* Quote */}
               <p className="text-foreground mb-8 leading-relaxed text-[0.95rem]">
                 &ldquo;{testimonial.content}&rdquo;
@@ -63,7 +51,7 @@ export default function Testimonials() {
               {/* Author */}
               <div className="flex items-center gap-3">
                 <Avatar className="w-10 h-10">
-                  <AvatarFallback className="gradient-primary text-white text-xs font-medium">
+                  <AvatarFallback className="bg-muted text-muted-foreground text-xs font-medium">
                     {testimonial.avatar}
                   </AvatarFallback>
                 </Avatar>

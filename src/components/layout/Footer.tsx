@@ -36,7 +36,7 @@ export default function Footer() {
                 height={32}
                 className="rounded-lg"
               />
-              <span className="text-lg font-bold text-gradient-primary">
+              <span className="text-lg font-bold text-foreground">
                 {tCommon('brand')}
               </span>
             </Link>

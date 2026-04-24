@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Fonctionnalités clés",
-      "subtitle": "De puissantes capacités d'Agent IA pour interroger et comprendre efficacement vos données de chat",
+      "subtitle": "Des capacités d'Agent IA pour interroger et comprendre efficacement vos données de chat",
       "personality": {
         "title": "Chat Agent IA",
         "description": "Posez des questions en langage naturel — l'IA invoque automatiquement des outils pour rechercher des contacts, l'historique de chat, les messages, et plus encore"
@@ -78,24 +78,24 @@
       "subtitle": "Ce que disent nos utilisateurs",
       "items": [
         {
-          "content": "Rethink AI me permet de retrouver rapidement les informations clés dans mon historique de chat, améliorant considérablement ma productivité.",
+          "content": "Avant, je passais un temps fou à parcourir mes conversations pour retrouver une info. Maintenant, je pose la question et j'ai la réponse.",
           "author": "Michel Dupont",
           "role": "Chef de produit"
         },
         {
-          "content": "Les données restent entièrement en local, la confidentialité est donc garantie. La fonction de requête IA est incroyablement utile.",
+          "content": "Ce qui m'a convaincu, c'est que tout reste sur ma machine. Aucun souci de confidentialité.",
           "author": "Dr. Marie Laurent",
           "role": "Responsable des opérations"
         },
         {
-          "content": "Le basculement entre les modes Agent est flexible — le mode Deep pour les analyses complexes, le mode React pour les requêtes rapides.",
+          "content": "Les différents modes d'Agent sont pratiques — réponses rapides pour les questions simples, analyse approfondie quand j'en ai besoin.",
           "author": "Pierre Martin",
           "role": "Responsable technique"
         }
       ]
     },
     "cta": {
-      "title": "Prêt à interroger intelligemment vos données de chat ?",
+      "title": "Essayez de consulter vos conversations par le dialogue",
       "subtitle": "Gratuit et open source — téléchargez et commencez dès maintenant",
       "button": "Téléchargement gratuit"
     }

@@ -127,35 +127,13 @@
   }
 }
 
-/* Custom gradient utilities */
+/* Custom utilities */
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+    background-color: var(--primary);
   }
   .gradient-primary-hover {
-    background: linear-gradient(135deg, #4F46E5 0%, #9333EA 50%, #DB2777 100%);
-  }
-  .group:hover .group-hover\:gradient-primary {
-    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
-    color: white;
-    border-color: transparent;
-    box-shadow: 0 4px 6px -1px rgb(168 85 247 / 0.2);
-    transition: background 500ms ease-out, color 400ms ease-out, border-color 300ms ease-out, box-shadow 400ms ease-out;
-  }
-  .text-gradient-primary {
-    background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .border-gradient-primary {
-    border-image: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%) 1;
-  }
-  .glass-card {
-    background: oklch(1 0 0 / 60%);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid oklch(1 0 0 / 20%);
+    background-color: color-mix(in oklch, var(--primary), black 12%);
   }
 }
 
@@ -176,19 +154,6 @@ html {
   }
 }
 
-/* Aurora background animation */
-@keyframes aurora {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(30px, -20px) scale(1.05); }
-  50% { transform: translate(-20px, 20px) scale(0.95); }
-  75% { transform: translate(20px, 10px) scale(1.02); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -200,21 +165,12 @@ html {
   }
 }
 
-.animate-aurora {
-  animation: aurora 10s ease-in-out infinite;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out both;
 }
 
 .animation-delay-200 { animation-delay: 200ms; }
 .animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-600 { animation-delay: 600ms; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

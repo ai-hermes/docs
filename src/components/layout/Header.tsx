@@ -41,7 +41,7 @@ export default function Header() {
             height={36}
             className="rounded-lg"
           />
-          <span className="text-lg font-bold text-gradient-primary">
+          <span className="text-lg font-bold text-foreground">
             {t('brand')}
           </span>
         </Link>

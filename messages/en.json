@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Core Features",
-      "subtitle": "Powerful AI Agent capabilities to help you efficiently query and understand chat data",
+      "subtitle": "AI Agent capabilities to help you efficiently query and understand chat data",
       "personality": {
         "title": "AI Agent Chat",
         "description": "Ask questions in natural language — the AI automatically invokes tools to query contacts, chat history, search messages, and more"
@@ -78,24 +78,24 @@
       "subtitle": "See what other users say",
       "items": [
         {
-          "content": "Rethink AI lets me quickly find key information in my chat history, greatly improving productivity.",
+          "content": "I used to spend ages scrolling through chat logs to find things. Now I just ask and get the answer right away.",
           "author": "Michael Zhang",
           "role": "Product Manager"
         },
         {
-          "content": "Data stays completely local, so privacy is guaranteed. The AI query feature is incredibly useful.",
+          "content": "What sold me is that everything stays on my machine. No privacy concerns at all.",
           "author": "Dr. Lisa Chen",
           "role": "Operations Lead"
         },
         {
-          "content": "Switching between Agent modes is flexible — Deep mode for complex analysis, React mode for quick queries.",
+          "content": "The different Agent modes are handy — quick answers for simple stuff, deeper analysis when I need it.",
           "author": "David Wang",
           "role": "Tech Lead"
         }
       ]
     },
     "cta": {
-      "title": "Ready to Query Your Chat Data Intelligently?",
+      "title": "Try Querying Your Chat History by Conversation",
       "subtitle": "Free and open-source — download and start using now",
       "button": "Free Download"
     }

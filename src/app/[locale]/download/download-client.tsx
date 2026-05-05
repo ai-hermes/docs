@@ -71,10 +71,10 @@ function detectPlatform(): Platform | null {
   return null;
 }
 
-const platformConfig: Record<Platform, { icon: typeof AppleIcon; label: string; sublabel: string }> = {
-  'mac-arm64': { icon: AppleIcon, label: 'macOS', sublabel: 'Apple Silicon (M1/M2/M3/M4)' },
-  'mac-x64': { icon: AppleIcon, label: 'macOS', sublabel: 'Intel' },
-  windows: { icon: WindowsIcon, label: 'Windows', sublabel: 'x64' },
+const platformConfig: Record<Platform, { icon: typeof AppleIcon; label: string; sublabel: string; iconSize: string }> = {
+  'mac-arm64': { icon: AppleIcon, label: 'macOS', sublabel: 'Apple Silicon (M1/M2/M3/M4)', iconSize: 'w-12 h-12' },
+  'mac-x64': { icon: AppleIcon, label: 'macOS', sublabel: 'Intel', iconSize: 'w-12 h-12' },
+  windows: { icon: WindowsIcon, label: 'Windows', sublabel: 'x64', iconSize: 'w-10 h-10' },
 };
 
 export default function DownloadClient() {
@@ -172,7 +172,7 @@ export default function DownloadClient() {
                   {t('recommended')}
                 </Badge>
               )}
-              <Icon className={`w-12 h-12 transition-colors duration-500 ease-out ${isDetected ? 'text-purple-500' : 'text-muted-foreground group-hover:text-purple-500'}`} />
+              <Icon className={`${config.iconSize} transition-colors duration-500 ease-out ${isDetected ? 'text-purple-500' : 'text-muted-foreground group-hover:text-purple-500'}`} />
               <div>
                 <p className="text-lg font-semibold">{config.label}</p>
                 <p className="text-sm text-muted-foreground transition-colors duration-500 ease-out group-hover:text-foreground/80">{config.sublabel}</p>

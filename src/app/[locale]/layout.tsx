@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/i18n/config';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import AnalyticsProvider from '@/components/analytics/AnalyticsProvider';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
+          <AnalyticsProvider />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

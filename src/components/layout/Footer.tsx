@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import { track } from '@/lib/analytics';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -13,14 +14,24 @@ export default function Footer() {
 
   const footerLinks = {
     product: [
-      { href: `/${locale}/#features`, label: t('features') },
-      { href: `/${locale}/download`, label: t('pricing') },
-      { href: `/${locale}/docs`, label: t('docs') },
+      { href: `/${locale}/#features`, label: t('features'), key: 'features' },
+      { href: `/${locale}/download`, label: t('pricing'), key: 'download' },
+      { href: `/${locale}/docs`, label: t('docs'), key: 'docs' },
     ],
     legal: [
-      { href: `/${locale}/docs/privacy`, label: t('privacy') },
+      { href: `/${locale}/docs/privacy`, label: t('privacy'), key: 'privacy' },
     ],
   };
+
+  function trackFooterClick(item: { key: string; href: string }, group: 'product' | 'legal') {
+    const event = item.key === 'docs' || item.key === 'privacy' ? 'doc_link_clicked' : 'nav_link_clicked';
+    track(event, {
+      key: item.key,
+      href: item.href,
+      locale,
+      position: `footer_${group}`,
+    });
+  }
 
   return (
     <footer className="border-t border-border/40 bg-muted/30">
@@ -53,6 +64,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={() => trackFooterClick(link, 'product')}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}
@@ -70,6 +82,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={() => trackFooterClick(link, 'legal')}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.label}

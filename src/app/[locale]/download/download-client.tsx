@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { Download, ExternalLink, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { track } from '@/lib/analytics';
 
 const RELEASES_URL = '/api/releases';
 const BASE_URL = 'https://static.rethinkai.spotty.com.cn';
@@ -38,7 +40,7 @@ function AppleIcon({ className }: { className?: string }) {
 function WindowsIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M3 12V6.75l6-1.32v6.48L3 12zm6.73-.07 8.27-.9V2.46l-8.27 1.33v8.14zm-6.73 1.01 6 .09v6.81l-6-1.08V12.94zm6.73.17 8.27.14v8.78l-8.27-1.24v-7.68z" />
+      <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
     </svg>
   );
 }
@@ -77,12 +79,19 @@ const platformConfig: Record<Platform, { icon: typeof AppleIcon; label: string; 
 
 export default function DownloadClient() {
   const t = useTranslations('pricing');
+  const params = useParams();
+  const locale = (params?.locale as string) || undefined;
   const [data, setData] = useState<ReleasesData | null>(null);
   const [error, setError] = useState(false);
   const [detected, setDetected] = useState<Platform | null>(null);
 
   useEffect(() => {
-    setDetected(detectPlatform());
+    const platform = detectPlatform();
+    setDetected(platform);
+    track('download_page_viewed', {
+      locale,
+      platform_detected: platform,
+    });
     fetch(RELEASES_URL)
       .then((res) => {
         if (!res.ok) throw new Error('fetch failed');
@@ -90,6 +99,8 @@ export default function DownloadClient() {
       })
       .then((json: ReleasesData) => setData(json))
       .catch(() => setError(true));
+    // Page-view should fire once per mount; locale is captured at that moment.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (error) {
@@ -97,7 +108,17 @@ export default function DownloadClient() {
       <div className="text-center py-16">
         <p className="text-muted-foreground mb-5">{t('fetchError')}</p>
         <Button asChild variant="outline" className="gap-2 cursor-pointer">
-          <a href={GITHUB_RELEASES} target="_blank" rel="noopener noreferrer">
+          <a
+            href={GITHUB_RELEASES}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              track('installer_download_clicked', {
+                source: 'github_fallback',
+                locale,
+              })
+            }
+          >
             <ExternalLink className="w-4 h-4" />
             {t('githubFallback')}
           </a>
@@ -165,7 +186,18 @@ export default function DownloadClient() {
                 }`}
                 variant={isDetected ? 'default' : 'outline'}
               >
-                <a href={downloadUrl}>
+                <a
+                  href={downloadUrl}
+                  onClick={() =>
+                    track('installer_download_clicked', {
+                      platform,
+                      version: latest.version,
+                      is_detected_platform: isDetected,
+                      locale,
+                      source: 'cdn',
+                    })
+                  }
+                >
                   <Download className="w-4 h-4" />
                   {t('downloadBtn')}
                 </a>

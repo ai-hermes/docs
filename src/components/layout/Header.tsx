@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { VisuallyHidden } from 'radix-ui';
 import LanguageSwitcher from './LanguageSwitcher';
+import { track } from '@/lib/analytics';
 
 export default function Header() {
   const t = useTranslations('common');
@@ -19,9 +20,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: `/${locale}`, label: t('home'), exact: true },
-    { href: `/${locale}/docs`, label: t('docs'), exact: false },
-    { href: `/${locale}/download`, label: t('pricing'), exact: false },
+    { href: `/${locale}`, label: t('home'), exact: true, key: 'home' },
+    { href: `/${locale}/docs`, label: t('docs'), exact: false, key: 'docs' },
+    { href: `/${locale}/download`, label: t('pricing'), exact: false, key: 'download' },
   ];
 
   function isActive(href: string, exact: boolean) {
@@ -29,11 +30,25 @@ export default function Header() {
     return pathname.startsWith(href);
   }
 
+  function trackNav(item: { key: string; href: string }, position: 'header_desktop' | 'header_mobile' | 'header_brand') {
+    const event = item.key === 'docs' ? 'doc_link_clicked' : 'nav_link_clicked';
+    track(event, {
+      key: item.key,
+      href: item.href,
+      locale,
+      position,
+    });
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2.5">
+        <Link
+          href={`/${locale}`}
+          className="flex items-center gap-2.5"
+          onClick={() => trackNav({ key: 'brand_home', href: `/${locale}` }, 'header_brand')}
+        >
           <Image
             src="/images/logo.png"
             alt="Rethink AI"
@@ -52,6 +67,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => trackNav(item, 'header_desktop')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                 isActive(item.href, item.exact)
                   ? 'text-foreground bg-accent'
@@ -85,7 +101,10 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    trackNav(item, 'header_mobile');
+                    setIsOpen(false);
+                  }}
                   className={`px-4 py-3 rounded-lg text-base font-medium transition-colors duration-200 ${
                     isActive(item.href, item.exact)
                       ? 'text-foreground bg-accent'

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const RELEASES_URL = 'http://static.rethinkai.spotty.com.cn/releases.json';
+const RELEASES_URL = 'https://github.com/ai-hermes/wechat-mem0-build/releases/latest/download/releases.json';
 
 export async function GET() {
   try {
